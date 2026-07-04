@@ -1,0 +1,11 @@
+# Local tooling / editor state
+.claude/settings.local.json
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Env files
+.env
+.env.*
+!.env.example

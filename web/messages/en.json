@@ -1,0 +1,211 @@
+{
+  "metadatos": {
+    "inicio": {
+      "titulo": "Laboratorio Séance — Cosmetics manufacturing, import & ANMAT registration",
+      "descripcion": "We manufacture, import and register cosmetic, perfumery and household products in Argentina. Active ANMAT authorization, 35+ years of experience and full confidentiality."
+    }
+  },
+  "comun": {
+    "marca": "Laboratorio Séance",
+    "cta": {
+      "asesor": "Talk to an advisor"
+    }
+  },
+  "navegacion": {
+    "inicio": "Home",
+    "equipo": "Our Team",
+    "servicios": "Services",
+    "productos": "Products",
+    "contacto": "Contact us",
+    "abrirMenu": "Open menu",
+    "cerrarMenu": "Close menu",
+    "cambiarIdioma": "Change language"
+  },
+  "footer": {
+    "tagline": "Innovation, quality and experience in the Argentine cosmetics industry since 1990.",
+    "columnas": {
+      "links": "Links",
+      "servicios": "Services",
+      "contacto": "Contact",
+      "direccion": "Address"
+    },
+    "links": ["Home", "About us", "Contact"],
+    "servicios": [
+      "Contract Manufacturing",
+      "Import",
+      "ANMAT Registration",
+      "Quality Control · R&D"
+    ],
+    "derechos": "All rights reserved.",
+    "whatsapp": "Chat on WhatsApp"
+  },
+  "inicio": {
+    "hero": {
+      "eyebrow": "ANMAT-authorized cosmetics laboratory · Argentina · since 1990",
+      "titulo": "Your cosmetic brand in the Argentine market, risk-free",
+      "parrafo": "Laboratorio Séance is an Argentine cosmetics laboratory authorized by ANMAT, founded in 1990. We help brands and importers worldwide manufacture, import and register cosmetic, perfumery and household products in Argentina — with 100% regulatory compliance and full confidentiality over every formula and brand.",
+      "cta": "Talk to an advisor",
+      "imagenAlt": "Premium cosmetics product line manufactured by Laboratorio Séance"
+    },
+    "soluciones": {
+      "eyebrow": "What do you need to solve?",
+      "titulo": "End-to-end solutions for your brand",
+      "items": {
+        "fabricacion": {
+          "titulo": "Contract Manufacturing",
+          "subtitulo": "«I have a brand idea but I don't know how to manufacture it»",
+          "descripcion": "We develop your full product line under one roof: custom formula, GMP production, per-batch quality control, packaging and ANMAT registration. You bring the brand; we bring the lab.",
+          "enlace": "See manufacturing"
+        },
+        "hosting": {
+          "titulo": "Regulatory Hosting",
+          "subtitulo": "«I'm an importer and I need regulatory backing to operate legally»",
+          "descripcion": "We give you the backing to import legally in Argentina: authorized warehouse, technical direction, ANMAT registration and ongoing regulatory follow-up. Ownership and commercialization of your products always stay yours.",
+          "enlace": "See hosting"
+        },
+        "importacion": {
+          "titulo": "Full Import",
+          "subtitulo": "«I want to bring my product in without getting stuck at customs»",
+          "descripcion": "We manage the import end to end: tariff classification, customs, ANMAT registration, logistics and quality control. You don't deal with a thing.",
+          "enlace": "See import"
+        }
+      }
+    },
+    "confianza": {
+      "anchor": [
+        "Immediate ANMAT registration with a complete dossier",
+        "Over 35 years standing behind brands in Argentina"
+      ],
+      "bar": [
+        "ANMAT — Authorized facility",
+        "Over 35 years of experience",
+        "Manufacturing · Import · Registration",
+        "Confidentiality guaranteed"
+      ]
+    },
+    "confidencialidad": {
+      "eyebrow": "Confidentiality",
+      "titulo": "Your brand, your formula, your secret",
+      "parrafo": "We know your formula and your brand are your greatest asset. That's why every development we do is confidential and exclusive: we don't share formulas, we don't reuse them with other clients, and we protect your brand's ownership throughout the process. Working with Séance means putting your product in safe hands.",
+      "bullets": [
+        "Exclusive formulas, never shared or reused.",
+        "Ownership of the brand and registration always stays with the client.",
+        "Confidentiality guaranteed at every stage."
+      ],
+      "imagenAlt": "Cosmetic serum bottles developed confidentially and exclusively"
+    },
+    "stats": {
+      "items": [
+        { "valor": "200+", "etiqueta": "Brands registered with ANMAT" },
+        { "valor": "5000+", "etiqueta": "Cosmetic SKUs successfully processed" },
+        { "valor": "100%", "etiqueta": "Legal and regulatory compliance" },
+        { "valor": "+35", "etiqueta": "Years manufacturing in Argentina (since 1990)" }
+      ]
+    },
+    "servicios": {
+      "eyebrow": "Our services",
+      "titulo": "End-to-end solutions for your brand",
+      "items": {
+        "fabricacion": {
+          "titulo": "Contract Manufacturing (Private Label)",
+          "descripcion": "Custom formula · GMP production · Per-batch quality control · ANMAT registration · Regulatory packaging and labeling."
+        },
+        "hosting": {
+          "titulo": "Regulatory Hosting for Importers",
+          "descripcion": "We provide the authorized warehouse, technical direction, ANMAT registration and ongoing regulatory follow-up. Ownership and commercialization of the products always stay with the client."
+        },
+        "importacion": {
+          "titulo": "Full Import",
+          "descripcion": "Customs, ANMAT, logistics and quality control managed end to end. You bring the product, we take care of everything."
+        }
+      }
+    },
+    "registro": {
+      "titulo": "ANMAT registration without the wait",
+      "parrafo": "Once the dossier is complete, ANMAT registration is immediate. The difference between weeks of delay and a clean registration lies in preparing the documentation well — and that's exactly what we do, with over 35 years of experience."
+    },
+    "everest": {
+      "titulo": "Everest — our own brand",
+      "parrafo": "Everest is our own brand — manufactured to the same standards and authorizations we offer clients: hygiene, sanitization and personal care. If we trust Séance to carry our own name, you can trust it for yours."
+    },
+    "proceso": {
+      "eyebrow": "How we work",
+      "titulo": "You bring the idea. We handle the rest",
+      "parrafo": "You don't need to know how ANMAT works, or what documentation customs requires. In 34 years we've done it more than 5,000 times.",
+      "pasos": [
+        {
+          "numero": "01",
+          "titulo": "We talk",
+          "descripcion": "You tell us what you want to do. We tell you exactly what's needed."
+        },
+        {
+          "numero": "02",
+          "titulo": "We plan",
+          "descripcion": "We build a plan with timelines, costs and clear steps. No fine print."
+        },
+        {
+          "numero": "03",
+          "titulo": "We execute",
+          "descripcion": "We take care of everything. You focus on your brand."
+        }
+      ]
+    },
+    "guia": {
+      "eyebrow": "Free resource",
+      "titulo": "ANMAT registration guide for imported products",
+      "parrafo": "Everything you need to know to bring your product to the Argentine market. Step by step, with timelines and documentation.",
+      "enlace": "Download guide",
+      "imagenAlt": "ANMAT registration guide for imported products"
+    },
+    "nosotros": {
+      "eyebrow": "Who we are",
+      "titulo": "A family business with regulatory authority since 1990",
+      "parrafo": "Laboratorio Séance is a family business founded in 1990, a pioneer in contract cosmetics manufacturing in Argentina. Over more than 35 years, two generations of the same family have kept the same commitment: regulatory rigor, confidentiality and full ANMAT compliance in every product that passes through our laboratory.",
+      "cita": "«In this industry, problems are prevented before they appear. Our job is to anticipate them: prepare every dossier well and meet every regulation so your brand never has a headache with ANMAT.»",
+      "citaAutor": "Andrea Pelliza, CEO & Regulatory Affairs",
+      "epigrafe": "Enrique Pelliza, founder of Séance, was invited by C5N as an industry reference to speak about the importance of registration and the authenticity of cosmetic products.",
+      "imagenAlt": "Enrique Pelliza, founder of Laboratorio Séance"
+    },
+    "faq": {
+      "eyebrow": "Frequently asked questions",
+      "titulo": "What we get asked the most",
+      "items": [
+        {
+          "pregunta": "What does Laboratorio Séance do?",
+          "respuesta": "We manufacture, import and register cosmetic, perfumery and household products in Argentina for brands and importers, with an active ANMAT authorization and full confidentiality."
+        },
+        {
+          "pregunta": "Are my formula and my brand protected?",
+          "respuesta": "Yes. Every development is confidential and exclusive: we don't share or reuse formulas, and ownership of the brand and registration always stays with the client."
+        },
+        {
+          "pregunta": "Do I need to know how ANMAT works to work with you?",
+          "respuesta": "No. We handle the entire regulatory side: we tell you what's needed, prepare the dossier and manage the registration end to end."
+        },
+        {
+          "pregunta": "How long does it take to register a cosmetic product in Argentina?",
+          "respuesta": "Once the dossier is complete, ANMAT registration is immediate. The real timeline depends on preparing the documentation well, and that's exactly what we do for you."
+        },
+        {
+          "pregunta": "Do you manufacture for international brands without a structure in Argentina?",
+          "respuesta": "Yes. Through our regulatory hosting we provide the authorized warehouse, technical direction and ANMAT registration so brands and importers from abroad can operate legally."
+        },
+        {
+          "pregunta": "Where are you located?",
+          "respuesta": "We're at Directorio 3548, Caseros, Buenos Aires, Argentina, with a facility authorized by ANMAT."
+        }
+      ]
+    },
+    "contacto": {
+      "titulo": "Ready to start?",
+      "parrafo": "Tell us about your project and we'll reply within 48 hours. No commitment and full confidentiality.",
+      "cta": "Talk to an advisor"
+    },
+    "newsletter": {
+      "eyebrow": "Newsletter",
+      "titulo": "Cosmetovigilance and Trends",
+      "parrafo": "By Andrea Pelliza — CEO & Regulatory Affairs, Laboratorio Séance. Updates on cosmetovigilance and ANMAT regulation, regulatory changes and trends in the Argentine cosmetics industry.",
+      "cta": "Subscribe to the newsletter"
+    }
+  }
+}
