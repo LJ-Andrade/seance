@@ -25,7 +25,7 @@ export function Cierre() {
                 {c("parrafo")}
               </p>
             </div>
-            <CtaButton href="#contacto">{c("cta")}</CtaButton>
+            <CtaButton href="/contacto">{c("cta")}</CtaButton>
           </div>
 
           {/* Newsletter */}

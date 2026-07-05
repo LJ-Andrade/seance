@@ -41,7 +41,7 @@ export function Hero() {
           </p>
 
           <div className="pt-4">
-            <CtaButton href="#contacto">{t("cta")}</CtaButton>
+            <CtaButton href="/contacto">{t("cta")}</CtaButton>
           </div>
         </div>
       </Container>

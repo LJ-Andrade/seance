@@ -39,14 +39,29 @@ export function MobileNav({
       >
         <nav className="flex flex-col gap-1 px-6 py-4">
           {items.map((item) => (
-            <NavLink
-              key={item.href}
-              href={item.href}
-              onClick={() => setOpen(false)}
-              className="rounded-md px-2 py-3 text-base font-semibold text-brand-slate hover:bg-brand-cream-2"
-            >
-              {item.label}
-            </NavLink>
+            <div key={item.label} className="flex flex-col">
+              <NavLink
+                href={item.href}
+                onClick={() => setOpen(false)}
+                className="rounded-md px-2 py-3 text-base font-semibold text-brand-slate hover:bg-brand-cream-2"
+              >
+                {item.label}
+              </NavLink>
+              {item.children ? (
+                <div className="mb-1 flex flex-col border-l border-border pl-3">
+                  {item.children.map((child) => (
+                    <NavLink
+                      key={child.href}
+                      href={child.href}
+                      onClick={() => setOpen(false)}
+                      className="rounded-md px-2 py-2 text-sm font-medium text-brand-muted hover:bg-brand-cream-2 hover:text-brand-teal"
+                    >
+                      {child.label}
+                    </NavLink>
+                  ))}
+                </div>
+              ) : null}
+            </div>
           ))}
         </nav>
       </div>

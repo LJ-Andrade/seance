@@ -34,6 +34,13 @@ export const siteConfig = {
   },
   // Digits only, for wa.me links.
   whatsapp: "5491557406182",
+  // Google Maps "Seance" place (Directorio 3548, Caseros).
+  maps: {
+    query: "Seance, Directorio 3548, Caseros, Buenos Aires, Argentina",
+    lat: -34.6145544,
+    lng: -58.549096,
+    placeUrl: "https://www.google.com/maps/place/Seance/@-34.6145544,-58.549096,17z",
+  },
 } as const;
 
 /** Absolute URL for a given locale + path (path without leading locale). */

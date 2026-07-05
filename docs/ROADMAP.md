@@ -26,9 +26,10 @@ _Nothing in progress._
 
 ### Content
 - [x] Build home page sections from the Figma design (full home + header/footer)
-- [ ] Replace placeholders: Everest logo, Guía cover image; convert product images to WebP
-- [ ] Build a real contact form / route for the `#contacto` CTAs
-- [ ] Define page inventory for multi-page nav (Nuestro Equipo, Productos)
+- [x] Build a real contact form / route (`/contacto`) with Brevo delivery (gated on env vars)
+- [x] Servicios dropdown + 3 service pages (`/servicios/fabricacion|hosting|importacion`)
+- [x] Nosotros (`/nosotros`) and Productos (`/productos`) pages from Figma
+- [ ] Replace placeholders: Guía cover image; convert product images to WebP; real data-sheet PDFs
 - [ ] Define content model for non-text content
 
 ## Planned

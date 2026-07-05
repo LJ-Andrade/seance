@@ -10,7 +10,7 @@ import {
 } from "@/components/icons/brand-icons";
 import { siteConfig } from "@/lib/site";
 
-const linkHrefs = ["/", "#nosotros", "#contacto"];
+const linkHrefs = ["/", "/nosotros", "/contacto"];
 
 const socials: Array<{
   key: keyof typeof siteConfig.social;

@@ -9,6 +9,12 @@ import { absoluteUrl } from "@/lib/site";
  */
 const routes: string[] = [
   "", // home
+  "nosotros",
+  "productos",
+  "contacto",
+  "servicios/fabricacion",
+  "servicios/hosting",
+  "servicios/importacion",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

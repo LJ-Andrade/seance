@@ -5,6 +5,7 @@ import { Link } from "@/i18n/navigation";
 import { Container } from "@/components/layout/container";
 import { LocaleSwitcher } from "@/components/layout/locale-switcher";
 import { MobileNav } from "@/components/layout/mobile-nav";
+import { NavDropdown } from "@/components/layout/nav-dropdown";
 import { NavLink } from "@/components/layout/nav-link";
 import type { NavItem } from "@/components/layout/nav-items";
 import { CtaButton } from "@/components/ui/cta-button";
@@ -21,10 +22,21 @@ export function Header() {
 
   const items: NavItem[] = [
     { href: "/", label: t("inicio") },
-    { href: "#nosotros", label: t("equipo") },
-    { href: "#servicios", label: t("servicios") },
-    { href: "#productos", label: t("productos") },
+    { href: "/nosotros", label: t("equipo") },
+    {
+      href: "#servicios",
+      label: t("servicios"),
+      children: [
+        { href: "/servicios/fabricacion", label: t("serviciosItems.fabricacion") },
+        { href: "/servicios/hosting", label: t("serviciosItems.hosting") },
+        { href: "/servicios/importacion", label: t("serviciosItems.importacion") },
+      ],
+    },
+    { href: "/productos", label: t("productos") },
   ];
+
+  const navLinkClass =
+    "text-base font-semibold text-brand-slate transition-colors hover:text-brand-teal";
 
   return (
     <header className="sticky top-0 z-50 bg-white shadow-[4px_4px_8px_0px_rgba(15,76,92,0.16)]">
@@ -63,19 +75,19 @@ export function Header() {
         </Link>
 
         <nav className="hidden items-center gap-8 lg:flex">
-          {items.map((item) => (
-            <NavLink
-              key={item.href}
-              href={item.href}
-              className="text-base font-semibold text-brand-slate transition-colors hover:text-brand-teal"
-            >
-              {item.label}
-            </NavLink>
-          ))}
+          {items.map((item) =>
+            item.children ? (
+              <NavDropdown key={item.label} item={item} className={navLinkClass} />
+            ) : (
+              <NavLink key={item.href} href={item.href} className={navLinkClass}>
+                {item.label}
+              </NavLink>
+            ),
+          )}
         </nav>
 
         <div className="flex items-center gap-3">
-          <CtaButton href="#contacto" size="sm" className="hidden sm:inline-flex">
+          <CtaButton href="/contacto" size="sm" className="hidden sm:inline-flex">
             {t("contacto")}
           </CtaButton>
           <div className="lg:hidden">

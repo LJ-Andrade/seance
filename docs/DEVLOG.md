@@ -59,6 +59,58 @@ Reusable primitives: `Container`, `Eyebrow`, `Heading`, `SectionHeader`, `CtaBut
 Known TODOs / decisions:
 - Placeholders: Everest wordmark (no logo asset yet), Guia cover (icon placeholder).
 - Newsletter panel color (teal) is an inference; confirm against design.
-- CTAs/social/newsletter point to `#contacto`/`#` until real routes/forms exist.
+- Newsletter CTA still points to `#` until the signup flow exists.
 - Product images are PNG — convert to WebP/AVIF for weight.
 - Multi-page nav (Nuestro Equipo, Productos) still points to on-page anchors.
+
+## 2026-07-04 - Contact page + form (`/contacto`)
+
+Dedicated contact route with a Server Action form; Brevo delivery wired but
+gated on env vars (works end-to-end without them by logging).
+
+1. [x] `lib/email.ts` — `sendContactMessage` via Brevo transactional API, gated on `BREVO_API_KEY` / `BREVO_SENDER_EMAIL` / `CONTACT_TO_EMAIL`
+2. [x] `app/[locale]/contacto/actions.ts` — `submitContactForm` Server Action with server-side validation + localized messages + honeypot
+3. [x] `components/sections/contact/contact-form.tsx` (client, `useActionState`) and `contact-info.tsx` (server)
+4. [x] `app/[locale]/contacto/page.tsx` — page + `buildMetadata` (metadatos.contacto)
+5. [x] i18n: `metadatos.contacto` + `contacto` namespace in `es.json` + `en.json`
+6. [x] Point all contact CTAs to `/contacto` (header, hero, cierre, footer); add `contacto` to `sitemap.ts`
+7. [x] `.env.example`: Brevo variables
+8. [x] Build (`/es/contacto`, `/en/contacto` SSG), lint and runtime smoke test (form/info/hreflang) clean
+
+Pending: connect Brevo key when available; optional ContactPage/Organization JSON-LD; localized slug (`/en/contact`) if desired.
+
+## 2026-07-04 - Servicios dropdown + service pages
+
+Nav "Servicios" becomes a dropdown to three pages under `/servicios/*`.
+
+1. [x] Nav: `NavItem.children`; `NavDropdown` (CSS hover/focus, Server Component); header + `MobileNav` render children
+2. [x] Shared service components: `ServiceHero`, `InfoCardGrid`, `AnmatBand`, `CtaBand` (teal closing band, terracotta button); reuse home `TrustBar`
+3. [x] Page 1 — Fabricación (`/servicios/fabricacion`, Figma `24:1417`): hero, trust bar, "¿A quién servimos?" (4 cards), "¿Qué productos elaboramos?" (2×2 image cards + prompt), "4 pasos" process, ANMAT band, closing CTA
+4. [x] Fabricación-specific components: `ProductCategories`, `ProcessSteps`; images under `public/images/servicios/`
+5. [x] i18n `servicios.fabricacion` + `metadatos.fabricacion` (es/en); `navegacion.serviciosItems`; sitemap `servicios/fabricacion`
+6. [x] Build (SSG es/en), lint, runtime smoke test clean
+7. [x] Page 2 — Hosting (`/servicios/hosting`, Figma `39:2101`): hero, intro split, "Qué incluye" (icon cards), titularidad band, método (points), "¿Es para vos?" (check cards), FAQ, closing CTA
+8. [x] Page 3 — Importación (`/servicios/importacion`, Figma `52:1117`): hero, "todo el recorrido" (4 step cards w/ bullets), "cumplimiento" (split + bullets), titularidad band, closing CTA
+9. [x] More shared components: `SplitFeature`, `IconCardGrid`, `HighlightBand`, `MethodPoints`, `CheckCards`, `FaqSection`
+10. [x] Dropdown labels shortened to section names; sitemap has all 3; build (SSG es/en), lint, smoke tests clean
+
+## 2026-07-04 - Nosotros + Productos pages
+
+1. [x] `/nosotros` (Figma `10:491`): hero (video + ISO badge), trust bar, solutions overview → service pages, capabilities, audience, mission/vision split, values, Everest own-brand, closing CTA
+2. [x] Nosotros components under `components/sections/nosotros/`: `AboutHero`, `SolutionsOverview`, `Capabilities`, `AudienceCards`, `MissionVision`, `Values`, `OwnBrand`
+3. [x] `/productos` (Figma `57:1586`): Everest hero + 6 product cards (photo, description, format chips, data-sheet button) + closing CTA; `ProductCard` component
+4. [x] Nav: "Nuestro Equipo" → `/nosotros`, "Productos" → `/productos`; footer link → `/nosotros`; sitemap adds both
+5. [x] i18n `nosotros` + `productos` namespaces and `metadatos.*` (es/en); images under `public/images/nosotros/` and `public/images/productos/`
+6. [x] Build (SSG es/en for all 9 routes), lint, runtime smoke tests clean
+7. [x] Git identity set to javzero <javzero1@gmail.com>
+
+Pending: product data-sheet buttons link to `#` until real PDFs exist; hero video links to the (placeholder) YouTube URL in `siteConfig.social`.
+
+## 2026-07-04 - Contact page: match Figma design (node 44:861)
+
+Reworked the first-pass contact layout to the actual Figma design.
+
+1. [x] Two-column: form (left) + embedded Google Maps (right, `contact-map.tsx`); three channel cards below (`contact-cards.tsx`, replaces `contact-info.tsx`)
+2. [x] Form redesign: 2-col field grid, 56px inputs (6px radius, `#e9eaec` border), required red asterisks, message char counter (0/200), compact uppercase "Enviar" button
+3. [x] i18n: `contacto.form` fields now carry `label` + `placeholder`; added `tarjetas` and `mapaAlt`; copy taken from the design
+4. [x] Build (`/es/contacto`, `/en/contacto` SSG), lint and runtime smoke test clean
