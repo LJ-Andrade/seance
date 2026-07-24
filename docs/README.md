@@ -11,6 +11,7 @@ This directory is the operational memory for the project. Keep each document foc
 | `ROADMAP.md` | High-level project status and future work. | Work moves between completed, in progress, next up, or planned. |
 | `DEVLOG.md` | Active execution plans, per-file checklists, and completed implementation notes. | Multi-file work starts or progresses. |
 | `DEPLOY_INFO.md` | Deployment, hosting, and release information. | Deployment process or production infrastructure changes. |
+| `TUNEL_TEMPORAL.md` | Spanish guide for temporarily sharing the local site through a Cloudflare tunnel. | The local demo-sharing process changes. |
 | `standards/` | Reusable implementation standards. | A standard pattern is introduced or revised. |
 
 ## Standards

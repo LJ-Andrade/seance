@@ -1,15 +1,14 @@
-import { BookOpenText } from "lucide-react";
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Container } from "@/components/layout/container";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { Heading } from "@/components/ui/heading";
-import { ArrowLink } from "@/components/ui/arrow-link";
+import { CtaButton } from "@/components/ui/cta-button";
+import { Reveal } from "@/components/ui/reveal";
 
 /**
- * Lead magnet: the downloadable ANMAT registration guide, with a preview panel
- * on the left and copy + download link on the right.
- *
- * TODO: swap the placeholder panel for the real guide cover once exported.
+ * Lead magnet: the downloadable ANMAT registration guide, with the guide cover
+ * image on the left and copy + download link on the right.
  */
 export function Guia() {
   const t = useTranslations("inicio.guia");
@@ -17,11 +16,20 @@ export function Guia() {
   return (
     <section className="bg-brand-cream-2 py-20 md:py-24">
       <Container className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
-        <div className="flex aspect-[733/410] w-full items-center justify-center rounded-lg bg-brand-cream-3">
-          <BookOpenText className="size-16 text-brand-primary" aria-hidden />
-        </div>
+        <Reveal
+          from="left"
+          className="relative aspect-[733/410] w-full overflow-hidden rounded-lg bg-brand-cream-3"
+        >
+          <Image
+            src="/images/guia-de-registro.jpg"
+            alt={t("titulo")}
+            fill
+            sizes="(min-width: 1024px) 50vw, 100vw"
+            className="object-cover"
+          />
+        </Reveal>
 
-        <div className="flex flex-col gap-4">
+        <Reveal from="right" delay={120} className="flex flex-col gap-4">
           <Eyebrow>{t("eyebrow")}</Eyebrow>
           <Heading className="text-3xl sm:text-4xl lg:text-[44px]">
             {t("titulo")}
@@ -29,10 +37,15 @@ export function Guia() {
           <p className="max-w-[560px] text-base leading-[22px] tracking-[0.02em] text-brand-muted">
             {t("parrafo")}
           </p>
-          <ArrowLink href="#contacto" className="mt-2">
-            {t("enlace")}
-          </ArrowLink>
-        </div>
+          <div className="mt-2">
+            <CtaButton
+              href="/docs/guia-de-registro-anmat-productos-importados.docx"
+              download
+            >
+              {t("enlace")}
+            </CtaButton>
+          </div>
+        </Reveal>
       </Container>
     </section>
   );

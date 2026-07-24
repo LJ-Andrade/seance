@@ -19,7 +19,8 @@ seamce-repo/
 |   +-- i18n/            # next-intl routing, navigation, request config
 |   +-- messages/        # JSON translation dictionaries (keys in Spanish)
 |   +-- components/ui/   # shadcn/ui components (Radix)
-|   +-- lib/             # site config + SEO metadata helper
+|   +-- components/seo/  # Safe server-rendered JSON-LD serialization
+|   +-- lib/             # Site config, metadata, and structured-data builders
 |   +-- proxy.ts         # next-intl middleware (Next 16 "proxy" convention)
 +-- docs/                # Project documentation, specs, roadmap, and dev log
 ```

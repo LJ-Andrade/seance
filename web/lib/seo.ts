@@ -8,6 +8,8 @@ type BuildMetadataArgs = {
   path?: string;
   title: string;
   description: string;
+  /** Search keywords when explicitly provided for the route. */
+  keywords?: string[];
   /** Open Graph image path relative to the site (optional). */
   ogImage?: string;
 };
@@ -23,9 +25,14 @@ export function buildMetadata({
   path = "",
   title,
   description,
+  keywords,
   ogImage,
 }: BuildMetadataArgs): Metadata {
   const canonical = absoluteUrl(locale, path);
+  const openGraphLocale = locale === "es" ? "es_AR" : "en_US";
+  const alternateLocale = routing.locales
+    .filter((candidate) => candidate !== locale)
+    .map((candidate) => (candidate === "es" ? "es_AR" : "en_US"));
 
   const languages: Record<string, string> = {};
   for (const l of routing.locales) {
@@ -38,6 +45,7 @@ export function buildMetadata({
     metadataBase: new URL(siteUrl),
     title,
     description,
+    keywords,
     alternates: {
       canonical,
       languages,
@@ -45,7 +53,8 @@ export function buildMetadata({
     openGraph: {
       type: "website",
       siteName: siteConfig.name,
-      locale,
+      locale: openGraphLocale,
+      alternateLocale,
       url: canonical,
       title,
       description,

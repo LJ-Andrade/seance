@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { buildMetadata } from "@/lib/seo";
+import { serviceNode } from "@/lib/structured-data";
+import { JsonLd } from "@/components/seo/json-ld";
 import { TrustBar } from "@/components/sections/trust-bar";
 import { ServiceHero } from "@/components/sections/servicios/service-hero";
 import { InfoCardGrid } from "@/components/sections/servicios/info-card-grid";
@@ -44,47 +46,64 @@ export default async function FabricacionPage({ params }: PageProps) {
   const t = await getTranslations({ locale, namespace: "servicios.fabricacion" });
 
   return (
-    <main className="flex flex-1 flex-col">
-      <ServiceHero
-        eyebrow={t("hero.eyebrow")}
-        title={t("hero.titulo")}
-        paragraph={t("hero.parrafo")}
-        ctaLabel={t("hero.cta")}
-        image="/images/servicios/fabricacion-hero.png"
-        imageAlt={t("hero.imagenAlt")}
+    <>
+      <JsonLd
+        nodes={[
+          serviceNode({
+            locale,
+            path: "servicios/fabricacion",
+            name: t("hero.titulo"),
+            description: t("hero.parrafo"),
+            serviceType:
+              locale === "en"
+                ? "Contract cosmetics manufacturing (private label)"
+                : "Fabricación cosmética tercerista (private label)",
+          }),
+        ]}
       />
+      <main className="flex flex-1 flex-col">
+        <ServiceHero
+          eyebrow={t("hero.eyebrow")}
+          title={t("hero.titulo")}
+          paragraph={t("hero.parrafo")}
+          ctaLabel={t("hero.cta")}
+          image="/images/servicios/fabricacion-hero.png"
+          mobileImage="/images/servicios/fabricacion-hero-mobile.jpg"
+          imageAlt={t("hero.imagenAlt")}
+        />
 
-      <TrustBar />
+        <TrustBar />
 
-      <InfoCardGrid
-        eyebrow={t("quienes.eyebrow")}
-        title={t("quienes.titulo")}
-        items={t.raw("quienes.items")}
-        columns={4}
-      />
+        <InfoCardGrid
+          eyebrow={t("quienes.eyebrow")}
+          title={t("quienes.titulo")}
+          items={t.raw("quienes.items")}
+          columns={4}
+        />
 
-      <ProductCategories
-        eyebrow={t("productos.eyebrow")}
-        title={t("productos.titulo")}
-        categories={t.raw("productos.categorias")}
-        images={PRODUCT_IMAGES}
-        cta={t.raw("productos.sinProducto")}
-      />
+        <ProductCategories
+          eyebrow={t("productos.eyebrow")}
+          title={t("productos.titulo")}
+          categories={t.raw("productos.categorias")}
+          images={PRODUCT_IMAGES}
+          cta={t.raw("productos.sinProducto")}
+        />
 
-      <ProcessSteps
-        eyebrow={t("proceso.eyebrow")}
-        title={t("proceso.titulo")}
-        paragraph={t("proceso.parrafo")}
-        steps={t.raw("proceso.pasos") as ProcessStep[]}
-      />
+        <ProcessSteps
+          eyebrow={t("proceso.eyebrow")}
+          title={t("proceso.titulo")}
+          paragraph={t("proceso.parrafo")}
+          steps={t.raw("proceso.pasos") as ProcessStep[]}
+        />
 
-      <AnmatBand title={t("anmat.titulo")} paragraph={t("anmat.parrafo")} />
+        <AnmatBand title={t("anmat.titulo")} paragraph={t("anmat.parrafo")} />
 
-      <CtaBand
-        title={t("cierre.titulo")}
-        description={t("cierre.parrafo")}
-        ctaLabel={t("cierre.cta")}
-      />
-    </main>
+        <CtaBand
+          title={t("cierre.titulo")}
+          description={t("cierre.parrafo")}
+          ctaLabel={t("cierre.cta")}
+        />
+      </main>
+    </>
   );
 }

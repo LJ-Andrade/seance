@@ -36,11 +36,11 @@ export function Footer() {
         <div className="flex flex-col gap-6 border-b border-[#e4dfd4] pb-8 md:flex-row md:items-center md:justify-between">
           <div className="flex flex-col gap-3">
             <Image
-              src="/images/logo-seance.png"
+              src="/images/logo-seance-v2.png"
               alt={siteConfig.name}
-              width={148}
-              height={44}
-              className="h-11 w-auto"
+              width={300}
+              height={86}
+              className="h-11 w-auto self-start"
             />
             <p className="max-w-[540px] text-sm text-brand-muted">
               {t("tagline")}

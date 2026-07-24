@@ -1,5 +1,6 @@
 import type { LucideIcon } from "lucide-react";
 import { ArrowLink } from "@/components/ui/arrow-link";
+import { ChromeTilt } from "@/components/ui/chrome-tilt";
 
 export type SolucionCardProps = {
   icon: LucideIcon;
@@ -23,7 +24,7 @@ export function SolucionCard({
   href,
 }: SolucionCardProps) {
   return (
-    <article className="flex flex-1 flex-col gap-6 rounded-lg bg-white p-10">
+    <ChromeTilt className="chrome-tilt-card flex flex-1 flex-col gap-6 rounded-lg bg-white p-10">
       <div className="flex size-14 items-center justify-center rounded-lg bg-brand-cream-2">
         <Icon className="size-7 text-brand-teal" aria-hidden />
       </div>
@@ -40,6 +41,6 @@ export function SolucionCard({
       <ArrowLink href={href} className="mt-auto">
         {enlace}
       </ArrowLink>
-    </article>
+    </ChromeTilt>
   );
 }

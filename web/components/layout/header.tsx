@@ -65,10 +65,10 @@ export function Header() {
       <Container className="relative flex items-center justify-between py-3">
         <Link href="/" aria-label={siteConfig.name} className="shrink-0">
           <Image
-            src="/images/logo-seance.png"
+            src="/images/logo-seance-v2.png"
             alt={siteConfig.name}
-            width={155}
-            height={44}
+            width={300}
+            height={86}
             priority
             className="h-11 w-auto"
           />

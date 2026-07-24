@@ -10,7 +10,7 @@ export function WhatsAppFloat() {
 
   return (
     <a
-      href={`https://wa.me/${siteConfig.whatsapp}`}
+      href={siteConfig.whatsappUrl}
       target="_blank"
       rel="noopener noreferrer"
       aria-label={t("whatsapp")}

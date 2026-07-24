@@ -1,32 +1,38 @@
 {
   "metadatos": {
     "inicio": {
-      "titulo": "Laboratorio Séance — Cosmetics manufacturing, import & ANMAT registration",
-      "descripcion": "We manufacture, import and register cosmetic, perfumery and household products in Argentina. Active ANMAT authorization, 35+ years of experience and full confidentiality."
+      "titulo": "Laboratorio Séance | Cosmetic Manufacturing, Import and ANMAT Registration — Argentina",
+      "descripcion": "ANMAT-authorized Argentine cosmetics laboratory since 1990. We manufacture, import and register cosmetics with full confidentiality. Immediate ANMAT registration. 35+ years, 200+ brands."
     },
     "contacto": {
-      "titulo": "Contact — Laboratorio Séance",
-      "descripcion": "Tell us about your manufacturing, import or ANMAT registration project. We reply within 48 hours, with no commitment and full confidentiality."
+      "titulo": "Contact | Laboratorio Séance — Cosmetic Manufacturing, Import and Registration",
+      "descripcion": "Contact Laboratorio Séance. We reply within 48 hours, with no commitment and full confidentiality. Directorio 3548, Caseros, Buenos Aires."
     },
     "fabricacion": {
-      "titulo": "Contract Manufacturing (Private Label) — Laboratorio Séance",
-      "descripcion": "We manufacture your cosmetic line in Argentina under your brand: custom formula, GMP production, per-batch quality control and ANMAT registration. Full confidentiality."
+      "titulo": "Contract Cosmetics Manufacturing (Private Label) ANMAT | Laboratorio Séance",
+      "descripcion": "We manufacture your cosmetic line in Argentina: custom formulas, GMP production, quality control and ANMAT registration. Confidential private label for brands and importers. 35+ years."
     },
     "hosting": {
-      "titulo": "Regulatory Hosting for Importers — Laboratorio Séance",
-      "descripcion": "Regulatory backing to import cosmetics into Argentina: authorized warehouse, technical direction, ANMAT registration and ongoing follow-up. Ownership is always yours."
+      "titulo": "Regulatory Hosting for ANMAT Cosmetics Importers | Laboratorio Séance",
+      "descripcion": "Regulatory hosting to import cosmetics into Argentina: authorized warehouse, technical direction, ANMAT registration and ongoing support. Ownership is always yours. 35+ years.",
+      "palabrasClave": [
+        "cosmetics regulatory hosting",
+        "ANMAT technical direction",
+        "authorized warehouse for importers",
+        "regulatory support for cosmetics imports Argentina"
+      ]
     },
     "importacion": {
-      "titulo": "Full Cosmetics Import — Laboratorio Séance",
-      "descripcion": "We manage the end-to-end import of cosmetics into Argentina: customs, ANMAT registration, logistics and quality control. 100% compliance and full confidentiality."
+      "titulo": "Cosmetics Import to Argentina · ANMAT Registration | Laboratorio Séance",
+      "descripcion": "We import your cosmetic product into Argentina end to end: customs, ANMAT registration, logistics and quality control. Ready to sell, fully compliant and confidential."
     },
     "nosotros": {
-      "titulo": "About us — Laboratorio Séance",
-      "descripcion": "Over 35 years manufacturing, importing and registering cosmetics in Argentina. A family company with ANMAT authorization, regulatory authority and full confidentiality."
+      "titulo": "About Us | Laboratorio Séance — ANMAT Cosmetics Manufacturing and Import",
+      "descripcion": "Meet Laboratorio Séance, an ANMAT-authorized Argentine cosmetics laboratory. Contract manufacturing, regulatory hosting and full import services with complete confidentiality. 35+ years."
     },
     "productos": {
-      "titulo": "Everest — Our own brand | Laboratorio Séance",
-      "descripcion": "Everest is Laboratorio Séance's own line: hygiene, sanitization and personal care made with the same authorizations and standards we offer our clients."
+      "titulo": "Everest · Hygiene, Sanitization and Personal Care Products | Laboratorio Séance",
+      "descripcion": "Discover Everest, Laboratorio Séance's own brand: hand sanitizer, 70% alcohol, antibacterial soap, repellent, shampoo and conditioner. Quality and ANMAT compliance."
     }
   },
   "comun": {
@@ -248,15 +254,15 @@
           },
           {
             "pregunta": "What exactly does Séance provide?",
-            "respuesta": "We provide the full regulatory backing: an ANMAT-authorized warehouse, technical direction, the registration of your products and regulatory follow-up over time."
+            "respuesta": "The authorized warehouse, the technical direction, ANMAT registration and constant regulatory follow-up of your products."
           },
           {
             "pregunta": "How is it different from the import service?",
-            "respuesta": "With hosting we focus on the regulatory backing so you operate compliantly; with import we also manage the entire logistics and customs journey of your product into Argentina."
+            "respuesta": "With hosting, you import and commercialize under your own ownership and we back the compliance. With full import, we manage the entire journey of the product into Argentina."
           },
           {
             "pregunta": "Do you support me after registration?",
-            "respuesta": "Yes. Follow-up is constant: regulatory changes, renewals and any ANMAT requirement are handled for as long as your operation runs."
+            "respuesta": "Yes. Regulatory follow-up is constant: regulatory changes, renewals and ANMAT requirements over time."
           }
         ]
       },
@@ -556,7 +562,8 @@
     },
     "everest": {
       "titulo": "Everest — our own brand",
-      "parrafo": "Everest is our own brand — manufactured to the same standards and authorizations we offer clients: hygiene, sanitization and personal care. If we trust Séance to carry our own name, you can trust it for yours."
+      "parrafo": "Everest is our own brand — manufactured to the same standards and authorizations we offer clients: hygiene, sanitization and personal care. If we trust Séance to carry our own name, you can trust it for yours.",
+      "logoAlt": "Everest logo, Laboratorio Séance's own brand"
     },
     "proceso": {
       "eyebrow": "How we work",
@@ -606,23 +613,23 @@
         },
         {
           "pregunta": "Are my formula and my brand protected?",
-          "respuesta": "Yes. Every development is confidential and exclusive: we don't share or reuse formulas, and ownership of the brand and registration always stays with the client."
+          "respuesta": "Yes. Every formula is confidential and exclusive to each client: we don't share or reuse it. Ownership of your brand and your registration is always yours."
         },
         {
           "pregunta": "Do I need to know how ANMAT works to work with you?",
-          "respuesta": "No. We handle the entire regulatory side: we tell you what's needed, prepare the dossier and manage the registration end to end."
+          "respuesta": "No. We give you a free initial consultation, understand your project and tell you exactly which path to follow."
         },
         {
           "pregunta": "How long does it take to register a cosmetic product in Argentina?",
-          "respuesta": "Once the dossier is complete, ANMAT registration is immediate. The real timeline depends on preparing the documentation well, and that's exactly what we do for you."
+          "respuesta": "ANMAT registration is immediate once the documentation and studies are complete. The real work is in preparing the dossier well — and that's what we take care of."
         },
         {
           "pregunta": "Do you manufacture for international brands without a structure in Argentina?",
-          "respuesta": "Yes. Through our regulatory hosting we provide the authorized warehouse, technical direction and ANMAT registration so brands and importers from abroad can operate legally."
+          "respuesta": "Yes. Through our hosting service for importers, you operate legally in Argentina without needing a local entity."
         },
         {
           "pregunta": "Where are you located?",
-          "respuesta": "We're at Directorio 3548, Caseros, Buenos Aires, Argentina, with a facility authorized by ANMAT."
+          "respuesta": "At Directorio 3548, Caseros, Buenos Aires, Argentina."
         }
       ]
     },

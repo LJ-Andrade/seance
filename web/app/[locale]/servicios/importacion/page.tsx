@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { ShieldCheck } from "lucide-react";
 import { buildMetadata } from "@/lib/seo";
+import { serviceNode } from "@/lib/structured-data";
+import { JsonLd } from "@/components/seo/json-ld";
 import { TrustBar } from "@/components/sections/trust-bar";
 import { CtaBand } from "@/components/sections/cta-band";
 import { ServiceHero } from "@/components/sections/servicios/service-hero";
@@ -37,48 +39,65 @@ export default async function ImportacionPage({ params }: PageProps) {
   const t = await getTranslations({ locale, namespace: "servicios.importacion" });
 
   return (
-    <main className="flex flex-1 flex-col">
-      <ServiceHero
-        eyebrow={t("hero.eyebrow")}
-        title={t("hero.titulo")}
-        paragraph={t("hero.parrafo")}
-        ctaLabel={t("hero.cta")}
-        image="/images/servicios/import-hero.png"
-        imageAlt={t("hero.imagenAlt")}
+    <>
+      <JsonLd
+        nodes={[
+          serviceNode({
+            locale,
+            path: "servicios/importacion",
+            name: t("hero.titulo"),
+            description: t("hero.parrafo"),
+            serviceType:
+              locale === "en"
+                ? "Full cosmetics import"
+                : "Importación integral de cosméticos",
+          }),
+        ]}
       />
+      <main className="flex flex-1 flex-col">
+        <ServiceHero
+          eyebrow={t("hero.eyebrow")}
+          title={t("hero.titulo")}
+          paragraph={t("hero.parrafo")}
+          ctaLabel={t("hero.cta")}
+          image="/images/servicios/import-hero.png"
+          mobileImage="/images/servicios/import-hero.mobile.png"
+          imageAlt={t("hero.imagenAlt")}
+        />
 
-      <TrustBar />
+        <TrustBar />
 
-      <ProcessSteps
-        eyebrow={t("recorrido.eyebrow")}
-        title={t("recorrido.titulo")}
-        paragraph={t("recorrido.parrafo")}
-        steps={t.raw("recorrido.pasos") as ProcessStep[]}
-      />
+        <ProcessSteps
+          eyebrow={t("recorrido.eyebrow")}
+          title={t("recorrido.titulo")}
+          paragraph={t("recorrido.parrafo")}
+          steps={t.raw("recorrido.pasos") as ProcessStep[]}
+        />
 
-      <SplitFeature
-        eyebrow={t("cumplimiento.eyebrow")}
-        title={t("cumplimiento.titulo")}
-        paragraph={t("cumplimiento.parrafo")}
-        bullets={t.raw("cumplimiento.bullets")}
-        image="/images/servicios/import-cumplimiento.png"
-        imageAlt={t("cumplimiento.imagenAlt")}
-        imageSide="left"
-        background="white"
-      />
+        <SplitFeature
+          eyebrow={t("cumplimiento.eyebrow")}
+          title={t("cumplimiento.titulo")}
+          paragraph={t("cumplimiento.parrafo")}
+          bullets={t.raw("cumplimiento.bullets")}
+          image="/images/servicios/import-cumplimiento.png"
+          imageAlt={t("cumplimiento.imagenAlt")}
+          imageSide="left"
+          background="white"
+        />
 
-      <HighlightBand
-        icon={ShieldCheck}
-        eyebrow={t("titularidad.eyebrow")}
-        title={t("titularidad.titulo")}
-        paragraph={t("titularidad.parrafo")}
-      />
+        <HighlightBand
+          icon={ShieldCheck}
+          eyebrow={t("titularidad.eyebrow")}
+          title={t("titularidad.titulo")}
+          paragraph={t("titularidad.parrafo")}
+        />
 
-      <CtaBand
-        title={t("cierre.titulo")}
-        description={t("cierre.parrafo")}
-        ctaLabel={t("cierre.cta")}
-      />
-    </main>
+        <CtaBand
+          title={t("cierre.titulo")}
+          description={t("cierre.parrafo")}
+          ctaLabel={t("cierre.cta")}
+        />
+      </main>
+    </>
   );
 }

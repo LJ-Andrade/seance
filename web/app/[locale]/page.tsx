@@ -1,6 +1,13 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { buildMetadata } from "@/lib/seo";
+import {
+  faqPageNode,
+  organizationNode,
+  personNodes,
+  type FaqItem,
+} from "@/lib/structured-data";
+import { JsonLd } from "@/components/seo/json-ld";
 import { Hero } from "@/components/sections/hero";
 import { TrustAnchor } from "@/components/sections/trust-anchor";
 import { TrustBar } from "@/components/sections/trust-bar";
@@ -38,22 +45,34 @@ export default async function HomePage({ params }: PageProps) {
   const { locale } = await params;
   setRequestLocale(locale);
 
+  const t = await getTranslations({ locale, namespace: "inicio" });
+  const faqItems = t.raw("faq.items") as FaqItem[];
+
   return (
-    <main className="flex flex-1 flex-col">
-      <Hero />
-      <TrustAnchor />
-      <TrustBar />
-      <Soluciones />
-      <Confidencialidad />
-      <Stats />
-      <Servicios />
-      <Proceso />
-      <Guia />
-      <Registro />
-      <Nosotros />
-      <Everest />
-      <Faq />
-      <Cierre />
-    </main>
+    <>
+      <JsonLd
+        nodes={[
+          organizationNode(t("hero.parrafo")),
+          ...personNodes(locale),
+          faqPageNode(locale, "", faqItems),
+        ]}
+      />
+      <main className="flex flex-1 flex-col">
+        <Hero />
+        <TrustAnchor />
+        <TrustBar />
+        <Soluciones />
+        <Confidencialidad />
+        <Stats />
+        <Servicios />
+        <Proceso />
+        <Guia />
+        <Registro />
+        <Nosotros />
+        <Everest />
+        <Faq />
+        <Cierre />
+      </main>
+    </>
   );
 }

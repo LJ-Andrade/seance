@@ -12,6 +12,12 @@ import {
   UserCheck,
 } from "lucide-react";
 import { buildMetadata } from "@/lib/seo";
+import {
+  faqPageNode,
+  serviceNode,
+  type FaqItem,
+} from "@/lib/structured-data";
+import { JsonLd } from "@/components/seo/json-ld";
 import { TrustBar } from "@/components/sections/trust-bar";
 import { CtaBand } from "@/components/sections/cta-band";
 import { ServiceHero } from "@/components/sections/servicios/service-hero";
@@ -37,6 +43,7 @@ export async function generateMetadata({
     path: "servicios/hosting",
     title: t("titulo"),
     description: t("descripcion"),
+    keywords: t.raw("palabrasClave") as string[],
   });
 }
 
@@ -45,63 +52,82 @@ export default async function HostingPage({ params }: PageProps) {
   setRequestLocale(locale);
 
   const t = await getTranslations({ locale, namespace: "servicios.hosting" });
+  const faqItems = t.raw("faq.items") as FaqItem[];
 
   return (
-    <main className="flex flex-1 flex-col">
-      <ServiceHero
-        eyebrow={t("hero.eyebrow")}
-        title={t("hero.titulo")}
-        paragraph={t("hero.parrafo")}
-        ctaLabel={t("hero.cta")}
-        image="/images/servicios/hosting-hero.png"
-        imageAlt={t("hero.imagenAlt")}
+    <>
+      <JsonLd
+        nodes={[
+          serviceNode({
+            locale,
+            path: "servicios/hosting",
+            name: t("hero.titulo"),
+            description: t("hero.parrafo"),
+            serviceType:
+              locale === "en"
+                ? "Regulatory hosting for cosmetics importers"
+                : "Hosting regulatorio para importadores de cosméticos",
+          }),
+          faqPageNode(locale, "servicios/hosting", faqItems),
+        ]}
       />
+      <main className="flex flex-1 flex-col">
+        <ServiceHero
+          eyebrow={t("hero.eyebrow")}
+          title={t("hero.titulo")}
+          paragraph={t("hero.parrafo")}
+          ctaLabel={t("hero.cta")}
+          image="/images/servicios/hosting-hero.png"
+          mobileImage="/images/servicios/hosting-hero-mobile.png"
+          imageAlt={t("hero.imagenAlt")}
+        />
 
-      <TrustBar />
+        <TrustBar />
 
-      <SplitFeature
-        eyebrow={t("intro.eyebrow")}
-        title={t("intro.titulo")}
-        paragraph={t("intro.parrafo")}
-        image="/images/servicios/hosting-intro.png"
-        imageAlt={t("intro.imagenAlt")}
-      />
+        <SplitFeature
+          eyebrow={t("intro.eyebrow")}
+          title={t("intro.titulo")}
+          paragraph={t("intro.parrafo")}
+          image="/images/servicios/hosting-intro.png"
+          imageAlt={t("intro.imagenAlt")}
+        />
 
-      <IconCardGrid
-        eyebrow={t("incluye.eyebrow")}
-        title={t("incluye.titulo")}
-        items={t.raw("incluye.items")}
-        icons={[Building2, UserCheck, FileText, RefreshCcw]}
-      />
+        <IconCardGrid
+          eyebrow={t("incluye.eyebrow")}
+          title={t("incluye.titulo")}
+          items={t.raw("incluye.items")}
+          icons={[Building2, UserCheck, FileText, RefreshCcw]}
+        />
 
-      <HighlightBand
-        icon={ShieldCheck}
-        eyebrow={t("titularidad.eyebrow")}
-        title={t("titularidad.titulo")}
-        paragraph={t("titularidad.parrafo")}
-      />
+        <HighlightBand
+          icon={ShieldCheck}
+          eyebrow={t("titularidad.eyebrow")}
+          title={t("titularidad.titulo")}
+          paragraph={t("titularidad.parrafo")}
+        />
 
-      <MethodPoints
-        eyebrow={t("metodo.eyebrow")}
-        title={t("metodo.titulo")}
-        paragraph={t("metodo.parrafo")}
-        points={t.raw("metodo.puntos")}
-        icons={[Shield, Eye, Info, BookOpen]}
-      />
+        <MethodPoints
+          eyebrow={t("metodo.eyebrow")}
+          title={t("metodo.titulo")}
+          paragraph={t("metodo.parrafo")}
+          points={t.raw("metodo.puntos")}
+          icons={[Shield, Eye, Info, BookOpen]}
+        />
 
-      <CheckCards title={t("paraVos.titulo")} items={t.raw("paraVos.items")} />
+        <CheckCards title={t("paraVos.titulo")} items={t.raw("paraVos.items")} />
 
-      <FaqSection
-        eyebrow={t("faq.eyebrow")}
-        title={t("faq.titulo")}
-        items={t.raw("faq.items")}
-      />
+        <FaqSection
+          eyebrow={t("faq.eyebrow")}
+          title={t("faq.titulo")}
+          items={faqItems}
+        />
 
-      <CtaBand
-        title={t("cierre.titulo")}
-        description={t("cierre.parrafo")}
-        ctaLabel={t("cierre.cta")}
-      />
-    </main>
+        <CtaBand
+          title={t("cierre.titulo")}
+          description={t("cierre.parrafo")}
+          ctaLabel={t("cierre.cta")}
+        />
+      </main>
+    </>
   );
 }

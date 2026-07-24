@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Download } from "lucide-react";
 
 type ProductCardProps = {
+  id: string;
   titulo: string;
   descripcion: string;
   presentaciones: string[];
@@ -16,6 +17,7 @@ type ProductCardProps = {
  * and a "download data sheet" button.
  */
 export function ProductCard({
+  id,
   titulo,
   descripcion,
   presentaciones,
@@ -25,7 +27,10 @@ export function ProductCard({
   fichaHref = "#",
 }: ProductCardProps) {
   return (
-    <article className="flex flex-col overflow-hidden rounded-[8px] border border-border bg-brand-cream">
+    <article
+      id={id}
+      className="flex scroll-mt-24 flex-col overflow-hidden rounded-[8px] border border-border bg-brand-cream"
+    >
       <div className="relative h-[280px] w-full">
         <Image
           src={image}

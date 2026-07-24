@@ -17,3 +17,7 @@
 ## Release Process
 
 - TBD.
+
+## Temporary local demos
+
+For short-lived, non-production reviews, the local Next.js server can be shared through a Cloudflare Quick Tunnel. The procedure, limitations, and shutdown steps are documented in Spanish in [`TUNEL_TEMPORAL.md`](./TUNEL_TEMPORAL.md).

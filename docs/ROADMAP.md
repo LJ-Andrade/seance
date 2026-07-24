@@ -22,7 +22,8 @@ _Nothing in progress._
 ## Next Up
 
 ### SEO Baseline
-- [ ] Add JSON-LD structured data baseline (Organization on home)
+- [x] Add localized JSON-LD structured data across public routes
+- [ ] Confirm business opening hours for the Contacto `LocalBusiness` schema
 
 ### Content
 - [x] Build home page sections from the Figma design (full home + header/footer)

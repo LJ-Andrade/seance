@@ -32,6 +32,7 @@ export function CtaBand({
           ) : null}
           <CtaButton
             href={ctaHref}
+            liquid={false}
             className="mt-2 bg-brand-primary text-white hover:bg-brand-primary/90"
           >
             {ctaLabel}

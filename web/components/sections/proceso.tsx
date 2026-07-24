@@ -2,6 +2,7 @@ import { useTranslations } from "next-intl";
 import { Container } from "@/components/layout/container";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { Heading } from "@/components/ui/heading";
+import { Reveal } from "@/components/ui/reveal";
 import { cn } from "@/lib/utils";
 
 type Paso = { numero: string; titulo: string; descripcion: string };
@@ -17,15 +18,15 @@ export function Proceso() {
   return (
     <section className="bg-white py-20 md:py-24">
       <Container className="grid gap-12 lg:grid-cols-2 lg:gap-20">
-        <div className="flex flex-col gap-6">
+        <Reveal from="left" className="flex flex-col gap-6">
           <Eyebrow>{t("eyebrow")}</Eyebrow>
           <Heading>{t("titulo")}</Heading>
           <p className="max-w-[520px] text-base leading-[22px] tracking-[0.02em] text-brand-muted">
             {t("parrafo")}
           </p>
-        </div>
+        </Reveal>
 
-        <ol className="flex flex-col">
+        <Reveal as="ol" from="right" delay={120} className="flex flex-col">
           {pasos.map((paso, i) => (
             <li
               key={paso.numero}
@@ -47,7 +48,7 @@ export function Proceso() {
               </div>
             </li>
           ))}
-        </ol>
+        </Reveal>
       </Container>
     </section>
   );

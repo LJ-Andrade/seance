@@ -1,6 +1,7 @@
 import { useTranslations } from "next-intl";
 import { Container } from "@/components/layout/container";
 import { SectionHeader } from "@/components/sections/section-header";
+import { Reveal } from "@/components/ui/reveal";
 
 const keys = ["fabricacion", "hosting", "importacion"] as const;
 
@@ -14,18 +15,20 @@ export function Servicios() {
   return (
     <section className="bg-white py-20 md:py-24">
       <Container className="flex flex-col gap-14">
-        <SectionHeader eyebrow={t("eyebrow")} title={t("titulo")} />
+        <Reveal>
+          <SectionHeader eyebrow={t("eyebrow")} title={t("titulo")} />
+        </Reveal>
 
         <div className="grid gap-10 md:grid-cols-3">
-          {keys.map((key) => (
-            <div key={key} className="flex flex-col gap-4">
+          {keys.map((key, i) => (
+            <Reveal key={key} delay={i * 120} className="flex flex-col gap-4">
               <h3 className="font-serif text-2xl text-brand-slate">
                 {t(`items.${key}.titulo`)}
               </h3>
               <p className="text-base leading-[22px] tracking-[0.02em] text-brand-muted">
                 {t(`items.${key}.descripcion`)}
               </p>
-            </div>
+            </Reveal>
           ))}
         </div>
       </Container>

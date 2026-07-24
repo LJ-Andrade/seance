@@ -1,32 +1,38 @@
 {
   "metadatos": {
     "inicio": {
-      "titulo": "Laboratorio Séance — Fabricación, importación y registro ANMAT",
-      "descripcion": "Fabricamos, importamos y registramos productos cosméticos, de perfumería y domisanitarios en Argentina. Habilitación ANMAT vigente, más de 35 años de trayectoria y confidencialidad total."
+      "titulo": "Laboratorio Séance | Fabricación, Importación y Registro Cosmético ANMAT — Argentina",
+      "descripcion": "Laboratorio cosmético argentino habilitado por ANMAT desde 1990. Fabricamos, importamos y registramos cosméticos con confidencialidad total. Registro ANMAT inmediato. Más de 35 años, 200+ marcas."
     },
     "contacto": {
-      "titulo": "Contacto — Laboratorio Séance",
-      "descripcion": "Contanos tu proyecto de fabricación, importación o registro ANMAT. Te respondemos dentro de las 48 horas, sin compromiso y con total confidencialidad."
+      "titulo": "Contacto | Laboratorio Séance — Fabricación, Importación y Registro Cosmético",
+      "descripcion": "Contactá a Laboratorio Séance. Respondemos en 48 horas, sin compromiso y con total confidencialidad. Directorio 3548, Caseros, Buenos Aires."
     },
     "fabricacion": {
-      "titulo": "Fabricación Tercerista (Private Label) — Laboratorio Séance",
-      "descripcion": "Fabricamos tu línea cosmética en Argentina bajo tu marca: fórmula a medida, producción con BPM, control de calidad por lote y registro ANMAT. Confidencialidad total."
+      "titulo": "Fabricación Cosmética Tercerista (Private Label) ANMAT | Laboratorio Séance",
+      "descripcion": "Fabricamos tu línea cosmética en Argentina: fórmula a medida, producción con BPM, control de calidad y registro ANMAT. Private label confidencial para marcas e importadores. Más de 35 años."
     },
     "hosting": {
-      "titulo": "Hosting Regulatorio para Importadores — Laboratorio Séance",
-      "descripcion": "Respaldo regulatorio para importar cosméticos en Argentina: depósito habilitado, dirección técnica, registro ANMAT y seguimiento constante. La titularidad siempre es tuya."
+      "titulo": "Hosting Regulatorio para Importadores de Cosméticos ANMAT | Laboratorio Séance",
+      "descripcion": "Hosting regulatorio para importar cosméticos en Argentina: depósito habilitado, dirección técnica, registro ANMAT y seguimiento constante. La titularidad es siempre tuya. Más de 35 años.",
+      "palabrasClave": [
+        "hosting regulatorio cosméticos",
+        "dirección técnica ANMAT",
+        "depósito habilitado importadores",
+        "respaldo regulatorio importación cosmética Argentina"
+      ]
     },
     "importacion": {
-      "titulo": "Importación Completa de Cosméticos — Laboratorio Séance",
-      "descripcion": "Gestionamos la importación integral de cosméticos a Argentina: aduana, registro ANMAT, logística y control de calidad. Cumplimiento del 100% y confidencialidad total."
+      "titulo": "Importación de Cosméticos a Argentina · Registro ANMAT | Laboratorio Séance",
+      "descripcion": "Importamos tu producto cosmético a Argentina de punta a punta: aduana, registro ANMAT, logística y control de calidad. Listo para vender, en regla y con confidencialidad total."
     },
     "nosotros": {
-      "titulo": "Nosotros — Laboratorio Séance",
-      "descripcion": "Más de 35 años fabricando, importando y registrando cosméticos en Argentina. Empresa familiar con habilitación ANMAT, autoridad regulatoria y confidencialidad total."
+      "titulo": "Nosotros | Laboratorio Séance — Fabricación e Importación Cosmética ANMAT",
+      "descripcion": "Conocé Laboratorio Séance: laboratorio cosmético argentino habilitado por ANMAT. Fabricación tercerista, hosting regulatorio e importación integral, con confidencialidad total. Más de 35 años."
     },
     "productos": {
-      "titulo": "Everest — Nuestra marca propia | Laboratorio Séance",
-      "descripcion": "Everest es la línea propia de Laboratorio Séance: higiene, sanitización y cuidado personal fabricados con las mismas habilitaciones y estándares que ofrecemos a clientes."
+      "titulo": "Everest · Productos de Higiene, Sanitización y Cuidado Personal | Laboratorio Séance",
+      "descripcion": "Conocé Everest, la marca propia de Laboratorio Séance: alcohol en gel, alcohol 70%, jabón bactericida, repelente, shampoo y acondicionador. Calidad y cumplimiento ANMAT."
     }
   },
   "comun": {
@@ -248,15 +254,15 @@
           },
           {
             "pregunta": "¿Qué aporta Séance exactamente?",
-            "respuesta": "Aportamos el respaldo regulatorio completo: depósito habilitado por ANMAT, dirección técnica, el registro de tus productos y el seguimiento regulatorio en el tiempo."
+            "respuesta": "El depósito habilitado, la dirección técnica, el registro ante ANMAT y el seguimiento regulatorio constante de tus productos."
           },
           {
             "pregunta": "¿En qué se diferencia del servicio de importación?",
-            "respuesta": "En el hosting nos enfocamos en el respaldo regulatorio para que operes en regla; en la importación gestionamos además todo el recorrido logístico y aduanero de tu producto hasta Argentina."
+            "respuesta": "En el hosting, vos importás y comercializás con tu titularidad y nosotros respaldamos el cumplimiento. En la importación integral, gestionamos nosotros todo el recorrido del producto hasta Argentina."
           },
           {
             "pregunta": "¿Me acompañan después del registro?",
-            "respuesta": "Sí. El seguimiento es constante: cambios de normativa, renovaciones y cualquier requerimiento de ANMAT los gestionamos mientras dure tu operación."
+            "respuesta": "Sí. El seguimiento regulatorio es constante: cambios de normativa, renovaciones y requerimientos de ANMAT a lo largo del tiempo."
           }
         ]
       },
@@ -556,7 +562,8 @@
     },
     "everest": {
       "titulo": "Everest — nuestra marca propia",
-      "parrafo": "Everest es nuestra marca propia — fabricada con los mismos estándares y habilitaciones que ofrecemos a clientes: higiene, sanitización y cuidado personal. Si confiamos en Séance para poner nuestro nombre, podés confiar para el tuyo."
+      "parrafo": "Everest es nuestra marca propia — fabricada con los mismos estándares y habilitaciones que ofrecemos a clientes: higiene, sanitización y cuidado personal. Si confiamos en Séance para poner nuestro nombre, podés confiar para el tuyo.",
+      "logoAlt": "Logo de Everest, la marca propia de Laboratorio Séance"
     },
     "proceso": {
       "eyebrow": "Proceso de trabajo",
@@ -606,23 +613,23 @@
         },
         {
           "pregunta": "¿Mi fórmula y mi marca quedan protegidas?",
-          "respuesta": "Sí. Cada desarrollo es confidencial y exclusivo: no compartimos ni reutilizamos fórmulas, y la titularidad de la marca y del registro siempre queda en manos del cliente."
+          "respuesta": "Sí. Cada fórmula es confidencial y exclusiva de cada cliente: no la compartimos ni la reutilizamos. La titularidad de tu marca y de tu registro es siempre tuya."
         },
         {
           "pregunta": "¿Necesito saber cómo funciona ANMAT para trabajar con ustedes?",
-          "respuesta": "No. Nos encargamos de toda la parte regulatoria: te decimos qué se necesita, preparamos el expediente y gestionamos el registro de punta a punta."
+          "respuesta": "No. Te hacemos una consulta inicial gratuita, entendemos tu proyecto y te decimos exactamente qué camino seguir."
         },
         {
           "pregunta": "¿Cuánto tarda registrar un producto cosmético en Argentina?",
-          "respuesta": "Una vez que el expediente está completo, el registro ante ANMAT es inmediato. El tiempo real depende de preparar bien la documentación, y eso es justamente lo que hacemos por vos."
+          "respuesta": "El registro ante ANMAT es inmediato una vez que la documentación y los estudios están completos. El trabajo real está en preparar bien el expediente — y de eso nos encargamos nosotros."
         },
         {
           "pregunta": "¿Fabrican para marcas internacionales sin estructura en Argentina?",
-          "respuesta": "Sí. A través de nuestro hosting regulatorio aportamos el depósito habilitado, la dirección técnica y el registro ante ANMAT para que marcas e importadores del exterior operen en regla."
+          "respuesta": "Sí. Mediante nuestro servicio de hosting para importadores, operás legalmente en Argentina sin necesidad de tener una entidad local."
         },
         {
           "pregunta": "¿Dónde están ubicados?",
-          "respuesta": "Estamos en Directorio 3548, Caseros, Buenos Aires, Argentina, con establecimiento habilitado por ANMAT."
+          "respuesta": "En Directorio 3548, Caseros, Buenos Aires, Argentina."
         }
       ]
     },

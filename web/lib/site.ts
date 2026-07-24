@@ -32,8 +32,8 @@ export const siteConfig = {
     facebook: "#",
     linkedin: "#",
   },
-  // Digits only, for wa.me links.
-  whatsapp: "5491557406182",
+  whatsappUrl:
+    "https://wa.me/541157406182?text=Hola%2C+me+interesa+conocer+m%C3%A1s+sobre+los+servicios+de+Laboratorio+S%C3%A9ance",
   // Google Maps "Seance" place (Directorio 3548, Caseros).
   maps: {
     query: "Seance, Directorio 3548, Caseros, Buenos Aires, Argentina",

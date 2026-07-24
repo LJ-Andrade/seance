@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { buildMetadata } from "@/lib/seo";
+import { aboutPageNode } from "@/lib/structured-data";
+import { JsonLd } from "@/components/seo/json-ld";
 import { TrustBar } from "@/components/sections/trust-bar";
 import { CtaBand } from "@/components/sections/cta-band";
 import { AboutHero } from "@/components/sections/nosotros/about-hero";
@@ -36,58 +38,65 @@ export default async function NosotrosPage({ params }: PageProps) {
   const t = await getTranslations({ locale, namespace: "nosotros" });
 
   return (
-    <main className="flex flex-1 flex-col">
-      <AboutHero
-        eyebrow={t("hero.eyebrow")}
-        title={t("hero.titulo")}
-        paragraph={t("hero.parrafo")}
-        videoAlt={t("hero.videoAlt")}
-        certAlt={t("hero.certAlt")}
-        certLinea1={t("hero.certLinea1")}
-        certLinea2={t("hero.certLinea2")}
+    <>
+      <JsonLd
+        nodes={[
+          aboutPageNode(locale, t("hero.titulo"), t("hero.parrafo")),
+        ]}
       />
+      <main className="flex flex-1 flex-col">
+        <AboutHero
+          eyebrow={t("hero.eyebrow")}
+          title={t("hero.titulo")}
+          paragraph={t("hero.parrafo")}
+          videoAlt={t("hero.videoAlt")}
+          certAlt={t("hero.certAlt")}
+          certLinea1={t("hero.certLinea1")}
+          certLinea2={t("hero.certLinea2")}
+        />
 
-      <TrustBar />
+        <TrustBar />
 
-      <SolutionsOverview
-        eyebrow={t("soluciones.eyebrow")}
-        title={t("soluciones.titulo")}
-        paragraph={t("soluciones.parrafo")}
-        items={t.raw("soluciones.items")}
-      />
+        <SolutionsOverview
+          eyebrow={t("soluciones.eyebrow")}
+          title={t("soluciones.titulo")}
+          paragraph={t("soluciones.parrafo")}
+          items={t.raw("soluciones.items")}
+        />
 
-      <Capabilities
-        eyebrow={t("capacidades.eyebrow")}
-        title={t("capacidades.titulo")}
-        items={t.raw("capacidades.items")}
-      />
+        <Capabilities
+          eyebrow={t("capacidades.eyebrow")}
+          title={t("capacidades.titulo")}
+          items={t.raw("capacidades.items")}
+        />
 
-      <AudienceCards
-        eyebrow={t("marcas.eyebrow")}
-        title={t("marcas.titulo")}
-        items={t.raw("marcas.items")}
-      />
+        <AudienceCards
+          eyebrow={t("marcas.eyebrow")}
+          title={t("marcas.titulo")}
+          items={t.raw("marcas.items")}
+        />
 
-      <MissionVision
-        mision={t.raw("mision")}
-        vision={t.raw("vision")}
-      />
+        <MissionVision
+          mision={t.raw("mision")}
+          vision={t.raw("vision")}
+        />
 
-      <Values eyebrow={t("valores.eyebrow")} items={t.raw("valores.items")} />
+        <Values eyebrow={t("valores.eyebrow")} items={t.raw("valores.items")} />
 
-      <OwnBrand
-        eyebrow={t("everest.eyebrow")}
-        title={t("everest.titulo")}
-        paragraph={t("everest.parrafo")}
-        products={t.raw("everest.productos")}
-        logoAlt={t("everest.logoAlt")}
-      />
+        <OwnBrand
+          eyebrow={t("everest.eyebrow")}
+          title={t("everest.titulo")}
+          paragraph={t("everest.parrafo")}
+          products={t.raw("everest.productos")}
+          logoAlt={t("everest.logoAlt")}
+        />
 
-      <CtaBand
-        title={t("cierre.titulo")}
-        description={t("cierre.parrafo")}
-        ctaLabel={t("cierre.cta")}
-      />
-    </main>
+        <CtaBand
+          title={t("cierre.titulo")}
+          description={t("cierre.parrafo")}
+          ctaLabel={t("cierre.cta")}
+        />
+      </main>
+    </>
   );
 }

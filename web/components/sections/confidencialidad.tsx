@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Lock } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { Container } from "@/components/layout/container";
+import { Reveal } from "@/components/ui/reveal";
 
 /**
  * Dark teal confidentiality section: copy and a bulleted list of guarantees on
@@ -14,7 +15,7 @@ export function Confidencialidad() {
   return (
     <section className="bg-brand-teal py-20 md:py-24">
       <Container className="flex flex-col items-center gap-12 lg:flex-row lg:gap-20">
-        <div className="flex flex-1 flex-col gap-8">
+        <Reveal from="left" className="flex flex-1 flex-col gap-8">
           <div className="flex flex-col gap-4">
             <p className="flex items-center gap-3 text-[11px] font-medium uppercase tracking-[2px] text-brand-cream-2">
               <Lock className="size-5 text-brand-cream-2" aria-hidden />
@@ -37,9 +38,13 @@ export function Confidencialidad() {
               </li>
             ))}
           </ul>
-        </div>
+        </Reveal>
 
-        <div className="relative aspect-[5/4] w-full max-w-[500px] shrink-0 overflow-hidden rounded-lg">
+        <Reveal
+          from="right"
+          delay={120}
+          className="relative aspect-[5/4] w-full max-w-[500px] shrink-0 overflow-hidden rounded-lg"
+        >
           <Image
             src="/images/confidencialidad.png"
             alt={t("imagenAlt")}
@@ -47,7 +52,7 @@ export function Confidencialidad() {
             sizes="(min-width: 1024px) 500px, 100vw"
             className="object-cover"
           />
-        </div>
+        </Reveal>
       </Container>
     </section>
   );

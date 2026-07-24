@@ -2,6 +2,11 @@
 
 Execution log and active implementation checklists. Add a numbered checklist before multi-file execution and mark items as completed as work progresses. Keep this separate from `SPECS.md` (intended behavior) and `ROADMAP.md` (status-level tracking).
 
+## 2026-07-15 - Temporary demo tunnel documentation
+
+1. [x] Document how to run and stop a temporary Cloudflare Quick Tunnel for local demos.
+2. [x] Add the guide to the documentation index and deployment notes.
+
 ## 2026-07-03 - Project Bootstrap
 
 1. [x] Create `AGENTS.md` with project orchestrator instructions
@@ -114,3 +119,46 @@ Reworked the first-pass contact layout to the actual Figma design.
 2. [x] Form redesign: 2-col field grid, 56px inputs (6px radius, `#e9eaec` border), required red asterisks, message char counter (0/200), compact uppercase "Enviar" button
 3. [x] i18n: `contacto.form` fields now carry `label` + `placeholder`; added `tarjetas` and `mapaAlt`; copy taken from the design
 4. [x] Build (`/es/contacto`, `/en/contacto` SSG), lint and runtime smoke test clean
+
+## 2026-07-23 - Route metadata and structured data
+
+1. [x] Audit existing metadata, localized content, business data, FAQs, products,
+   people, contact details, and product data-sheet availability.
+2. [x] Add localized client-provided title tags, meta descriptions, and Hosting
+   keywords for all seven public page types.
+3. [x] Add reusable JSON-LD serialization and shared organization identity.
+4. [x] Add page-specific Organization/LocalBusiness, Person, FAQPage, AboutPage,
+   Service, Product, and ContactPage graphs.
+5. [x] Validate lint, TypeScript/production build, generated metadata, JSON-LD,
+   canonical URLs, and hreflang.
+6. [x] Record unresolved client inputs: business opening hours and approved
+   selectable-text product data-sheet PDFs.
+
+## 2026-07-23 - Responsive service hero images
+
+1. [x] Audit portrait mobile assets, dimensions, composition, and route mapping.
+2. [x] Extend the shared `ServiceHero` with a dedicated mobile image.
+3. [x] Wire Fabricación, Hosting, and Importación to their matching mobile asset.
+4. [x] Verify desktop/mobile composition, localized copy flow, image sizing, and
+   absence of horizontal overflow.
+5. [x] Validate lint, TypeScript, and the production build.
+
+## 2026-07-23 - Hero pointer parallax
+
+1. [x] Specify horizontal-only movement, center pivot, overscan, reset behavior,
+   and reduced-motion handling.
+2. [x] Add a small reusable Client Component that exposes pointer position as
+   CSS custom properties while preserving server-rendered hero content.
+3. [x] Apply the shared motion to Home and service hero image layers.
+4. [x] Validate pointer reset, responsive behavior, no exposed edges, lint,
+   TypeScript, and production build.
+
+## 2026-07-23 - Solution card chrome tilt
+
+1. [x] Specify pointer-driven 3D tilt, reset behavior, touch guards,
+   and reduced-motion handling.
+2. [x] Add a reusable Client Component while preserving server-rendered card
+   content and link semantics.
+3. [x] Apply the effect to the three Home solution cards.
+4. [x] Validate cursor response, neutral reset, responsive behavior, lint,
+   TypeScript, and production build.
