@@ -1,6 +1,7 @@
 import type { LucideIcon } from "lucide-react";
 import { Container } from "@/components/layout/container";
 import { SectionHeader } from "@/components/sections/section-header";
+import { Reveal } from "@/components/ui/reveal";
 
 type Point = { titulo: string; descripcion: string };
 
@@ -28,13 +29,20 @@ export function MethodPoints({
     <section className="bg-brand-cream-2 py-16 md:py-24">
       <Container>
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
-          <SectionHeader eyebrow={eyebrow} title={title} description={paragraph} />
+          <Reveal from="left">
+            <SectionHeader eyebrow={eyebrow} title={title} description={paragraph} />
+          </Reveal>
 
           <div className="flex flex-col gap-6">
             {points.map((point, i) => {
               const Icon = icons[i];
               return (
-                <div key={point.titulo} className="flex items-start gap-5">
+                <Reveal
+                  key={point.titulo}
+                  from="right"
+                  delay={i * 100}
+                  className="flex items-start gap-5"
+                >
                   <span className="flex size-12 shrink-0 items-center justify-center rounded-[8px] bg-white text-brand-teal shadow-[4px_4px_4px_rgba(15,76,92,0.12)]">
                     {Icon ? <Icon className="size-5" aria-hidden /> : null}
                   </span>
@@ -46,7 +54,7 @@ export function MethodPoints({
                       {point.descripcion}
                     </p>
                   </div>
-                </div>
+                </Reveal>
               );
             })}
           </div>

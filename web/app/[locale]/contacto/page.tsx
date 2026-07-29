@@ -4,6 +4,7 @@ import { buildMetadata } from "@/lib/seo";
 import { contactPageNode, organizationNode } from "@/lib/structured-data";
 import { JsonLd } from "@/components/seo/json-ld";
 import { Container } from "@/components/layout/container";
+import { Reveal } from "@/components/ui/reveal";
 import { ContactForm } from "@/components/sections/contact/contact-form";
 import { ContactMap } from "@/components/sections/contact/contact-map";
 import { ContactCards } from "@/components/sections/contact/contact-cards";
@@ -57,7 +58,9 @@ export default async function ContactoPage({ params }: PageProps) {
                 <ContactForm />
               </div>
 
-              <ContactMap />
+              <Reveal from="right" delay={120} className="flex flex-col">
+                <ContactMap />
+              </Reveal>
             </div>
           </Container>
         </section>

@@ -1,5 +1,6 @@
 import { Container } from "@/components/layout/container";
 import { SectionHeader } from "@/components/sections/section-header";
+import { Reveal } from "@/components/ui/reveal";
 import { cn } from "@/lib/utils";
 
 type Item = { titulo: string; descripcion: string };
@@ -25,7 +26,9 @@ export function InfoCardGrid({
   return (
     <section className="bg-brand-cream-3 py-16 md:py-24">
       <Container>
-        <SectionHeader eyebrow={eyebrow} title={title} />
+        <Reveal>
+          <SectionHeader eyebrow={eyebrow} title={title} />
+        </Reveal>
         <div
           className={cn(
             "mt-12 grid gap-6",
@@ -34,9 +37,10 @@ export function InfoCardGrid({
               : "sm:grid-cols-2 lg:grid-cols-3",
           )}
         >
-          {items.map((item) => (
-            <div
+          {items.map((item, i) => (
+            <Reveal
               key={item.titulo}
+              delay={i * 100}
               className="flex flex-col gap-3 rounded-[8px] bg-brand-cream p-10"
             >
               <h3 className="font-serif text-3xl leading-tight text-brand-slate">
@@ -45,7 +49,7 @@ export function InfoCardGrid({
               <p className="text-base leading-[22px] tracking-[0.02em] text-brand-muted">
                 {item.descripcion}
               </p>
-            </div>
+            </Reveal>
           ))}
         </div>
       </Container>

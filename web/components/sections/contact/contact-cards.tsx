@@ -2,6 +2,7 @@ import type { LucideIcon } from "lucide-react";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { Container } from "@/components/layout/container";
+import { Reveal } from "@/components/ui/reveal";
 import { siteConfig } from "@/lib/site";
 
 /**
@@ -22,9 +23,10 @@ export function ContactCards() {
     <section className="bg-brand-cream py-16 md:py-24">
       <Container>
         <div className="grid gap-8 md:grid-cols-3 md:gap-14">
-          {cards.map(({ icon: Icon, title, value }) => (
-            <div
+          {cards.map(({ icon: Icon, title, value }, i) => (
+            <Reveal
               key={title}
+              delay={i * 110}
               className="flex flex-col gap-6 rounded-[8px] border border-border bg-white p-10"
             >
               <span className="flex size-14 items-center justify-center rounded-[8px] bg-brand-cream-2 text-brand-teal">
@@ -38,7 +40,7 @@ export function ContactCards() {
                   {value}
                 </p>
               </div>
-            </div>
+            </Reveal>
           ))}
         </div>
       </Container>

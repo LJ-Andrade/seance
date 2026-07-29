@@ -1,5 +1,6 @@
 import type { LucideIcon } from "lucide-react";
 import { Container } from "@/components/layout/container";
+import { Reveal } from "@/components/ui/reveal";
 import { cn } from "@/lib/utils";
 
 type HighlightBandProps = {
@@ -27,7 +28,7 @@ export function HighlightBand({
       className={cn("py-16 md:py-20", variant === "teal" ? "bg-brand-teal" : "bg-brand-muted")}
     >
       <Container>
-        <div className="mx-auto flex max-w-[820px] flex-col items-center gap-6 text-center">
+        <Reveal className="mx-auto flex max-w-[820px] flex-col items-center gap-6 text-center">
           <span className="flex size-20 items-center justify-center rounded-full bg-white/10 text-white">
             <Icon className="size-9" aria-hidden />
           </span>
@@ -49,7 +50,7 @@ export function HighlightBand({
           <p className="text-base leading-[24px] tracking-[0.02em] text-white/90">
             {paragraph}
           </p>
-        </div>
+        </Reveal>
       </Container>
     </section>
   );

@@ -1,5 +1,6 @@
 import { Container } from "@/components/layout/container";
 import { SectionHeader } from "@/components/sections/section-header";
+import { Reveal } from "@/components/ui/reveal";
 
 export type ProcessStep = {
   numero: string;
@@ -31,11 +32,13 @@ export function ProcessSteps({
   return (
     <section className="bg-white py-16 md:py-24">
       <Container>
-        <SectionHeader eyebrow={eyebrow} title={title} description={paragraph} />
+        <Reveal>
+          <SectionHeader eyebrow={eyebrow} title={title} description={paragraph} />
+        </Reveal>
 
         <div className="mt-14 grid gap-8 lg:grid-cols-4 lg:gap-6">
-          {steps.map((step) => (
-            <div key={step.numero} className="flex flex-col gap-5">
+          {steps.map((step, i) => (
+            <Reveal key={step.numero} delay={i * 120} className="flex flex-col gap-5">
               <span className="flex size-12 items-center justify-center rounded-full bg-brand-primary text-base font-bold text-white shadow-[0px_10px_7.5px_rgba(144,138,129,0.25)]">
                 {step.numero}
               </span>
@@ -88,7 +91,7 @@ export function ProcessSteps({
                   </div>
                 ) : null}
               </div>
-            </div>
+            </Reveal>
           ))}
         </div>
       </Container>

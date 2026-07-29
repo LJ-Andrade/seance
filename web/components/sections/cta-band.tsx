@@ -1,5 +1,6 @@
 import { Container } from "@/components/layout/container";
 import { CtaButton } from "@/components/ui/cta-button";
+import { Reveal } from "@/components/ui/reveal";
 
 type CtaBandProps = {
   title: string;
@@ -21,7 +22,7 @@ export function CtaBand({
   return (
     <section className="bg-brand-teal py-16 md:py-20">
       <Container>
-        <div className="flex flex-col items-center gap-6 text-center">
+        <Reveal className="flex flex-col items-center gap-6 text-center">
           <h2 className="font-serif text-4xl font-medium leading-[1.1] tracking-[-0.01em] text-brand-cream sm:text-5xl lg:text-[54px]">
             {title}
           </h2>
@@ -37,7 +38,7 @@ export function CtaBand({
           >
             {ctaLabel}
           </CtaButton>
-        </div>
+        </Reveal>
       </Container>
     </section>
   );

@@ -162,3 +162,22 @@ Reworked the first-pass contact layout to the actual Figma design.
 3. [x] Apply the effect to the three Home solution cards.
 4. [x] Validate cursor response, neutral reset, responsive behavior, lint,
    TypeScript, and production build.
+
+## 2026-07-29 - Site-wide scroll reveals
+
+Extend the Home scroll-reveal language (`Reveal`, `ChromeTilt`) to the rest of
+the site so every page shares the same entrance motion.
+
+1. [x] Nosotros sections: solutions overview, capabilities, audience, mission and
+   vision, values, own brand.
+2. [x] Service sections: info/icon grids, product categories, process steps,
+   split feature, method points, check cards, bands, FAQ.
+3. [x] Productos and Contacto pages plus the shared closing CTA band.
+4. [x] Keep above-the-fold hero copy unanimated (LCP) and validate lint,
+   TypeScript, and the production build.
+
+`ChromeTilt` was also applied to the Nosotros solution cards and the Everest
+product cards, with a slow hover zoom on the split-feature, category and product
+images. The reveal transition itself could not be observed in the automated
+browser pane (hidden tab, so `IntersectionObserver` never fires — the Home
+baseline behaves the same); layout was verified by forcing the revealed state.

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Download } from "lucide-react";
+import { ChromeTilt } from "@/components/ui/chrome-tilt";
 
 type ProductCardProps = {
   id: string;
@@ -27,17 +28,17 @@ export function ProductCard({
   fichaHref = "#",
 }: ProductCardProps) {
   return (
-    <article
+    <ChromeTilt
       id={id}
-      className="flex scroll-mt-24 flex-col overflow-hidden rounded-[8px] border border-border bg-brand-cream"
+      className="chrome-tilt-card group flex flex-1 scroll-mt-24 flex-col rounded-[8px] border border-border bg-brand-cream"
     >
-      <div className="relative h-[280px] w-full">
+      <div className="relative h-[280px] w-full overflow-hidden">
         <Image
           src={image}
           alt={titulo}
           fill
           sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-          className="object-cover"
+          className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.05] motion-reduce:transition-none motion-reduce:group-hover:scale-100"
         />
       </div>
 
@@ -73,6 +74,6 @@ export function ProductCard({
           {fichaLabel}
         </a>
       </div>
-    </article>
+    </ChromeTilt>
   );
 }

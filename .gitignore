@@ -9,3 +9,6 @@ Thumbs.db
 .env
 .env.*
 !.env.example
+
+# Local demo tunnel logs (see docs/TUNEL_TEMPORAL.md)
+.tunnel-*.log

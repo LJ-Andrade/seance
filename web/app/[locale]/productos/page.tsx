@@ -9,6 +9,7 @@ import { JsonLd } from "@/components/seo/json-ld";
 import { Container } from "@/components/layout/container";
 import { Heading } from "@/components/ui/heading";
 import { CtaBand } from "@/components/sections/cta-band";
+import { Reveal } from "@/components/ui/reveal";
 import { ProductCard } from "@/components/sections/productos/product-card";
 
 type PageProps = {
@@ -91,16 +92,17 @@ export default async function ProductosPage({ params }: PageProps) {
           <Container>
             <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
               {items.map((item, i) => (
-                <ProductCard
-                  key={item.titulo}
-                  id={PRODUCT_SLUGS[i]}
-                  titulo={item.titulo}
-                  descripcion={item.descripcion}
-                  presentaciones={item.presentaciones}
-                  image={PRODUCT_IMAGES[i]}
-                  presentacionesLabel={t("presentaciones")}
-                  fichaLabel={t("ficha")}
-                />
+                <Reveal key={item.titulo} delay={(i % 3) * 110} className="flex">
+                  <ProductCard
+                    id={PRODUCT_SLUGS[i]}
+                    titulo={item.titulo}
+                    descripcion={item.descripcion}
+                    presentaciones={item.presentaciones}
+                    image={PRODUCT_IMAGES[i]}
+                    presentacionesLabel={t("presentaciones")}
+                    fichaLabel={t("ficha")}
+                  />
+                </Reveal>
               ))}
             </div>
           </Container>

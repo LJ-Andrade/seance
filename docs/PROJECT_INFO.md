@@ -48,7 +48,15 @@ Rules:
 
 ## Environment
 
-> TBD: fill in once hosting/deployment is decided (e.g., Vercel, VPS + Nginx).
+- Production target: Hostinger VPS managed with CloudPanel, running the Next.js
+  server under PM2 behind CloudPanel's Nginx. The VPS is shared with other live
+  sites, so the app port must be discovered rather than assumed and no shared
+  service may be restarted globally.
+- `NEXT_PUBLIC_SITE_URL` is a build-time variable; the Brevo contact-form
+  variables (`BREVO_API_KEY`, `BREVO_SENDER_EMAIL`, `CONTACT_TO_EMAIL`) are read
+  at runtime.
+- Full provisioning, release, verification, and rollback steps live in
+  `docs/DEPLOY_INFO.md`.
 
 ## Commands
 

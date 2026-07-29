@@ -3,6 +3,7 @@ import { Check } from "lucide-react";
 import { Container } from "@/components/layout/container";
 import { SectionHeader } from "@/components/sections/section-header";
 import { CtaButton } from "@/components/ui/cta-button";
+import { Reveal } from "@/components/ui/reveal";
 
 type Category = { titulo: string; items: string[] };
 
@@ -30,13 +31,16 @@ export function ProductCategories({
   return (
     <section className="bg-brand-cream py-16 md:py-24">
       <Container>
-        <SectionHeader eyebrow={eyebrow} title={title} />
+        <Reveal>
+          <SectionHeader eyebrow={eyebrow} title={title} />
+        </Reveal>
 
         <div className="mt-12 grid gap-6 lg:grid-cols-2">
           {categories.map((category, i) => (
-            <div
+            <Reveal
               key={category.titulo}
-              className="relative flex min-h-[300px] flex-col overflow-hidden rounded-[8px] border border-border p-8 lg:p-10"
+              delay={i * 110}
+              className="group relative flex min-h-[300px] flex-col overflow-hidden rounded-[8px] border border-border p-8 lg:p-10"
             >
               {images[i] ? (
                 <Image
@@ -44,7 +48,7 @@ export function ProductCategories({
                   alt=""
                   fill
                   sizes="(min-width: 1024px) 50vw, 100vw"
-                  className="object-cover"
+                  className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04] motion-reduce:transition-none motion-reduce:group-hover:scale-100"
                 />
               ) : null}
               <div className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/70 to-white/40" />
@@ -66,11 +70,11 @@ export function ProductCategories({
                   ))}
                 </ul>
               </div>
-            </div>
+            </Reveal>
           ))}
         </div>
 
-        <div className="mt-12 flex flex-col items-center gap-6 text-center">
+        <Reveal className="mt-12 flex flex-col items-center gap-6 text-center">
           <div className="flex flex-col items-center gap-2">
             <p className="text-base font-semibold tracking-[0.02em] text-brand-ink">
               {cta.titulo}
@@ -80,7 +84,7 @@ export function ProductCategories({
             </p>
           </div>
           <CtaButton href="/contacto">{cta.cta}</CtaButton>
-        </div>
+        </Reveal>
       </Container>
     </section>
   );
