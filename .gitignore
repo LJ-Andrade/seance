@@ -11,5 +11,8 @@ Thumbs.db
 .env.*
 !.env.example
 
+# PM2 ecosystem file holds production secrets (see docs/DEPLOY_INFO.md)
+ecosystem.config.cjs
+
 # Local demo tunnel logs (see docs/TUNEL_TEMPORAL.md)
 .tunnel-*.log

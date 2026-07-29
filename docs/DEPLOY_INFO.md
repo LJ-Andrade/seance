@@ -157,15 +157,15 @@ Replace every occurrence of these placeholders before running any command.
 
 | Placeholder | Meaning | Status |
 | --- | --- | --- |
-| `<SITE_DOMAIN>` | Canonical public host, including subdomain (e.g. `www.laboratorioseance.com.ar`) | TBD |
-| `<REDIRECT_DOMAIN>` | The non-canonical variant that 301s to `<SITE_DOMAIN>` (apex or `www`) | TBD |
-| `<SITE_USER>` | Linux user CloudPanel creates for this site; owns the checkout and the PM2 daemon | TBD |
-| `<REPO_PATH>` | Absolute path of the checkout, inside the site user's home (e.g. `/home/<SITE_USER>/htdocs/<SITE_DOMAIN>`) | TBD |
-| `<APP_PORT>` | Local port the Node server listens on. **Must be discovered** per [Port selection](#port-selection) — do not default to 3000 | TBD |
-| `<NODE_VERSION>` | Node.js version selected for the site (20.9+; 22 LTS recommended) | TBD |
-| `<BREVO_API_KEY>` | Brevo transactional API key | TBD |
-| `<BREVO_SENDER_EMAIL>` | Verified sender address in Brevo | TBD |
-| `<CONTACT_TO_EMAIL>` | Inbox that receives contact submissions | TBD |
+| `<SITE_DOMAIN>` | Canonical public host, including subdomain (e.g. `www.laboratorioseance.com.ar`) | `seance.studiovimana.com.ar` (staging) |
+| `<REDIRECT_DOMAIN>` | The non-canonical variant that 301s to `<SITE_DOMAIN>` (apex or `www`) | N/A for the staging subdomain |
+| `<SITE_USER>` | Linux user CloudPanel creates for this site; owns the checkout and the PM2 daemon | `seance` |
+| `<REPO_PATH>` | Absolute path of the checkout, inside the site user's home (e.g. `/home/<SITE_USER>/htdocs/<SITE_DOMAIN>`) | `/home/seance/htdocs/seance.studiovimana.com.ar/seance` |
+| `<APP_PORT>` | Local port the Node server listens on. **Must be discovered** per [Port selection](#port-selection) — do not default to 3000 | `3010` (3000–3002 were already taken) |
+| `<NODE_VERSION>` | Node.js version selected for the site (20.9+; 22 LTS recommended) | 22 (`v22.23.2`) |
+| `<BREVO_API_KEY>` | Brevo transactional API key | Pending — form fakes success until set |
+| `<BREVO_SENDER_EMAIL>` | Verified sender address in Brevo | Pending |
+| `<CONTACT_TO_EMAIL>` | Inbox that receives contact submissions | Pending |
 
 ## Environment Variables
 
