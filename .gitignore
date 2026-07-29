@@ -1,5 +1,6 @@
 # Local tooling / editor state
-.claude/settings.local.json
+.claude/
+.codex/
 
 # OS files
 .DS_Store
