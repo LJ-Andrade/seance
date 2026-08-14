@@ -10,7 +10,7 @@ export function Registro() {
   const t = useTranslations("inicio.registro");
 
   return (
-    <section className="bg-brand-cream-2 py-20 md:py-24">
+    <section className="bg-white py-20 md:py-24">
       <Container className="flex justify-center">
         <Reveal className="flex flex-col items-center gap-6 text-center">
           <Heading className="max-w-[800px]">{t("titulo")}</Heading>

@@ -95,6 +95,7 @@ export default async function NosotrosPage({ params }: PageProps) {
           title={t("cierre.titulo")}
           description={t("cierre.parrafo")}
           ctaLabel={t("cierre.cta")}
+          liquidEffect
         />
       </main>
     </>

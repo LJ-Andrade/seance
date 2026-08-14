@@ -28,7 +28,7 @@ export const siteConfig = {
     address: ["Directorio 3548, Caseros", "(1678) Buenos Aires, Argentina"],
   },
   social: {
-    youtube: "#",
+    youtube: "https://www.youtube.com/@AndreaPellizaOK",
     facebook: "#",
     linkedin: "#",
   },

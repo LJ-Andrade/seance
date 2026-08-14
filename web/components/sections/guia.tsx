@@ -39,7 +39,7 @@ export function Guia() {
           </p>
           <div className="mt-2">
             <CtaButton
-              href="/docs/guia-de-registro-anmat-productos-importados.docx"
+              href="https://t90133068787.p.clickup-attachments.com/t90133068787/e815a510-5db8-4f25-9933-5e49c10eb533/guia-de-registro-anmat-productos-importados.pdf?view=open"
               download
             >
               {t("enlace")}

@@ -12,6 +12,12 @@ import { siteConfig } from "@/lib/site";
 
 const linkHrefs = ["/", "/nosotros", "/contacto"];
 
+const serviceHrefs = [
+  "/servicios/fabricacion",
+  "/servicios/hosting",
+  "/servicios/importacion",
+];
+
 const socials: Array<{
   key: keyof typeof siteConfig.social;
   Icon: ComponentType<SVGProps<SVGSVGElement>>;
@@ -24,7 +30,7 @@ const socials: Array<{
 
 export function Footer() {
   const t = useTranslations("footer");
-  const { footer, social } = siteConfig;
+  const { contact, footer, social } = siteConfig;
   const links = t.raw("links") as string[];
   const servicios = t.raw("servicios") as string[];
   const year = new Date().getFullYear();
@@ -34,7 +40,7 @@ export function Footer() {
       <Container className="pb-8 pt-20">
         {/* Brand + socials */}
         <div className="flex flex-col gap-6 border-b border-[#e4dfd4] pb-8 md:flex-row md:items-center md:justify-between">
-          <div className="flex flex-col gap-3">
+          <div>
             <Image
               src="/images/logo-seance-v2.png"
               alt={siteConfig.name}
@@ -42,9 +48,6 @@ export function Footer() {
               height={86}
               className="h-11 w-auto self-start"
             />
-            <p className="max-w-[540px] text-sm text-brand-muted">
-              {t("tagline")}
-            </p>
           </div>
           <div className="flex gap-2.5">
             {socials.map(({ key, Icon, label }) => (
@@ -79,10 +82,10 @@ export function Footer() {
           </FooterColumn>
 
           <FooterColumn title={t("columnas.servicios")}>
-            {servicios.map((label) => (
+            {servicios.map((label, i) => (
               <NavLink
                 key={label}
-                href="#servicios"
+                href={serviceHrefs[i]}
                 className="text-sm text-brand-muted transition-colors hover:text-brand-teal"
               >
                 {label}
@@ -91,12 +94,15 @@ export function Footer() {
           </FooterColumn>
 
           <FooterColumn title={t("columnas.contacto")}>
-            <a
-              href={`mailto:${footer.email}`}
-              className="text-sm text-brand-muted transition-colors hover:text-brand-teal"
-            >
-              {footer.email}
-            </a>
+            {contact.emails.map((email) => (
+              <a
+                key={email}
+                href={`mailto:${email}`}
+                className="text-sm text-brand-muted transition-colors hover:text-brand-teal"
+              >
+                {email}
+              </a>
+            ))}
             <a
               href={`tel:${footer.phone.replace(/[^+\d]/g, "")}`}
               className="text-sm text-brand-muted transition-colors hover:text-brand-teal"

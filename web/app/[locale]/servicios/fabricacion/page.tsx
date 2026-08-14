@@ -70,6 +70,7 @@ export default async function FabricacionPage({ params }: PageProps) {
           image="/images/servicios/fabricacion-hero.png"
           mobileImage="/images/servicios/fabricacion-hero-mobile.jpg"
           imageAlt={t("hero.imagenAlt")}
+          fullDesktopImage
         />
 
         <TrustBar />

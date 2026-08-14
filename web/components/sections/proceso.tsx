@@ -16,7 +16,7 @@ export function Proceso() {
   const pasos = t.raw("pasos") as Paso[];
 
   return (
-    <section className="bg-white py-20 md:py-24">
+    <section className="bg-[#F0EBE1] py-20 md:py-24">
       <Container className="grid gap-12 lg:grid-cols-2 lg:gap-20">
         <Reveal from="left" className="flex flex-col gap-6">
           <Eyebrow>{t("eyebrow")}</Eyebrow>

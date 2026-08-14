@@ -7,6 +7,7 @@ type CtaBandProps = {
   description?: string;
   ctaLabel: string;
   ctaHref?: string;
+  liquidEffect?: boolean;
 };
 
 /**
@@ -18,6 +19,7 @@ export function CtaBand({
   description,
   ctaLabel,
   ctaHref = "/contacto",
+  liquidEffect = false,
 }: CtaBandProps) {
   return (
     <section className="bg-brand-teal py-16 md:py-20">
@@ -33,8 +35,12 @@ export function CtaBand({
           ) : null}
           <CtaButton
             href={ctaHref}
-            liquid={false}
-            className="mt-2 bg-brand-primary text-white hover:bg-brand-primary/90"
+            liquid={liquidEffect}
+            className={
+              liquidEffect
+                ? "mt-2 bg-brand-cream-3 text-brand-teal [--primary:#F0EBE1] hover:bg-brand-cream-3"
+                : "mt-2 bg-brand-primary text-white hover:bg-brand-primary/90"
+            }
           >
             {ctaLabel}
           </CtaButton>

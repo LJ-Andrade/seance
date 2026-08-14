@@ -11,7 +11,7 @@ export function Everest() {
   const t = useTranslations("inicio.everest");
 
   return (
-    <section className="bg-brand-cream-deep py-16 md:py-20">
+    <section className="bg-[#F0EBE1] py-16 md:py-20">
       <Container>
         <div className="flex flex-col items-start gap-8 md:flex-row md:items-center md:gap-12">
           <Reveal

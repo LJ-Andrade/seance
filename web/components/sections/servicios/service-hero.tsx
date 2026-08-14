@@ -3,6 +3,7 @@ import { Container } from "@/components/layout/container";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { CtaButton } from "@/components/ui/cta-button";
 import { HeroMotion } from "@/components/ui/hero-motion";
+import { cn } from "@/lib/utils";
 
 type ServiceHeroProps = {
   eyebrow: string;
@@ -13,6 +14,7 @@ type ServiceHeroProps = {
   image: string;
   mobileImage: string;
   imageAlt: string;
+  fullDesktopImage?: boolean;
 };
 
 /**
@@ -29,9 +31,17 @@ export function ServiceHero({
   image,
   mobileImage,
   imageAlt,
+  fullDesktopImage = false,
 }: ServiceHeroProps) {
   return (
-    <HeroMotion className="hero-background relative isolate overflow-hidden bg-[#f7f7f7] min-[900px]:bg-gradient-to-b min-[900px]:from-brand-cream-deep min-[900px]:to-[#fefbf6]">
+    <HeroMotion
+      className={cn(
+        "hero-background relative isolate overflow-hidden",
+        fullDesktopImage
+          ? "bg-white"
+          : "bg-[#f7f7f7] min-[900px]:bg-gradient-to-b min-[900px]:from-brand-cream-deep min-[900px]:to-[#fefbf6]",
+      )}
+    >
       <div className="hero-background-frame pointer-events-none absolute inset-x-0 top-0 aspect-[768/1376] min-[900px]:hidden">
         <Image
           src={mobileImage}
@@ -43,14 +53,27 @@ export function ServiceHero({
         />
       </div>
 
-      <div className="hero-background-frame pointer-events-none absolute inset-y-0 right-0 hidden w-[55%] min-[900px]:block">
+      <div
+        className={cn(
+          "hero-background-frame pointer-events-none absolute inset-y-0 right-0 hidden min-[900px]:block",
+          fullDesktopImage ? "left-0 w-full" : "w-[55%]",
+        )}
+      >
         <Image
           src={image}
           alt={imageAlt}
           fill
           priority
-          sizes="(min-width: 900px) 55vw, 0px"
-          className="hero-background-media object-cover object-center [mask-image:linear-gradient(to_right,transparent,#000_38%)] [-webkit-mask-image:linear-gradient(to_right,transparent,#000_38%)]"
+          sizes={
+            fullDesktopImage
+              ? "(min-width: 900px) 100vw, 0px"
+              : "(min-width: 900px) 55vw, 0px"
+          }
+          className={cn(
+            "hero-background-media object-cover object-center",
+            !fullDesktopImage &&
+              "[mask-image:linear-gradient(to_right,transparent,#000_38%)] [-webkit-mask-image:linear-gradient(to_right,transparent,#000_38%)]",
+          )}
         />
       </div>
 

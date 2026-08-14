@@ -30,7 +30,9 @@ export function SolucionCard({
       </div>
 
       <div className="flex flex-col gap-3">
-        <h3 className="font-serif text-3xl text-brand-slate">{titulo}</h3>
+        <h3 className="font-serif text-3xl font-bold text-brand-slate underline decoration-1">
+          {titulo}
+        </h3>
         <p className="font-serif text-lg italic text-brand-primary">{subtitulo}</p>
       </div>
 

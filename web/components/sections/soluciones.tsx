@@ -1,4 +1,4 @@
-import { Building2, CircleX, FlaskConical } from "lucide-react";
+import { Building2, FlaskConical, Ship } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { Container } from "@/components/layout/container";
 import { SectionHeader } from "@/components/sections/section-header";
@@ -19,11 +19,11 @@ export function Soluciones() {
     [
       { key: "fabricacion", icon: FlaskConical, href: "#servicios" },
       { key: "hosting", icon: Building2, href: "#servicios" },
-      { key: "importacion", icon: CircleX, href: "#servicios" },
+      { key: "importacion", icon: Ship, href: "#servicios" },
     ];
 
   return (
-    <section id="servicios" className="bg-brand-cream-2 py-20 md:py-24">
+    <section id="servicios" className="bg-[#F9F7F2] py-20 md:py-24">
       <Container className="flex flex-col gap-14">
         <Reveal>
           <SectionHeader eyebrow={t("eyebrow")} title={t("titulo")} />

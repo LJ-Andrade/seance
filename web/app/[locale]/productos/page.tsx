@@ -88,7 +88,7 @@ export default async function ProductosPage({ params }: PageProps) {
           </Container>
         </section>
 
-        <section className="bg-white py-16 md:py-24">
+        <section className="bg-gradient-to-b from-[#fefbf6] via-white to-white py-16 md:py-24">
           <Container>
             <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
               {items.map((item, i) => (

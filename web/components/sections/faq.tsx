@@ -19,7 +19,7 @@ export function Faq() {
   const items = t.raw("items") as FaqItem[];
 
   return (
-    <section className="bg-white py-20 md:py-24">
+    <section className="bg-[#F9F7F2] py-20 md:py-24">
       <Container className="flex flex-col gap-14">
         <Reveal>
           <SectionHeader eyebrow={t("eyebrow")} title={t("titulo")} />

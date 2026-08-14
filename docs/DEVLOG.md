@@ -181,3 +181,10 @@ product cards, with a slow hover zoom on the split-feature, category and product
 images. The reveal transition itself could not be observed in the automated
 browser pane (hidden tab, so `IntersectionObserver` never fires — the Home
 baseline behaves the same); layout was verified by forcing the revealed state.
+
+## 2026-08-13 - Fabricación sticky process stack
+
+1. [x] Specify the horizontal card layout, desktop sticky stacking, and mobile
+   fallback.
+2. [x] Replace the uneven four-column process grid with the sticky stack.
+3. [x] Validate responsive structure, lint, and TypeScript.

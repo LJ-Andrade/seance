@@ -54,7 +54,7 @@ export function Cierre() {
               {n("parrafo")}
             </p>
             <CtaButton
-              href="#contacto"
+              href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7297123054453698561"
               liquid={false}
               className="newsletter-attention mt-auto self-start bg-brand-cream text-brand-teal hover:bg-white"
             >

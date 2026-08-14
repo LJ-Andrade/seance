@@ -62,6 +62,9 @@ This is the source of truth for intended product and technical behavior. Update 
   preserved for the localized hero copy.
 - At 900px and above, the existing wide desktop image remains on the right with
   its readability mask and the hero copy remains left-aligned.
+- Fabricación is the desktop exception: its panoramic source already includes
+  the white copy area, so it renders full-width without the split mask to avoid
+  excessive cropping.
 - The heading, paragraph, and CTA remain server-rendered once in the document;
   responsive image presentation must not duplicate SEO-critical copy or create
   layout shift.
@@ -70,6 +73,28 @@ This is the source of truth for intended product and technical behavior. Update 
   translation and `rotateY` perspective shift. The motion resets on pointer
   leave, keeps enough scale overscan to hide image edges, and is disabled when
   `prefers-reduced-motion` is active.
+
+### Fabricación process steps
+
+- The four steps render as full-width horizontal cards so variable content
+  length never creates mismatched columns.
+- At desktop widths, the complete process scene (heading, description, and card
+  stage) stays pinned and vertically centered while scrolling. Every new card
+  settles slightly below the previous one, leaving a narrow visible strip of
+  each earlier card. Incoming cards remain invisible while waiting below the
+  viewport, use a very short fade over their first few visible pixels, and then
+  travel upward at full opacity, covering the preceding card without blended
+  text. The scene releases into normal page scrolling as soon as the fourth
+  card finishes stacking.
+- All four desktop cards use the same fixed height, sized for the richest step,
+  so no earlier content can protrude below the active card.
+- On smaller screens, the steps fall back to a normal vertical list with no
+  sticky trapping or oversized scroll distance.
+- The scene uses native page scrolling in both directions. Card movement is
+  interpolated from scroll progress and lightly eased; no wheel interception or
+  scroll trapping is used.
+- The complete localized content remains server-rendered and readable when
+  motion is reduced or CSS positioning is unavailable.
 
 ### Contact (`/[locale]/contacto`)
 

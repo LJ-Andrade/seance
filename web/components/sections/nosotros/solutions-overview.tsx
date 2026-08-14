@@ -1,4 +1,4 @@
-import { Building2, CircleX, FlaskConical } from "lucide-react";
+import { Building2, FlaskConical, Ship } from "lucide-react";
 import { Container } from "@/components/layout/container";
 import { SectionHeader } from "@/components/sections/section-header";
 import { ArrowLink } from "@/components/ui/arrow-link";
@@ -14,7 +14,7 @@ type SolutionsOverviewProps = {
   items: Item[];
 };
 
-const ICONS = [FlaskConical, Building2, CircleX];
+const ICONS = [FlaskConical, Building2, Ship];
 const HREFS = [
   "/servicios/fabricacion",
   "/servicios/hosting",

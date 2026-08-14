@@ -1,8 +1,7 @@
 import Image from "next/image";
-import { Play } from "lucide-react";
 import { Container } from "@/components/layout/container";
 import { Eyebrow } from "@/components/ui/eyebrow";
-import { siteConfig } from "@/lib/site";
+import { YouTubeEmbed } from "@/components/ui/youtube-embed";
 
 type AboutHeroProps = {
   eyebrow: string;
@@ -16,7 +15,7 @@ type AboutHeroProps = {
 
 /**
  * About page hero: headline and intro on the left, a founder interview video
- * thumbnail (links to YouTube) plus the ISO certification badge.
+ * lazy YouTube player plus the ISO certification badge.
  */
 export function AboutHero({
   eyebrow,
@@ -54,26 +53,13 @@ export function AboutHero({
             </div>
           </div>
 
-          <a
-            href={siteConfig.social.youtube}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={videoAlt}
-            className="group relative aspect-video overflow-hidden rounded-xl border border-border"
-          >
-            <Image
-              src="/images/nosotros/video-c5n.png"
-              alt={videoAlt}
-              fill
-              sizes="(min-width: 1024px) 40vw, 100vw"
-              className="object-cover"
+          <div className="relative aspect-video overflow-hidden rounded-xl border border-border">
+            <YouTubeEmbed
+              id="pePrqcVz88s"
+              title={videoAlt}
+              poster="/images/nosotros/video-c5n.png"
             />
-            <span className="absolute inset-0 flex items-center justify-center bg-black/10 transition group-hover:bg-black/20">
-              <span className="flex size-16 items-center justify-center rounded-full bg-white/90 text-brand-teal transition group-hover:scale-105">
-                <Play className="size-6 translate-x-0.5 fill-current" aria-hidden />
-              </span>
-            </span>
-          </a>
+          </div>
         </div>
       </Container>
     </section>
