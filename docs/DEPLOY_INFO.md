@@ -445,6 +445,7 @@ today.
 | Form shows the success message but no email arrives | One or more Brevo variables unset; `lib/email.ts` logs and fakes success | Set all three in the PM2 env, `pm2 restart seance-web`, check `pm2 logs` for `[contact]` warnings |
 | `next build` killed without an error message | Out of memory | Free memory or add swap, build at a low-traffic hour, or build in CI and ship the artifact (see `output: "standalone"`) |
 | Intermittent 500s right after a deploy | Reloaded before the build finished | Rebuild fully, then `pm2 reload seance-web` |
+| Page loads unstyled; CSS/JS chunks return 500 | `.next` was rebuilt but the server was never reloaded, so it serves stale in-memory HTML referencing deleted chunks | `pm2 reload seance-web` |
 | Site down after a server reboot | `pm2 save` / `pm2 startup` never completed for `<SITE_USER>` | Re-run both, scoped to the site user |
 
 ## Pending Production Inputs
