@@ -1,13 +1,9 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import {
-  BookOpen,
   Building2,
-  Eye,
   FileText,
-  Info,
   RefreshCcw,
-  Shield,
   ShieldCheck,
   UserCheck,
 } from "lucide-react";
@@ -17,14 +13,16 @@ import {
   serviceNode,
   type FaqItem,
 } from "@/lib/structured-data";
+import { siteConfig } from "@/lib/site";
 import { JsonLd } from "@/components/seo/json-ld";
+import { pageBreadcrumb } from "@/lib/breadcrumbs";
 import { TrustBar } from "@/components/sections/trust-bar";
 import { CtaBand } from "@/components/sections/cta-band";
 import { ServiceHero } from "@/components/sections/servicios/service-hero";
 import { SplitFeature } from "@/components/sections/servicios/split-feature";
 import { IconCardGrid } from "@/components/sections/servicios/icon-card-grid";
 import { HighlightBand } from "@/components/sections/servicios/highlight-band";
-import { MethodPoints } from "@/components/sections/servicios/method-points";
+import { Responsibilities } from "@/components/sections/servicios/responsibilities";
 import { CheckCards } from "@/components/sections/servicios/check-cards";
 import { FaqSection } from "@/components/sections/servicios/faq-section";
 
@@ -43,13 +41,13 @@ export async function generateMetadata({
     path: "servicios/hosting",
     title: t("titulo"),
     description: t("descripcion"),
-    keywords: t.raw("palabrasClave") as string[],
   });
 }
 
 export default async function HostingPage({ params }: PageProps) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const breadcrumb = await pageBreadcrumb(locale, "hosting", "servicios/hosting");
 
   const t = await getTranslations({ locale, namespace: "servicios.hosting" });
   const faqItems = t.raw("faq.items") as FaqItem[];
@@ -58,10 +56,12 @@ export default async function HostingPage({ params }: PageProps) {
     <>
       <JsonLd
         nodes={[
+          breadcrumb,
           serviceNode({
             locale,
             path: "servicios/hosting",
-            name: t("hero.titulo"),
+            // The eyebrow is the service name; the H1 is a longer benefit statement.
+            name: t("hero.eyebrow"),
             description: t("hero.parrafo"),
             serviceType:
               locale === "en"
@@ -82,12 +82,12 @@ export default async function HostingPage({ params }: PageProps) {
           imageAlt={t("hero.imagenAlt")}
         />
 
-        <TrustBar />
+        <TrustBar items={t.raw("confianza") as string[]} />
 
         <SplitFeature
           eyebrow={t("intro.eyebrow")}
           title={t("intro.titulo")}
-          paragraph={t("intro.parrafo")}
+          paragraphs={t.raw("intro.parrafos") as string[]}
           image="/images/servicios/hosting-intro.png"
           imageAlt={t("intro.imagenAlt")}
         />
@@ -106,15 +106,18 @@ export default async function HostingPage({ params }: PageProps) {
           paragraph={t("titularidad.parrafo")}
         />
 
-        <MethodPoints
-          eyebrow={t("metodo.eyebrow")}
-          title={t("metodo.titulo")}
-          paragraph={t("metodo.parrafo")}
-          points={t.raw("metodo.puntos")}
-          icons={[Shield, Eye, Info, BookOpen]}
+        <Responsibilities
+          eyebrow={t("responsabilidades.eyebrow")}
+          title={t("responsabilidades.titulo")}
+          columns={t.raw("responsabilidades.columnas")}
+          note={t("responsabilidades.nota")}
         />
 
-        <CheckCards title={t("paraVos.titulo")} items={t.raw("paraVos.items")} />
+        <CheckCards
+          eyebrow={t("paraVos.eyebrow")}
+          title={t("paraVos.titulo")}
+          items={t.raw("paraVos.items")}
+        />
 
         <FaqSection
           eyebrow={t("faq.eyebrow")}
@@ -123,9 +126,13 @@ export default async function HostingPage({ params }: PageProps) {
         />
 
         <CtaBand
+          eyebrow={t("cierre.eyebrow")}
           title={t("cierre.titulo")}
           description={t("cierre.parrafo")}
+          note={t("cierre.plazo")}
           ctaLabel={t("cierre.cta")}
+          // General inbox (info@), as specified for this page's closing.
+          email={siteConfig.contact.emails[0]}
         />
       </main>
     </>

@@ -286,9 +286,10 @@ npm ci --prefix web
 npm run build --prefix web
 ```
 
-The build must print `●  (SSG)` for the locale routes. If any route is marked
-dynamic (`ƒ`), stop and investigate before deploying — it means something broke
-static generation.
+The build must print `●  (SSG)` for the locale routes. The only expected
+dynamic (`ƒ`) entries are `/_not-found` (the localized global 404) and the
+proxy. If any page route is marked dynamic, stop and investigate before
+deploying — it means something broke static generation.
 
 ### 6. Start under PM2
 
@@ -452,14 +453,10 @@ These do not block deployment but are visible defects in production:
 
 - No Open Graph image: `ogImage` is never passed to `buildMetadata`
   (`web/lib/seo.ts`), so shared links render without a preview.
-- `siteConfig.social` (YouTube, Facebook, LinkedIn) still holds `#` placeholders;
-  the About page video links to `#`.
-- Product data-sheet buttons link to `#` — no real PDFs yet.
-- `siteConfig.contact` and `siteConfig.footer` carry different emails and phone
-  numbers. The footer values are the ones exposed in JSON-LD, so the discrepancy
-  must be resolved.
-- Business opening hours are still unconfirmed for the LocalBusiness structured
-  data.
+- English product data sheets are pending; `/en/productos` links the Spanish
+  PDFs until `web/public/fichas/en/` is filled (rebuild required).
+- `info@` and `comex@laboratorioseance.com.ar` must be active mailboxes before
+  launch; they are the only emails published on the site.
 
 ## Post-Launch
 

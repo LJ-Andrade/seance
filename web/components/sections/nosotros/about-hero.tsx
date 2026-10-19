@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { ShieldCheck } from "lucide-react";
 import { Container } from "@/components/layout/container";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { YouTubeEmbed } from "@/components/ui/youtube-embed";
@@ -8,23 +8,21 @@ type AboutHeroProps = {
   title: string;
   paragraph: string;
   videoAlt: string;
-  certAlt: string;
-  certLinea1: string;
-  certLinea2: string;
+  scopeTitle: string;
+  scopeItems: string[];
 };
 
 /**
- * About page hero: headline and intro on the left, a founder interview video
- * lazy YouTube player plus the ISO certification badge.
+ * About page hero: headline, intro and the ANMAT authorization scope on the
+ * left; a lazy YouTube player with the founder interview on the right.
  */
 export function AboutHero({
   eyebrow,
   title,
   paragraph,
   videoAlt,
-  certAlt,
-  certLinea1,
-  certLinea2,
+  scopeTitle,
+  scopeItems,
 }: AboutHeroProps) {
   return (
     <section className="bg-gradient-to-b from-brand-cream-deep to-[#fefbf6] py-16 md:py-20">
@@ -38,18 +36,16 @@ export function AboutHero({
             <p className="max-w-[640px] text-base leading-[22px] tracking-[0.02em] text-brand-muted">
               {paragraph}
             </p>
-            <div className="flex items-center gap-3 pt-2">
-              <Image
-                src="/images/nosotros/iso-cert.png"
-                alt={certAlt}
-                width={42}
-                height={42}
-                className="shrink-0 rounded-sm"
-              />
-              <div className="text-xs leading-[16px] text-brand-muted">
-                <p>{certLinea1}</p>
-                <p>{certLinea2}</p>
-              </div>
+            <div className="flex max-w-[640px] flex-col gap-3 rounded-[8px] border border-border bg-white/70 p-6">
+              <h2 className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.08em] text-brand-teal">
+                <ShieldCheck className="size-5 shrink-0" aria-hidden />
+                {scopeTitle}
+              </h2>
+              <ul className="flex list-disc flex-col gap-2 pl-5 text-sm leading-[20px] tracking-[0.02em] text-brand-slate marker:text-brand-primary">
+                {scopeItems.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
             </div>
           </div>
 
@@ -57,7 +53,7 @@ export function AboutHero({
             <YouTubeEmbed
               id="pePrqcVz88s"
               title={videoAlt}
-              poster="/images/nosotros/video-c5n.png"
+              poster="/images/thumbnail-home-video.jpg"
             />
           </div>
         </div>

@@ -16,22 +16,36 @@ export type StructuredProduct = {
 };
 
 export const organizationId = `${siteUrl}/#organization`;
+export const websiteId = `${siteUrl}/#website`;
 export const andreaPellizaId = `${siteUrl}/#andrea-pelliza`;
 export const enriquePellizaId = `${siteUrl}/#enrique-pelliza`;
 export const everestBrandId = `${siteUrl}/#brand-everest`;
 
+const contactLanguages = ["es", "en"];
+
+/**
+ * Shared business entity. Values mirror the client-confirmed business data
+ * (change request v1-10-26); keep them in sync with `siteConfig.contact`.
+ */
 export function organizationNode(description?: string): JsonLdNode {
+  const { contact, social } = siteConfig;
+  const [salesEmail, comexEmail] = contact.emails;
+
   return {
     "@type": ["Organization", "LocalBusiness"],
     "@id": organizationId,
-    name: siteConfig.name,
+    name: "Séance",
+    legalName: "SEANCE SRL",
+    alternateName: siteConfig.name,
     url: siteUrl,
     logo: `${siteUrl}/images/logo-seance-v2.png`,
+    image: `${siteUrl}/images/og-image.jpg`,
     ...(description ? { description } : {}),
     foundingDate: "1990",
-    founder: { "@id": enriquePellizaId },
-    email: "info@laboratorioseance.com.ar",
-    telephone: "+54 11 4750-0763",
+    // Inline name so the reference resolves on pages without the Person node.
+    founder: { "@type": "Person", "@id": enriquePellizaId, name: "Enrique Pelliza" },
+    email: salesEmail,
+    telephone: contact.phone,
     address: {
       "@type": "PostalAddress",
       streetAddress: "Directorio 3548",
@@ -46,13 +60,83 @@ export function organizationNode(description?: string): JsonLdNode {
       longitude: siteConfig.maps.lng,
     },
     hasMap: siteConfig.maps.placeUrl,
-    contactPoint: {
-      "@type": "ContactPoint",
-      telephone: "+54 11 4750-0763",
-      email: "info@laboratorioseance.com.ar",
-      contactType: "customer service",
-      areaServed: "AR",
+    openingHoursSpecification: {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      opens: "08:00",
+      closes: "17:00",
     },
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        contactType: "sales",
+        telephone: contact.phone,
+        email: salesEmail,
+        availableLanguage: contactLanguages,
+      },
+      {
+        "@type": "ContactPoint",
+        contactType: "comercio exterior",
+        email: comexEmail,
+        availableLanguage: contactLanguages,
+      },
+    ],
+    sameAs: [social.facebook, social.linkedin],
+    knowsAbout: [
+      "Registro de cosméticos ante ANMAT",
+      "Cosméticos Grado I y Grado II",
+      "Buenas Prácticas de Fabricación (BPF)",
+      "Control de calidad de productos cosméticos",
+      "Productos domisanitarios",
+      "Hosting regulatorio",
+    ],
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Servicios",
+      itemListElement: [
+        ["Fabricación para terceros", "servicios/fabricacion"],
+        ["Hosting regulatorio", "servicios/hosting"],
+        ["Importación", "servicios/importacion"],
+      ].map(([name, path]) => ({
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name,
+          url: absoluteUrl("es", path),
+        },
+      })),
+    },
+  };
+}
+
+export function websiteNode(locale: string): JsonLdNode {
+  return {
+    "@type": "WebSite",
+    "@id": websiteId,
+    url: siteUrl,
+    name: siteConfig.name,
+    inLanguage: locale,
+    publisher: { "@id": organizationId },
+  };
+}
+
+export type BreadcrumbItem = { name: string; path: string };
+
+export function breadcrumbNode(
+  locale: string,
+  trail: BreadcrumbItem[],
+): JsonLdNode {
+  const last = trail[trail.length - 1];
+
+  return {
+    "@type": "BreadcrumbList",
+    "@id": `${absoluteUrl(locale, last.path)}#breadcrumb`,
+    itemListElement: trail.map((item, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: item.name,
+      item: absoluteUrl(locale, item.path),
+    })),
   };
 }
 

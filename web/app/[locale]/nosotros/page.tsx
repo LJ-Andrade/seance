@@ -3,6 +3,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { buildMetadata } from "@/lib/seo";
 import { aboutPageNode } from "@/lib/structured-data";
 import { JsonLd } from "@/components/seo/json-ld";
+import { pageBreadcrumb } from "@/lib/breadcrumbs";
 import { TrustBar } from "@/components/sections/trust-bar";
 import { CtaBand } from "@/components/sections/cta-band";
 import { AboutHero } from "@/components/sections/nosotros/about-hero";
@@ -34,6 +35,7 @@ export async function generateMetadata({
 export default async function NosotrosPage({ params }: PageProps) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const breadcrumb = await pageBreadcrumb(locale, "nosotros", "nosotros");
 
   const t = await getTranslations({ locale, namespace: "nosotros" });
 
@@ -41,6 +43,7 @@ export default async function NosotrosPage({ params }: PageProps) {
     <>
       <JsonLd
         nodes={[
+          breadcrumb,
           aboutPageNode(locale, t("hero.titulo"), t("hero.parrafo")),
         ]}
       />
@@ -50,9 +53,8 @@ export default async function NosotrosPage({ params }: PageProps) {
           title={t("hero.titulo")}
           paragraph={t("hero.parrafo")}
           videoAlt={t("hero.videoAlt")}
-          certAlt={t("hero.certAlt")}
-          certLinea1={t("hero.certLinea1")}
-          certLinea2={t("hero.certLinea2")}
+          scopeTitle={t("hero.alcance.titulo")}
+          scopeItems={t.raw("hero.alcance.items") as string[]}
         />
 
         <TrustBar />
@@ -67,6 +69,7 @@ export default async function NosotrosPage({ params }: PageProps) {
         <Capabilities
           eyebrow={t("capacidades.eyebrow")}
           title={t("capacidades.titulo")}
+          metrics={t.raw("capacidades.cifras")}
           items={t.raw("capacidades.items")}
         />
 

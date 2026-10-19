@@ -15,6 +15,11 @@ type ServiceHeroProps = {
   mobileImage: string;
   imageAlt: string;
   fullDesktopImage?: boolean;
+  /**
+   * Mobile top offset of the copy (a literal Tailwind class), so it starts
+   * below the subject of each portrait image. Defaults to `pt-[88vw]`.
+   */
+  mobileCopyOffset?: string;
 };
 
 /**
@@ -32,6 +37,7 @@ export function ServiceHero({
   mobileImage,
   imageAlt,
   fullDesktopImage = false,
+  mobileCopyOffset = "pt-[88vw]",
 }: ServiceHeroProps) {
   return (
     <HeroMotion
@@ -78,9 +84,14 @@ export function ServiceHero({
       </div>
 
       <Container className="relative">
-        <div className="flex max-w-[760px] flex-col gap-6 pb-14 pt-[88vw] min-[900px]:min-h-[560px] min-[900px]:justify-center min-[900px]:py-20">
+        <div
+          className={cn(
+            "flex max-w-[760px] flex-col gap-6 pb-14 min-[900px]:min-h-[560px] min-[900px]:justify-center min-[900px]:py-20",
+            mobileCopyOffset,
+          )}
+        >
           <Eyebrow>{eyebrow}</Eyebrow>
-          <h1 className="font-serif text-4xl font-medium italic leading-[1.03] tracking-tight text-brand-ink sm:text-5xl lg:text-[72px] lg:leading-[74px]">
+          <h1 className="whitespace-pre-line font-serif text-4xl font-medium italic leading-[1.03] tracking-tight text-brand-ink sm:text-5xl lg:text-[72px] lg:leading-[74px]">
             {title}
           </h1>
           <p className="max-w-[620px] text-base leading-[22px] tracking-[0.02em] text-brand-muted">

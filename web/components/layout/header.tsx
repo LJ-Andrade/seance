@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { Container } from "@/components/layout/container";
@@ -9,7 +9,8 @@ import { NavDropdown } from "@/components/layout/nav-dropdown";
 import { NavLink } from "@/components/layout/nav-link";
 import type { NavItem } from "@/components/layout/nav-items";
 import { CtaButton } from "@/components/ui/cta-button";
-import { siteConfig } from "@/lib/site";
+import { siteConfig, telHref, whatsappUrl } from "@/lib/site";
+import { WhatsappIcon } from "@/components/icons/brand-icons";
 
 /**
  * Site header: a top contact bar (desktop) plus the main navigation with logo,
@@ -18,13 +19,13 @@ import { siteConfig } from "@/lib/site";
  */
 export function Header() {
   const t = useTranslations("navegacion");
+  const tFooter = useTranslations("footer");
   const { contact } = siteConfig;
 
   const items: NavItem[] = [
     { href: "/", label: t("inicio") },
     { href: "/nosotros", label: t("equipo") },
     {
-      href: "#servicios",
       label: t("servicios"),
       children: [
         { href: "/servicios/fabricacion", label: t("serviciosItems.fabricacion") },
@@ -35,6 +36,8 @@ export function Header() {
     { href: "/productos", label: t("productos") },
   ];
 
+  const contactLinkClass = "transition-colors hover:text-brand-teal";
+
   const navLinkClass =
     "text-base font-semibold text-brand-slate transition-colors hover:text-brand-teal";
 
@@ -43,18 +46,39 @@ export function Header() {
       {/* Top contact bar (desktop only). */}
       <div className="hidden border-b border-border lg:block">
         <Container className="flex items-center justify-between py-2.5">
-          <div className="flex items-center gap-8 text-[13px] text-brand-muted">
+          <div className="flex items-center gap-6 whitespace-nowrap text-[13px] text-brand-muted xl:gap-8">
             <span className="flex items-center gap-2">
               <Mail className="size-4 shrink-0" aria-hidden />
-              {contact.emails.join(" / ")}
+              <span>
+                {contact.emails.map((email, i) => (
+                  <span key={email}>
+                    {i > 0 ? " / " : null}
+                    <a href={`mailto:${email}`} className={contactLinkClass}>
+                      {email}
+                    </a>
+                  </span>
+                ))}
+              </span>
             </span>
             <span className="flex items-center gap-2">
               <Phone className="size-4 shrink-0" aria-hidden />
-              {contact.phones.join(" / ")}
+              <a href={telHref(contact.phone)} className={contactLinkClass}>
+                {contact.phone}
+              </a>
             </span>
-            <span className="flex items-center gap-2">
-              <MapPin className="size-4 shrink-0" aria-hidden />
-              {contact.address}
+            {/* From xl only: at lg the bar can't fit three emails, two phones and
+                the switcher; the floating WhatsApp button covers smaller widths. */}
+            <span className="hidden items-center gap-2 xl:flex">
+              <WhatsappIcon className="size-4 shrink-0" aria-hidden />
+              <a
+                href={whatsappUrl(tFooter("whatsappMensaje"))}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`${tFooter("whatsapp")}: ${contact.whatsapp}`}
+                className={contactLinkClass}
+              >
+                {contact.whatsapp}
+              </a>
             </span>
           </div>
           <LocaleSwitcher />

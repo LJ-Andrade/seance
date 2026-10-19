@@ -9,7 +9,11 @@ type SplitFeatureProps = {
   eyebrow?: string;
   title: string;
   paragraph?: string;
+  /** Several body paragraphs; takes precedence over `paragraph`. */
+  paragraphs?: string[];
   bullets?: string[];
+  /** Highlighted item shown after the checklist (e.g. "Exportación"). */
+  highlight?: { titulo: string; parrafo: string };
   image: string;
   imageAlt: string;
   /** Which side the image sits on at lg+ (default right). */
@@ -24,7 +28,8 @@ const BG = {
 } as const;
 
 /**
- * Two-column section: copy (eyebrow + title + paragraph, optional checklist)
+ * Two-column section: copy (eyebrow + title + one or more paragraphs,
+ * optional checklist and highlighted item)
  * beside a photographic image. Reused for the hosting intro and the import
  * "compliance" block.
  */
@@ -32,7 +37,9 @@ export function SplitFeature({
   eyebrow,
   title,
   paragraph,
+  paragraphs,
   bullets,
+  highlight,
   image,
   imageAlt,
   imageSide = "right",
@@ -46,7 +53,19 @@ export function SplitFeature({
             from={imageSide === "left" ? "right" : "left"}
             className={cn("flex flex-col gap-6", imageSide === "left" && "lg:order-2")}
           >
-            <SectionHeader eyebrow={eyebrow} title={title} description={paragraph} />
+            <SectionHeader
+              eyebrow={eyebrow}
+              title={title}
+              description={paragraphs ? undefined : paragraph}
+            />
+            {paragraphs?.map((text) => (
+              <p
+                key={text}
+                className="max-w-[720px] text-base leading-[22px] tracking-[0.02em] text-brand-muted"
+              >
+                {text}
+              </p>
+            ))}
             {bullets ? (
               <ul className="flex flex-col gap-3">
                 {bullets.map((bullet) => (
@@ -60,6 +79,16 @@ export function SplitFeature({
                   </li>
                 ))}
               </ul>
+            ) : null}
+            {highlight ? (
+              <div className="flex max-w-[720px] flex-col gap-2 rounded-[8px] border border-brand-primary bg-brand-cream p-5">
+                <p className="text-base font-semibold tracking-[0.02em] text-brand-primary">
+                  {highlight.titulo}
+                </p>
+                <p className="text-base leading-[22px] tracking-[0.02em] text-brand-muted">
+                  {highlight.parrafo}
+                </p>
+              </div>
             ) : null}
           </Reveal>
 

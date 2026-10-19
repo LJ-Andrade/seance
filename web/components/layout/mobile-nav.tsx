@@ -40,13 +40,19 @@ export function MobileNav({
         <nav className="flex flex-col gap-1 px-6 py-4">
           {items.map((item) => (
             <div key={item.label} className="flex flex-col">
-              <NavLink
-                href={item.href}
-                onClick={() => setOpen(false)}
-                className="rounded-md px-2 py-3 text-base font-semibold text-brand-slate hover:bg-brand-cream-2"
-              >
-                {item.label}
-              </NavLink>
+              {item.children ? (
+                <span className="px-2 py-3 text-base font-semibold text-brand-slate">
+                  {item.label}
+                </span>
+              ) : (
+                <NavLink
+                  href={item.href}
+                  onClick={() => setOpen(false)}
+                  className="rounded-md px-2 py-3 text-base font-semibold text-brand-slate hover:bg-brand-cream-2"
+                >
+                  {item.label}
+                </NavLink>
+              )}
               {item.children ? (
                 <div className="mb-1 flex flex-col border-l border-border pl-3">
                   {item.children.map((child) => (

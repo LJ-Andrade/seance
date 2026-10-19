@@ -1,6 +1,6 @@
 import { useTranslations } from "next-intl";
 import { WhatsappIcon } from "@/components/icons/brand-icons";
-import { siteConfig } from "@/lib/site";
+import { whatsappUrl } from "@/lib/site";
 
 /**
  * Persistent WhatsApp contact button, fixed to the bottom-right corner.
@@ -10,7 +10,7 @@ export function WhatsAppFloat() {
 
   return (
     <a
-      href={siteConfig.whatsappUrl}
+      href={whatsappUrl(t("whatsappMensaje"))}
       target="_blank"
       rel="noopener noreferrer"
       aria-label={t("whatsapp")}

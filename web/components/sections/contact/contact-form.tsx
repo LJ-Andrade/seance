@@ -10,7 +10,7 @@ import {
 } from "@/app/[locale]/contacto/actions";
 
 const initialState: ContactState = { status: "idle" };
-const MAX_MESSAGE = 200;
+const MAX_MESSAGE = 1500;
 
 const inputClass =
   "w-full rounded-[6px] border-2 border-[#e9eaec] bg-white px-[14px] text-sm text-brand-ink outline-none transition-colors placeholder:text-[#919ca4] focus:border-brand-teal";

@@ -17,9 +17,9 @@ export function Soluciones() {
 
   const cards: Array<Pick<SolucionCardProps, "icon" | "href"> & { key: string }> =
     [
-      { key: "fabricacion", icon: FlaskConical, href: "#servicios" },
-      { key: "hosting", icon: Building2, href: "#servicios" },
-      { key: "importacion", icon: Ship, href: "#servicios" },
+      { key: "fabricacion", icon: FlaskConical, href: "/servicios/fabricacion" },
+      { key: "hosting", icon: Building2, href: "/servicios/hosting" },
+      { key: "importacion", icon: Ship, href: "/servicios/importacion" },
     ];
 
   return (

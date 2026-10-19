@@ -2,29 +2,23 @@
   "metadatos": {
     "inicio": {
       "titulo": "Laboratorio Séance | Cosmetic Manufacturing, Import and ANMAT Registration — Argentina",
-      "descripcion": "ANMAT-authorized Argentine cosmetics laboratory since 1990. We manufacture, import and register cosmetics with full confidentiality. Immediate ANMAT registration. 35+ years, 200+ brands."
+      "descripcion": "ANMAT-authorized Argentine cosmetics laboratory since 1990. We manufacture, import and register cosmetics with full confidentiality. ANMAT registration in about 72 business hours. 35+ years, 200+ brands."
     },
     "contacto": {
       "titulo": "Contact | Laboratorio Séance — Cosmetic Manufacturing, Import and Registration",
-      "descripcion": "Contact Laboratorio Séance. We reply within 48 hours, with no commitment and full confidentiality. Directorio 3548, Caseros, Buenos Aires."
+      "descripcion": "Contact Laboratorio Séance. We reply within 72 business hours, with no commitment and full confidentiality. Directorio 3548, Caseros, Buenos Aires."
     },
     "fabricacion": {
       "titulo": "Contract Cosmetics Manufacturing (Private Label) ANMAT | Laboratorio Séance",
       "descripcion": "We manufacture your cosmetic line in Argentina: custom formulas, GMP production, quality control and ANMAT registration. Confidential private label for brands and importers. 35+ years."
     },
     "hosting": {
-      "titulo": "Regulatory Hosting for ANMAT Cosmetics Importers | Laboratorio Séance",
-      "descripcion": "Regulatory hosting to import cosmetics into Argentina: authorized warehouse, technical direction, ANMAT registration and ongoing support. Ownership is always yours. 35+ years.",
-      "palabrasClave": [
-        "cosmetics regulatory hosting",
-        "ANMAT technical direction",
-        "authorized warehouse for importers",
-        "regulatory support for cosmetics imports Argentina"
-      ]
+      "titulo": "Regulatory Hosting for Cosmetics | Laboratorio Séance",
+      "descripcion": "Sell your cosmetic brand in Argentina with Séance’s Technical Director, ANMAT-authorized warehouse and regulatory support."
     },
     "importacion": {
-      "titulo": "Cosmetics Import to Argentina · ANMAT Registration | Laboratorio Séance",
-      "descripcion": "We import your cosmetic product into Argentina end to end: customs, ANMAT registration, logistics and quality control. Ready to sell, fully compliant and confidential."
+      "titulo": "Cosmetics & Household Hygiene Imports | Séance",
+      "descripcion": "Séance imports cosmetics and household hygiene products into Argentina, handling overseas payments, logistics, ANMAT procedures and quality control."
     },
     "nosotros": {
       "titulo": "About Us | Laboratorio Séance — ANMAT Cosmetics Manufacturing and Import",
@@ -37,13 +31,60 @@
   },
   "comun": {
     "marca": "Laboratorio Séance",
+    "horario": "Monday to Friday, 8 a.m. to 5 p.m. (Argentina time)",
     "cta": {
       "asesor": "Talk to an advisor"
     }
   },
+  "condiciones": {
+    "eyebrow": "Working terms",
+    "titulo": "Minimum batch and timelines",
+    "loteMinimo": {
+      "titulo": "Minimum batch",
+      "valor": "500 liters",
+      "detalle": "or 5,000 units in formats under 100 ml. The higher the volume, the better the unit price."
+    },
+    "plazos": {
+      "titulo": "Timelines",
+      "columnas": {
+        "etapa": "Stage",
+        "plazo": "Timeline"
+      },
+      "filas": [
+        {
+          "etapa": "Formula development",
+          "plazo": "1 to 3 months, depending on complexity"
+        },
+        {
+          "etapa": "ANMAT registration",
+          "plazo": "About 72 business hours, with a complete dossier"
+        },
+        {
+          "etapa": "Production",
+          "plazo": "About 4 weeks, with raw materials and packaging materials on site"
+        }
+      ]
+    }
+  },
+  "noEncontrado": {
+    "metaTitulo": "Page not found | Laboratorio Séance",
+    "eyebrow": "Error 404",
+    "titulo": "We couldn't find this page",
+    "parrafo": "The address may have changed or the link may be incomplete. These are the main sections of the site:",
+    "cta": "Back to home"
+  },
+  "migas": {
+    "inicio": "Home",
+    "nosotros": "About us",
+    "productos": "Products",
+    "contacto": "Contact",
+    "fabricacion": "Manufacturing",
+    "hosting": "Regulatory Hosting",
+    "importacion": "Import"
+  },
   "navegacion": {
     "inicio": "Home",
-    "equipo": "Our Team",
+    "equipo": "About us",
     "servicios": "Services",
     "productos": "Products",
     "contacto": "Contact us",
@@ -52,13 +93,13 @@
     "cambiarIdioma": "Change language",
     "serviciosItems": {
       "fabricacion": "Manufacturing",
-      "hosting": "Hosting",
+      "hosting": "Regulatory Hosting",
       "importacion": "Import"
     }
   },
   "contacto": {
     "titulo": "Get in touch",
-    "parrafo": "Write to us and we'll help you turn your idea into a real product — compliant and ready for the market. We reply within 48 hours, with no commitment and full confidentiality.",
+    "parrafo": "Write to us and we'll help you turn your idea into a real product — compliant and ready for the market. We reply within 72 business hours, with no commitment and full confidentiality.",
     "form": {
       "nombre": { "label": "Full name", "placeholder": "Your full name" },
       "email": { "label": "Contact email", "placeholder": "you@email.com" },
@@ -71,15 +112,17 @@
     "tarjetas": {
       "email": "Email",
       "telefono": "Phone",
-      "direccion": "Address"
+      "direccion": "Address",
+      "horario": "Business hours"
     },
     "mapaAlt": "Laboratorio Séance location on the map",
     "estado": {
-      "exito": "Thank you! We received your message and will reply within 48 hours.",
+      "exito": "Thank you! We received your message and will reply within 72 business hours.",
       "error": "We couldn't send your message. Please try again or email us.",
       "requerido": "This field is required.",
       "emailInvalido": "Enter a valid email address.",
-      "mensajeCorto": "Tell us a bit more (at least 10 characters)."
+      "mensajeCorto": "Tell us a bit more (at least 10 characters).",
+      "mensajeLargo": "The message can be up to 1,500 characters."
     }
   },
   "servicios": {
@@ -122,8 +165,8 @@
             "items": ["Serum", "Moisturizing / Nourishing Cream", "Exfoliating Cream / Peeling", "Eye contour", "Acid-based Creams"]
           },
           {
-            "titulo": "Perfumes",
-            "items": ["Eau de Parfum", "Eau de Toilette", "Body splash", "Designer perfumes"]
+            "titulo": "Fragrances",
+            "items": ["Eau de Parfum", "Body splash"]
           },
           {
             "titulo": "Hair Products",
@@ -131,7 +174,15 @@
           },
           {
             "titulo": "Body Creams",
-            "items": ["Cream for Cellulite / Stretch marks / Varicose veins", "Moisturizing / Nourishing Cream", "Cream for Feet / Legs", "Exfoliating Cream"]
+            "items": ["Cream for Cellulite / Stretch marks", "Moisturizing / Nourishing Cream", "Cream for Feet / Legs", "Exfoliating Cream"]
+          },
+          {
+            "titulo": "Household products",
+            "items": [
+              "Room fresheners",
+              "Textile fresheners",
+              "Car fresheners"
+            ]
           }
         ],
         "sinProducto": {
@@ -142,187 +193,308 @@
       },
       "proceso": {
         "eyebrow": "Our process",
-        "titulo": "We manufacture your line in 4 steps",
-        "parrafo": "We present the manufacturing process in 4 clear, client-oriented steps. Each step explains concretely what we do and what to expect.",
+        "titulo": "We manufacture your line in 5 steps",
+        "parrafo": "We present the manufacturing process in 5 clear steps, in the order the work actually happens. Each step explains concretely what we do and what to expect.",
         "pasos": [
           {
             "numero": "1",
-            "titulo": "Define your project and we register your products",
-            "parrafo": "We identify your needs and build your ANMAT registration. Our specialists handle the submission of your products to ANMAT and coordinate the whole procedure, speeding up timelines and minimizing errors."
+            "titulo": "Briefing and feasibility",
+            "parrafo": "You tell us what you want to make. We define the Grade I or Grade II classification, regulatory feasibility and project scope."
           },
           {
             "numero": "2",
-            "titulo": "Formulas, packaging and labeling",
-            "parrafo": "We work alongside your brand to choose the ideal formula for your line:",
-            "bullets": ["Select suitable packaging", "Design and validate regulatory labels."],
+            "titulo": "Development",
+            "parrafo": "Custom formula or adaptation of yours, packaging selection, packaging-formula compatibility and stability.",
             "destacado": {
               "titulo": "Don't have a formula? We develop it to measure",
               "parrafo": "Every formula we create is confidential and exclusive to each client: we design it to your goals and never share it with anyone else."
             },
-            "tags": ["Paraben Free", "Cruelty Free", "Sulfate Free", "Ask for others"]
+            "tagsTitulo": "Formulation options at the client's request:",
+            "tags": [
+              "Paraben Free",
+              "Cruelty Free",
+              "Sulfate Free",
+              "Ask for others"
+            ]
           },
           {
             "numero": "3",
-            "titulo": "Production, filling and quality control",
-            "parrafo": "We produce your line to high standards: manufacturing and filling.",
-            "bullets": ["Per-batch quality control", "Labeling verification", "Traceability records."]
+            "titulo": "Dossier and ANMAT registration",
+            "parrafo": "Dossier preparation, regulatory label, contract manufacturing agreement and submission to the authority."
           },
           {
             "numero": "4",
-            "titulo": "Final quality control and release",
-            "parrafo": "We run the final quality control on the finished product. Once approved, we let you know your line is ready to collect and bring to market."
+            "titulo": "Production and control",
+            "parrafo": "Manufacturing, filling, per-batch control and full traceability.",
+            "destacado": {
+              "titulo": "Quality control under GMP",
+              "parrafo": "Physicochemical and organoleptic testing, stability studies, control of raw and packaging materials, and finished-product control before release by the Technical Director."
+            }
+          },
+          {
+            "numero": "5",
+            "titulo": "Release",
+            "parrafo": "Finished-product control and release by the Technical Director."
           }
         ]
       },
       "anmat": {
-        "titulo": "ANMAT registration without the wait",
-        "parrafo": "With a complete file, ANMAT registration is immediate. Preparing the documentation well is our job — and we've been doing it for over 35 years."
+        "titulo": "ANMAT registration in about 72 business hours, with a well-prepared dossier",
+        "parrafos": [
+          "With a complete dossier (signed documentation, reviewed labels and finished studies), registration is granted in about 72 business hours, for both Grade I and Grade II cosmetic products.",
+          "Those 72 hours are the easy part. The difference between a clean registration and weeks of observations lies in how the dossier is prepared before it is submitted, and that is exactly what we have been doing since 1990."
+        ]
       },
       "cierre": {
         "titulo": "Tell us about your project",
-        "parrafo": "Tell us which line you want to manufacture and we'll reply within 48 hours. We tell you exactly what's needed and build a plan with clear timelines and costs.",
+        "parrafo": "Tell us which line you want to manufacture and we'll reply within 72 business hours. We tell you exactly what's needed and build a plan with clear timelines and costs.",
         "cta": "Talk to an advisor"
       }
     },
     "hosting": {
       "hero": {
-        "eyebrow": "Regulatory backing for importers",
-        "titulo": "Import compliantly, backed by an authorized laboratory",
-        "parrafo": "Laboratorio Séance's regulatory hosting gives importers the backing to operate legally in Argentina: authorized warehouse, technical direction, ANMAT registration and ongoing regulatory follow-up. Ownership and commercialization of the products always remain the client's.",
-        "cta": "Talk to an advisor",
+        "eyebrow": "Regulatory hosting for cosmetics",
+        "titulo": "Your cosmetic brand in Argentina, with a Technical Director and ANMAT-authorized warehouse",
+        "parrafo": "You bring the brand. We provide a Technical Director, an ANMAT-authorized warehouse and regulatory support so you can sell your products in Argentina.",
+        "cta": "Ask about regulatory hosting",
         "imagenAlt": "Regulatory documentation and samples in Séance's authorized laboratory"
       },
+      "confianza": ["ANMAT-authorized facility", "Since 1990", "In-house Technical Director", "Confidentiality"],
       "intro": {
-        "eyebrow": "What is regulatory hosting",
-        "titulo": "Your import operation, backed by a laboratory",
-        "parrafo": "If you're an importer and need to operate in Argentina in compliance with regulations, regulatory hosting gives you the authorized structure to do it. You import and commercialize your products keeping their ownership; we provide the regulatory backing so everything is in order, from registration to permanent follow-up with ANMAT.",
+        "eyebrow": "What is regulatory hosting?",
+        "titulo": "The regulatory infrastructure your brand needs",
+        "parrafos": [
+          "Regulatory hosting brings your project into Séance’s ANMAT-authorized facilities and operations, with warehousing, a Technical Director and regulatory management. We support you from document review and product registration through ongoing monitoring of your products on the Argentine market.",
+          "Before we begin, we assess your products and define the operating arrangement, each party’s responsibilities and the requirements to be met. You focus on developing and selling your brand."
+        ],
         "imagenAlt": "Laboratorio Séance's regulatory team reviewing documentation"
       },
       "incluye": {
-        "eyebrow": "Solutions",
-        "titulo": "What regulatory hosting includes",
+        "eyebrow": "What’s included",
+        "titulo": "Séance’s support at every stage",
         "items": [
           {
             "titulo": "Authorized warehouse",
-            "descripcion": "Storage in an ANMAT-authorized establishment, under conditions that meet the regulations."
+            "descripcion": "An ANMAT-authorized warehouse. Once the goods have passed the required checks, you can sell your products on the Argentine market."
           },
           {
-            "titulo": "Technical direction",
-            "descripcion": "A responsible technical director backs your operation before the health authority."
+            "titulo": "Technical Director",
+            "descripcion": "Our Technical Director oversees the regulatory aspects of the operation and supports your compliance with applicable regulations."
           },
           {
-            "titulo": "ANMAT registration",
-            "descripcion": "We handle the registration of your products so you can commercialize them legally."
+            "titulo": "ANMAT procedures",
+            "descripcion": "We review documentation, labeling and technical requirements. We manage the ANMAT registrations and submissions applicable to your products."
           },
           {
-            "titulo": "Ongoing regulatory follow-up",
-            "descripcion": "We support your products over time: regulatory changes, renewals and any ANMAT requirement."
+            "titulo": "Ongoing regulatory support",
+            "descripcion": "We support documentation updates and help maintain compliance with current Argentine health requirements."
           }
         ]
       },
       "titularidad": {
-        "eyebrow": "Ownership guarantee",
-        "titulo": "Ownership is always yours",
-        "parrafo": "We want it clear and in writing: with regulatory hosting, ownership and commercialization of the products always remain the client's. We provide the backing; you remain the owner of your brand, your products and your business."
+        "eyebrow": "Your brand and your information",
+        "titulo": "Your brand remains yours",
+        "parrafo": "You retain ownership of your brand. We define registration ownership and health regulatory responsibilities in writing from the outset, according to the operating arrangement. We safeguard your documentation and work under confidentiality agreements."
       },
-      "metodo": {
-        "eyebrow": "Our method",
-        "titulo": "Safety, transparency and clarity at every step",
-        "parrafo": "We don't leave you alone with the paperwork. Our focus is peace of mind: we explain each step clearly, work with full transparency and train you where needed so you understand and control your own operation.",
-        "puntos": [
-          { "titulo": "Safety", "descripcion": "You operate with an authorized laboratory and a technical director who answers for it." },
-          { "titulo": "Transparency", "descripcion": "You always know what is being done and why." },
-          { "titulo": "Clarity", "descripcion": "No unnecessary jargon: we explain what you need to know." },
-          { "titulo": "Training", "descripcion": "We train you wherever needed so you master your operation." }
-        ]
+      "responsabilidades": {
+        "eyebrow": "How we work",
+        "titulo": "What Séance provides and what you provide",
+        "columnas": [
+          {
+            "titulo": "Séance provides",
+            "items": [
+              "An ANMAT-authorized warehouse and an in-house Technical Director.",
+              "Documentation and labeling review, and management of applicable submissions.",
+              "Ongoing regulatory support, storage guidelines and traceability."
+            ]
+          },
+          {
+            "titulo": "You provide",
+            "items": [
+              "Your brand and information about the products and manufacturer.",
+              "Formulas, labels and available technical documentation for the project assessment.",
+              "Commercial management and the information needed to keep documentation up to date."
+            ]
+          }
+        ],
+        "nota": "The service proposal defines the scope, fees and each party’s responsibilities."
       },
       "paraVos": {
-        "titulo": "Is it for you?",
+        "eyebrow": "Who it’s for",
+        "titulo": "Is this right for your project?",
         "items": [
-          "Importers who want to commercialize cosmetics in Argentina in compliance with regulations.",
-          "Foreign brands that need local regulatory backing without setting up their own authorized structure.",
-          "Companies that prefer to focus on selling while an authorized laboratory backs compliance."
+          {
+            "titulo": "International brands",
+            "descripcion": "Seeking to enter the Argentine market with the necessary regulatory infrastructure and a local regulatory team."
+          },
+          {
+            "titulo": "Importers and distributors",
+            "descripcion": "Needing an ANMAT-authorized warehouse, a Technical Director and support for their cosmetic products."
+          },
+          {
+            "titulo": "Companies developing their own brand",
+            "descripcion": "Wanting to focus on sales while a laboratory supports the health regulatory aspects of their operation."
+          }
         ]
       },
       "faq": {
         "eyebrow": "Frequently asked questions",
-        "titulo": "What we get asked most",
+        "titulo": "What you need to know before you start",
         "items": [
           {
-            "pregunta": "Who owns the products?",
-            "respuesta": "Always the client. With regulatory hosting you keep ownership and commercialization of your products; we provide the regulatory backing."
+            "pregunta": "Do I need to obtain authorization for my own facility?",
+            "respuesta": "No. You can use Séance’s ANMAT-authorized warehouse and Technical Director under the agreed arrangement. Before we begin, we assess the authorizations, registrations and responsibilities that apply to each party, based on the products and the operation."
           },
           {
-            "pregunta": "What exactly does Séance provide?",
-            "respuesta": "The authorized warehouse, the technical direction, ANMAT registration and constant regulatory follow-up of your products."
+            "pregunta": "What documentation do I need to provide?",
+            "respuesta": "To assess your project, we need information about the products, country of origin, manufacturer, formulas or ingredient lists, and available labels. We then specify the technical documentation and studies required for each product."
           },
           {
-            "pregunta": "How is it different from the import service?",
-            "respuesta": "With hosting, you import and commercialize under your own ownership and we back the compliance. With full import, we manage the entire journey of the product into Argentina."
+            "pregunta": "Who owns the brand and holds the registrations?",
+            "respuesta": "Your brand remains yours. We define who holds the registrations and each party’s health regulatory responsibilities in writing at the outset, according to the operating arrangement and applicable requirements."
           },
           {
-            "pregunta": "Do you support me after registration?",
-            "respuesta": "Yes. Regulatory follow-up is constant: regulatory changes, renewals and ANMAT requirements over time."
+            "pregunta": "How does this differ from full-service imports?",
+            "respuesta": "Regulatory hosting provides an ANMAT-authorized warehouse, a Technical Director and regulatory support. With full-service imports, Séance imports directly from the country of origin, makes overseas payments, coordinates logistics, registers the products with ANMAT and performs quality controls. You focus on selling."
+          },
+          {
+            "pregunta": "Do you provide support after registration?",
+            "respuesta": "Yes. Throughout our working relationship, we support documentation updates, reportable changes and health regulatory requirements within the agreed scope. We also define safety and traceability guidelines for products on the market."
+          },
+          {
+            "pregunta": "How is the service quoted and billed?",
+            "respuesta": "We prepare the proposal based on the products, available documentation and scope of the operation. Before we begin, we set out our fees, billing arrangements and any additional expenses in writing so you can assess the cost of the service."
+          },
+          {
+            "pregunta": "What happens if our working relationship ends?",
+            "respuesta": "We agree the termination terms in writing at the outset. These specify how documentation and any relevant regulatory procedures will be handled. Any change of establishment or registration holder is assessed against applicable requirements."
+          },
+          {
+            "pregunta": "How is my information protected?",
+            "respuesta": "We work under confidentiality agreements to safeguard your technical and commercial information. We use the documentation to provide the service and carry out the relevant regulatory procedures within the agreed scope."
           }
         ]
       },
       "cierre": {
-        "titulo": "Tell us about your import project",
-        "parrafo": "Tell us what you want to import and we'll explain how regulatory hosting backs you. We reply within 48 hours, with full confidentiality.",
-        "cta": "Talk to an advisor"
+        "eyebrow": "Let’s talk about your brand",
+        "titulo": "Tell us which products you want to sell in Argentina",
+        "parrafo": "Share the product type, country of origin, labels and documentation you have available. We will assess your project and explain how our regulatory hosting service can support you.",
+        "plazo": "We respond within 72 business hours of receiving a complete inquiry.",
+        "cta": "Ask about regulatory hosting"
       }
     },
     "importacion": {
       "hero": {
-        "eyebrow": "Your vision, our expertise",
-        "titulo": "Bring your cosmetic product to Argentina, hassle-free and compliant",
-        "parrafo": "Laboratorio Séance manages the end-to-end import of cosmetics, perfumery and household products into Argentina. Since 1990 we handle the whole process — customs, ANMAT registration, logistics and quality control — so your product arrives ready to sell, with 100% compliance and full confidentiality.",
-        "cta": "Talk to an advisor",
+        "eyebrow": "Full-service imports of cosmetics and household hygiene products",
+        "titulo": "We handle the imports.\nYou focus on selling.",
+        "parrafo": "We import your products directly from their country of origin into Argentina. We make overseas payments, coordinate logistics, register products with ANMAT and perform quality controls.",
+        "cta": "Ask about full-service imports",
         "imagenAlt": "Cargo containers at port for the import of cosmetic products"
       },
+      "confianza": ["ANMAT-authorized facility", "Since 1990", "In-house Technical Director", "Confidentiality"],
       "recorrido": {
-        "eyebrow": "End-to-end operation",
-        "titulo": "We handle the whole journey",
-        "parrafo": "We manage the import end to end. Each stage is designed so your product reaches Argentina compliantly, with no surprises or delays.",
+        "eyebrow": "How we work",
+        "titulo": "We manage the entire import process",
+        "parrafo": "From the initial assessment to receipt of goods and batch quality control, we coordinate each stage with the support of our Technical Director and Regulatory Affairs Department.",
         "pasos": [
           {
             "numero": "1",
-            "titulo": "ANMAT registration and submission",
-            "bullets": ["Regulatory technical advice", "Dossier assembly and submission", "Local testing if required", "Follow-up until approval"]
+            "titulo": "Assessment, documentation and registration",
+            "bullets": [
+              "We assess the products and the requirements for selling them in Argentina.",
+              "We review the manufacturer’s documentation, formulas and labels.",
+              "We prepare the dossier and manage the applicable ANMAT registrations and submissions.",
+              "We coordinate the studies or tests required for each product."
+            ]
           },
           {
             "numero": "2",
-            "titulo": "Import coordination",
-            "bullets": ["Management with forwarder and customs brokers", "Tariff classification", "Documentation filing at port", "Release before ANMAT"]
+            "titulo": "Direct imports and overseas payments",
+            "bullets": [
+              "We coordinate the operation with the supplier in the country of origin.",
+              "We make overseas payments under the agreed terms.",
+              "We gather and review the commercial documentation required for the import.",
+              "Before we begin, we agree the scope, costs and terms of the operation with you."
+            ]
           },
           {
             "numero": "3",
             "titulo": "Logistics and receipt in Argentina",
-            "bullets": ["Coordination from origin to the Argentine port", "Handling of unforeseen events", "Safe transfer to authorized warehouse"]
+            "bullets": [
+              "We coordinate international transport and customs clearance.",
+              "We track the shipment and the documentation for the operation.",
+              "We coordinate transport to the authorized warehouse and receipt of the products.",
+              "We keep you informed of progress and any adjustments that may be required."
+            ]
           },
           {
             "numero": "4",
-            "titulo": "Per-batch verification and control",
-            "bullets": ["Quantity control", "Labeling validation", "Over-labeling if applicable", "Sample retention", "Quality control before commercialization"]
+            "titulo": "Batch quality control and release",
+            "bullets": [
+              "We verify quantities, batch identification and the products received.",
+              "We review the labeling and apply supplementary labels where required.",
+              "We perform quality controls and retain the required samples.",
+              "Our Technical Director assesses the results and releases the products before they go on sale."
+            ]
           }
         ]
       },
       "cumplimiento": {
-        "eyebrow": "We reduce risks, timelines and costs by aligning with your go-to-market strategy",
-        "titulo": "Always compliant with ANMAT",
-        "parrafo": "We make sure your products comply with local regulations from the very first procedure to their commercialization. We guarantee absolute confidentiality and respect for brand ownership.",
-        "bullets": ["Avoid customs delays.", "Avoid regulatory observations.", "Avoid unexpected costs.", "Avoid labeling errors.", "Avoid legal risks."],
+        "eyebrow": "Health and regulatory support",
+        "titulo": "Imports backed by an authorized laboratory",
+        "parrafo": "We hold ANMAT authorization to import cosmetics and household hygiene products, with an in-house Technical Director and Regulatory Affairs Department. We work to ensure strict compliance with current ANMAT regulations in every operation.",
+        "bullets": [
+          "Review of requirements before starting the operation.",
+          "Regulatory management included in the import service.",
+          "Labeling and quality checks before products go on sale."
+        ],
+        "destacado": {
+          "titulo": "Exports",
+          "parrafo": "We also hold ANMAT authorization to export cosmetic products."
+        },
         "imagenAlt": "Import containers at port, in compliance with ANMAT"
       },
       "titularidad": {
-        "eyebrow": "Ownership guarantee",
-        "titulo": "Your brand stays yours",
-        "parrafo": "When you import with Séance, ownership of your brand and your registration is always yours. We protect your product and your information with the same confidentiality we give every client."
+        "eyebrow": "Your brand and your information",
+        "titulo": "Your brand remains yours",
+        "parrafo": "You retain ownership of your brand. We safeguard your technical and commercial information through confidentiality agreements. We set out the terms of the operation and each party’s responsibilities in writing from the outset."
+      },
+      "faq": {
+        "eyebrow": "Frequently asked questions",
+        "titulo": "Before you start your import",
+        "items": [
+          {
+            "pregunta": "What products can you import?",
+            "respuesta": "We import cosmetics, fragrances and household and institutional hygiene products (domisanitarios). Our scope includes Grade II cosmetics in all categories. Before we begin, we assess each product and its documentation to establish the requirements for the operation."
+          },
+          {
+            "pregunta": "What information do you need to assess my project?",
+            "respuesta": "Tell us which products you want to import, who manufactures them, their country of origin, estimated quantities and your intended timeline. Include formulas, labels and technical documentation if available. We will identify anything else needed to proceed."
+          },
+          {
+            "pregunta": "Does Séance pay the overseas supplier?",
+            "respuesta": "Yes. As part of our full-service import offering, we make payments to the overseas supplier. We agree the currency, payment schedule and required funds in writing before starting the operation."
+          },
+          {
+            "pregunta": "How long does an import take?",
+            "respuesta": "The timeline depends on the available documentation, product requirements, supplier lead times, transport and customs clearance. After assessing your project, we outline the stages and estimated times so you can plan the operation."
+          },
+          {
+            "pregunta": "How does this differ from regulatory hosting?",
+            "respuesta": "Hosting provides an authorized warehouse, a Technical Director and regulatory support. Full-service imports add direct importing, overseas payments and logistics coordination. Choose this service if you want us to manage the entire process."
+          },
+          {
+            "pregunta": "How is the service quoted?",
+            "respuesta": "We prepare the proposal based on the products, origin, quantities and available documentation. We set out the scope and costs, specifying our fees and which transport, customs, tax, administrative or testing expenses are included or quoted separately."
+          }
+        ]
       },
       "cierre": {
-        "titulo": "Tell us about your import project",
-        "parrafo": "Tell us what product you want to import and we'll reply within 48 hours. We tell you exactly what's needed so it reaches Argentina without obstacles.",
-        "cta": "Talk to an advisor"
+        "eyebrow": "Let’s talk about your project",
+        "titulo": "Tell us which products you want to import",
+        "parrafo": "Share the product type, manufacturer, country of origin and estimated quantities. We will review the available documentation and propose how to proceed with the import.",
+        "plazo": "We respond within 72 business hours of receiving a complete inquiry.",
+        "cta": "Ask about full-service imports"
       }
     }
   },
@@ -330,11 +502,18 @@
     "hero": {
       "eyebrow": "Your strategic partner in the Argentine cosmetics industry",
       "titulo": "Over 35 years answering for the brands that trust us",
-      "parrafo": "Laboratorio Séance is an Argentine cosmetics laboratory specialized in contract manufacturing, regulatory hosting for importers and end-to-end import management of cosmetics, perfumery and household products. We operate with active ANMAT authorization, 100% regulatory compliance and full confidentiality over every formula and brand.",
+      "parrafo": "Laboratorio Séance is an Argentine cosmetics laboratory specialized in contract manufacturing, regulatory hosting for importers and end-to-end import management of cosmetics, perfumery and household products. We operate with active ANMAT authorization, rigorous compliance with current ANMAT regulations and full confidentiality over every formula and brand.",
       "videoAlt": "Enrique Pelliza, founder of Laboratorio Séance, in an interview",
-      "certAlt": "ISO 9001 and ISO 14001 certification",
-      "certLinea1": "Management System — ISO 9001:2008 · ISO 14001:2004",
-      "certLinea2": "www.tuv.com · ID 9108632300"
+      "alcance": {
+        "titulo": "Scope of authorization",
+        "items": [
+          "ANMAT-authorized establishment for manufacturing and conditioning cosmetic products: liquid, semi-solid and alcohol-based. Import and export of cosmetic products.",
+          "Active authorization for manufacturing and importing household products.",
+          "Registration and production of Grade I and Grade II products in liquid, semi-solid and alcohol-based forms. Import of Grade II cosmetics in every category.",
+          "Production under Good Manufacturing Practices (GMP), in line with current ANMAT regulations.",
+          "In-house Technical Director and Regulatory Affairs Department."
+        ]
+      }
     },
     "soluciones": {
       "eyebrow": "What we do",
@@ -361,6 +540,11 @@
     "capacidades": {
       "eyebrow": "Technical capabilities",
       "titulo": "Capabilities that back every project",
+      "cifras": [
+        { "valor": "3,500 L", "etiqueta": "Tanks of up to 3,500 liters" },
+        { "valor": "200,000", "etiqueta": "Units of monthly capacity" },
+        { "valor": "2 ml – 200 L", "etiqueta": "Filling range" }
+      ],
       "items": [
         "ANMAT-authorized plant for manufacturing and conditioning of cosmetic products.",
         "Good Manufacturing Practices (GMP) across all production processes.",
@@ -394,7 +578,7 @@
       "items": [
         { "titulo": "Trust", "descripcion": "We are the partner that answers for your brand's compliance." },
         { "titulo": "Confidentiality", "descripcion": "We protect each client's formula, brand and ownership." },
-        { "titulo": "Compliance", "descripcion": "100% of ANMAT regulations, no shortcuts." },
+        { "titulo": "Compliance", "descripcion": "Rigorous compliance with current ANMAT regulations, no shortcuts." },
         { "titulo": "Quality", "descripcion": "The same standards for our clients as for our own brand." },
         { "titulo": "Transparency", "descripcion": "Clear timelines, costs and steps, no fine print." }
       ]
@@ -402,13 +586,13 @@
     "everest": {
       "eyebrow": "Own brand",
       "titulo": "We manufacture to the same standards we offer our clients",
-      "parrafo": "Everest is our own brand, made with the same authorizations and standards we offer clients: hygiene, sanitization and personal care. If we trust Séance to put our own name on it, you can trust it for yours.",
+      "parrafo": "Everest is our own brand, made with the same authorizations and standards we offer clients: hygiene, sanitization and personal care. If we trust Séance to put our own name on it, you can trust it for yours. Séance's own brands and our clients' brands are managed separately.",
       "productos": ["Hand sanitizer gel", "70% alcohol", "Antibacterial liquid soap", "Insect repellent", "Shampoo", "Conditioner"],
       "logoAlt": "Everest logo, Laboratorio Séance's own brand"
     },
     "cierre": {
       "titulo": "Ready to start your project?",
-      "parrafo": "Whether you want to manufacture, import or operate as an importer in Argentina, tell us about your project and we'll reply within 48 hours.",
+      "parrafo": "Whether you want to manufacture, import or operate as an importer in Argentina, tell us about your project and we'll reply within 72 business hours.",
       "cta": "Talk to an advisor"
     }
   },
@@ -422,12 +606,12 @@
     "items": [
       {
         "titulo": "Hand sanitizer gel",
-        "descripcion": "Antibacterial hand sanitizer gel (EVEREST ORIGINAL), a product registered and approved by ANMAT, at 65% ethyl alcohol. Quality and protection for food industries, hospitals, sanatoriums and clinics.",
-        "presentaciones": ["65ml", "280ml", "500ml", "5L drum"]
+        "descripcion": "Antibacterial hand sanitizer gel (EVEREST ORIGINAL), a product registered with ANMAT. Backed by an antibacterial efficacy study. Formulated for intensive use in the food industry, hospitals, sanatoriums and clinics.",
+        "presentaciones": ["5L drum"]
       },
       {
         "titulo": "70% alcohol",
-        "descripcion": "Formulated with ethyl alcohol to eliminate viruses and bacteria, enriched with emollients. Made with 96° medicinal-grade alcohol, approved by the INV (methanol-free).",
+        "descripcion": "Formulated with 70% ethyl alcohol, enriched with emollients. Made with 96-proof alcohol approved by the INV, methanol-free. Antibacterial action backed by a study. Product registered with ANMAT.",
         "presentaciones": ["5L drum"]
       },
       {
@@ -436,8 +620,16 @@
         "presentaciones": ["280ml", "5L drum"]
       },
       {
+        "titulo": "Liquid soap",
+        "descripcion": "Newly launched, this product cleans and cares for the skin, with antibacterial and softening action at the same time. Apple fragrance.",
+        "presentaciones": [
+          "280ml",
+          "5L drum"
+        ]
+      },
+      {
         "titulo": "Repellent spray",
-        "descripcion": "Formula with 10% DEET and citronella. Dermatologically tested, hypoallergenic. Long-lasting protection with aloe vera, suitable for all skin types.",
+        "descripcion": "Formula with 10% DEET and citronella, with aloe vera. Hypoallergenic and dermatologically tested, both backed by studies. Long-lasting 8-hour protection, backed by an efficacy study. Suitable for all skin types.",
         "presentaciones": ["Spray"]
       },
       {
@@ -448,7 +640,7 @@
       {
         "titulo": "Conditioner",
         "descripcion": "The ideal complement to washing: detangles and adds softness to the hair. Apple variant. Formulated for high performance in hair care.",
-        "presentaciones": ["280ml", "5L drum"]
+        "presentaciones": ["5L drum"]
       }
     ],
     "cierre": {
@@ -460,27 +652,32 @@
   "footer": {
     "tagline": "Innovation, quality and experience in the Argentine cosmetics industry since 1990.",
     "columnas": {
-      "links": "Links",
       "servicios": "Services",
-      "contacto": "Contact",
+      "escribinos": "Write to us",
+      "contactanos": "Contact us",
       "direccion": "Address"
     },
-    "links": ["Home", "About us", "Contact"],
     "servicios": [
       "Contract Manufacturing",
-      "Hosting",
+      "Regulatory Hosting",
       "Import"
     ],
     "derechos": "All rights reserved.",
-    "whatsapp": "Chat on WhatsApp"
+    "whatsapp": "Chat on WhatsApp",
+    "whatsappMensaje": "Hello, I would like to learn more about Laboratorio Séance's services",
+    "redes": {
+      "youtube": "Séance on YouTube",
+      "facebook": "Séance on Facebook",
+      "linkedin": "Séance on LinkedIn"
+    }
   },
   "inicio": {
     "hero": {
       "eyebrow": "ANMAT-authorized cosmetics laboratory · Argentina · since 1990",
       "titulo": "Your cosmetic brand in the Argentine market, risk-free",
-      "parrafo": "Laboratorio Séance is an Argentine cosmetics laboratory authorized by ANMAT, founded in 1990. We help brands and importers worldwide manufacture, import and register cosmetic, perfumery and household products in Argentina — with 100% regulatory compliance and full confidentiality over every formula and brand.",
+      "parrafo": "Laboratorio Séance is an Argentine cosmetics laboratory authorized by ANMAT, founded in 1990. We help brands and importers worldwide manufacture, import and register cosmetic, perfumery and household products in Argentina — with rigorous compliance with current ANMAT regulations and full confidentiality over every formula and brand. We register and manufacture Grade I and Grade II products in liquid, semi-solid and alcohol-based forms, and import Grade II cosmetics in every category.",
       "cta": "Talk to an advisor",
-      "imagenAlt": "Premium cosmetics product line manufactured by Laboratorio Séance"
+      "imagenAlt": "Private-label cosmetic line in black packaging with gold details: pump bottle, spray and body and face cream jars"
     },
     "soluciones": {
       "eyebrow": "What do you need to solve?",
@@ -508,7 +705,7 @@
     },
     "confianza": {
       "anchor": [
-        "Immediate ANMAT registration with a complete dossier",
+        "ANMAT registration in about 72 business hours with a complete dossier",
         "Over 35 years standing behind brands in Argentina"
       ],
       "bar": [
@@ -533,7 +730,7 @@
       "items": [
         { "valor": "200+", "etiqueta": "Brands registered with ANMAT" },
         { "valor": "5000+", "etiqueta": "Cosmetic SKUs successfully processed" },
-        { "valor": "100%", "etiqueta": "Legal and regulatory compliance" },
+        { "valor": "72 h", "etiqueta": "Business hours, approx., to obtain ANMAT registration with a complete dossier" },
         { "valor": "+35", "etiqueta": "Years manufacturing in Argentina (since 1990)" }
       ]
     },
@@ -556,18 +753,21 @@
       }
     },
     "registro": {
-      "titulo": "ANMAT registration without the wait",
-      "parrafo": "Once the dossier is complete, ANMAT registration is immediate. The difference between weeks of delay and a clean registration lies in preparing the documentation well — and that's exactly what we do, with over 35 years of experience."
+      "titulo": "ANMAT registration in about 72 business hours, with a well-prepared dossier",
+      "parrafos": [
+        "With a complete dossier (signed documentation, reviewed labels and finished studies), registration is granted in about 72 business hours, for both Grade I and Grade II cosmetic products.",
+        "Those 72 hours are the easy part. The difference between a clean registration and weeks of observations lies in how the dossier is prepared before it is submitted, and that is exactly what we have been doing since 1990."
+      ]
     },
     "everest": {
       "titulo": "Everest — our own brand",
-      "parrafo": "Everest is our own brand — manufactured to the same standards and authorizations we offer clients: hygiene, sanitization and personal care. If we trust Séance to carry our own name, you can trust it for yours.",
+      "parrafo": "Everest is our own brand — manufactured to the same standards and authorizations we offer clients: hygiene, sanitization and personal care. If we trust Séance to carry our own name, you can trust it for yours. Séance's own brands and our clients' brands are managed separately.",
       "logoAlt": "Everest logo, Laboratorio Séance's own brand"
     },
     "proceso": {
       "eyebrow": "How we work",
       "titulo": "You bring the idea. We handle the rest",
-      "parrafo": "You don't need to know how ANMAT works, or what documentation customs requires. In 34 years we've done it more than 5,000 times.",
+      "parrafo": "You don't need to know how ANMAT works, or what documentation customs requires. Since 1990 we've done it more than 5,000 times.",
       "pasos": [
         {
           "numero": "01",
@@ -611,20 +811,60 @@
           "respuesta": "We manufacture, import and register cosmetic, perfumery and household products in Argentina for brands and importers, with an active ANMAT authorization and full confidentiality."
         },
         {
-          "pregunta": "Are my formula and my brand protected?",
-          "respuesta": "Yes. Every formula is confidential and exclusive to each client: we don't share or reuse it. Ownership of your brand and your registration is always yours."
+          "pregunta": "What is the minimum batch?",
+          "respuesta": "500 liters, or 5,000 units in formats under 100 ml. The higher the volume, the better the unit price."
+        },
+        {
+          "pregunta": "How long does it take to develop a new formula?",
+          "respuesta": "Between 1 and 3 months, depending on complexity."
+        },
+        {
+          "pregunta": "How long does it take to register a cosmetic product in Argentina?",
+          "respuesta": "With a complete dossier (signed documentation, reviewed labels and finished studies), ANMAT registration is granted in about 72 business hours, for both Grade I and Grade II. The real work is in preparing the dossier well, and that's what we take care of."
+        },
+        {
+          "pregunta": "How long does production take?",
+          "respuesta": "About 4 weeks from the moment raw materials and packaging materials are on site."
+        },
+        {
+          "pregunta": "Do you work with Grade II products?",
+          "respuesta": "Yes. We manufacture several Grade II categories in liquid, semi-solid and alcohol-based forms, and import Grade II cosmetics in every category."
+        },
+        {
+          "pregunta": "Can I bring my own formula?",
+          "respuesta": "Yes. We adapt it to local regulations and to our plant equipment. The formula remains yours and is never shared or reused."
+        },
+        {
+          "pregunta": "Who holds the registration?",
+          "respuesta": "Always the client. Séance provides the regulatory backing; ownership and commercialization never change hands."
+        },
+        {
+          "pregunta": "Do you sign non-disclosure agreements?",
+          "respuesta": "Yes, we do."
+        },
+        {
+          "pregunta": "Do you manufacture household products?",
+          "respuesta": "Yes. We hold an active authorization and manufacture room, textile and car fresheners."
+        },
+        {
+          "pregunta": "Do you import household products?",
+          "respuesta": "Yes, we are authorized to do so."
         },
         {
           "pregunta": "Do I need to know how ANMAT works to work with you?",
           "respuesta": "No. We give you a free initial consultation, understand your project and tell you exactly which path to follow."
         },
         {
-          "pregunta": "How long does it take to register a cosmetic product in Argentina?",
-          "respuesta": "ANMAT registration is immediate once the documentation and studies are complete. The real work is in preparing the dossier well — and that's what we take care of."
-        },
-        {
           "pregunta": "Do you manufacture for international brands without a structure in Argentina?",
           "respuesta": "Yes. Through our hosting service for importers, you operate legally in Argentina without needing a local entity."
+        },
+        {
+          "pregunta": "Which languages do you work in?",
+          "respuesta": "Spanish and English."
+        },
+        {
+          "pregunta": "How long do you take to reply to a request?",
+          "respuesta": "We reply to complete requests within 72 business hours at the latest."
         },
         {
           "pregunta": "Where are you located?",
@@ -634,14 +874,14 @@
     },
     "contacto": {
       "titulo": "Ready to start?",
-      "parrafo": "Tell us about your project and we'll reply within 48 hours. No commitment and full confidentiality.",
+      "parrafo": "Tell us about your project and we'll reply within 72 business hours. No commitment and full confidentiality.",
       "cta": "Talk to an advisor"
     },
     "newsletter": {
       "eyebrow": "Newsletter",
       "titulo": "Cosmetovigilance and Trends",
       "parrafo": "By Andrea Pelliza — CEO & Regulatory Affairs, Laboratorio Séance. Updates on cosmetovigilance and ANMAT regulation, regulatory changes and trends in the Argentine cosmetics industry.",
-      "cta": "Subscribe to the newsletter"
+      "cta": "Subscribe on LinkedIn"
     }
   }
 }

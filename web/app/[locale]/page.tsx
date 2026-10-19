@@ -3,7 +3,6 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { buildMetadata } from "@/lib/seo";
 import {
   faqPageNode,
-  organizationNode,
   personNodes,
   type FaqItem,
 } from "@/lib/structured-data";
@@ -52,7 +51,6 @@ export default async function HomePage({ params }: PageProps) {
     <>
       <JsonLd
         nodes={[
-          organizationNode(t("hero.parrafo")),
           ...personNodes(locale),
           faqPageNode(locale, "", faqItems),
         ]}
@@ -67,7 +65,10 @@ export default async function HomePage({ params }: PageProps) {
         <Servicios />
         <Proceso />
         <Guia />
-        <Registro />
+        <Registro
+          title={t("registro.titulo")}
+          paragraphs={t.raw("registro.parrafos") as string[]}
+        />
         <Nosotros />
         <Everest />
         <Faq />

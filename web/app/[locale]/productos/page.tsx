@@ -1,3 +1,5 @@
+import { existsSync } from "node:fs";
+import path from "node:path";
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { buildMetadata } from "@/lib/seo";
@@ -6,6 +8,7 @@ import {
   productNodes,
 } from "@/lib/structured-data";
 import { JsonLd } from "@/components/seo/json-ld";
+import { pageBreadcrumb } from "@/lib/breadcrumbs";
 import { Container } from "@/components/layout/container";
 import { Heading } from "@/components/ui/heading";
 import { CtaBand } from "@/components/sections/cta-band";
@@ -22,10 +25,26 @@ type Product = {
   presentaciones: string[];
 };
 
+type DataSheet = { href: string; hrefLang: string };
+
+/**
+ * Data-sheet PDF for a product, read at build time from `public/fichas/<lang>/`.
+ * Uses the page locale when that file exists and falls back to Spanish; returns
+ * undefined when no sheet exists, which hides the download button.
+ */
+function dataSheet(locale: string, slug: string): DataSheet | undefined {
+  for (const lang of [locale, "es"]) {
+    const file = path.join(process.cwd(), "public", "fichas", lang, `${slug}.pdf`);
+    if (existsSync(file)) return { href: `/fichas/${lang}/${slug}.pdf`, hrefLang: lang };
+  }
+  return undefined;
+}
+
 const PRODUCT_IMAGES = [
   "/images/productos/alcohol-gel.png",
   "/images/productos/alcohol-70.png",
   "/images/productos/jabon.png",
+  "/images/productos/jabon-liquido.png",
   "/images/productos/repelente.png",
   "/images/productos/shampoo.png",
   "/images/productos/acondicionador.png",
@@ -35,6 +54,7 @@ const PRODUCT_SLUGS = [
   "alcohol-en-gel",
   "alcohol-70",
   "jabon-liquido-bactericida",
+  "jabon-liquido",
   "repelente-en-spray",
   "shampoo",
   "acondicionador",
@@ -57,6 +77,7 @@ export async function generateMetadata({
 export default async function ProductosPage({ params }: PageProps) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const breadcrumb = await pageBreadcrumb(locale, "productos", "productos");
 
   const t = await getTranslations({ locale, namespace: "productos" });
   const items = t.raw("items") as Product[];
@@ -72,6 +93,7 @@ export default async function ProductosPage({ params }: PageProps) {
     <>
       <JsonLd
         nodes={[
+          breadcrumb,
           everestBrandNode(locale),
           ...productNodes(locale, structuredProducts, t("presentaciones")),
         ]}
@@ -101,6 +123,7 @@ export default async function ProductosPage({ params }: PageProps) {
                     image={PRODUCT_IMAGES[i]}
                     presentacionesLabel={t("presentaciones")}
                     fichaLabel={t("ficha")}
+                    ficha={dataSheet(locale, PRODUCT_SLUGS[i])}
                   />
                 </Reveal>
               ))}

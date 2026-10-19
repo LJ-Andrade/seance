@@ -18,22 +18,24 @@ export const siteConfig = {
   locales: routing.locales,
   defaultLocale: routing.defaultLocale,
   contact: {
-    emails: ["seancepelliza@gmail.com", "seance.comex@gmail.com"],
-    phones: ["(+54) 4750-0763", "(+54) 9 15-5740-6182"],
-    address: "Directorio 3548, Caseros. Buenos Aires, Argentina",
-  },
-  footer: {
-    email: "info@laboratorioseance.com.ar",
-    phone: "(+54) 11 4750-0763",
-    address: ["Directorio 3548, Caseros", "(1678) Buenos Aires, Argentina"],
+    // Order matters: [0] general inbox, [1] foreign trade (used by page CTAs and JSON-LD).
+    emails: [
+      "info@laboratorioseance.com.ar",
+      "comex@laboratorioseance.com.ar",
+      "seancepelliza@gmail.com",
+    ],
+    phone: "+54 11 4750-0763",
+    /** WhatsApp line as displayed; `whatsappNumber` is its wa.me form. */
+    whatsapp: "(+54) 9 11-5740-6182",
+    address: "Directorio 3548, Caseros, Buenos Aires, Argentina",
+    addressLines: ["Directorio 3548, Caseros", "(1678) Buenos Aires, Argentina"],
   },
   social: {
     youtube: "https://www.youtube.com/@AndreaPellizaOK",
-    facebook: "#",
-    linkedin: "#",
+    facebook: "https://www.facebook.com/seancesrl/",
+    linkedin: "https://www.linkedin.com/company/seancesrl/",
   },
-  whatsappUrl:
-    "https://wa.me/541157406182?text=Hola%2C+me+interesa+conocer+m%C3%A1s+sobre+los+servicios+de+Laboratorio+S%C3%A9ance",
+  whatsappNumber: "5491157406182",
   // Google Maps "Seance" place (Directorio 3548, Caseros).
   maps: {
     query: "Seance, Directorio 3548, Caseros, Buenos Aires, Argentina",
@@ -42,6 +44,16 @@ export const siteConfig = {
     placeUrl: "https://www.google.com/maps/place/Seance/@-34.6145544,-58.549096,17z",
   },
 } as const;
+
+/** WhatsApp click-to-chat URL with a localized prefilled message. */
+export function whatsappUrl(message: string): string {
+  return `https://wa.me/${siteConfig.whatsappNumber}?text=${encodeURIComponent(message)}`;
+}
+
+/** `tel:` href for a display-formatted phone number. */
+export function telHref(phone: string): string {
+  return `tel:${phone.replace(/[^+\d]/g, "")}`;
+}
 
 /** Absolute URL for a given locale + path (path without leading locale). */
 export function absoluteUrl(locale: string, path = ""): string {

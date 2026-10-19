@@ -4,6 +4,16 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* Pinned process scene: desktop width, unless the scene measured that its card
+   stage does not fit the viewport (data-pinned="false"). */
+@custom-variant pin {
+  @media (min-width: 1024px) {
+    &:where([data-pinned="true"], [data-pinned="true"] *) {
+      @slot;
+    }
+  }
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -239,7 +249,7 @@
 }
 
 @media (min-width: 1024px) {
-  .process-stack-card {
+  [data-pinned="true"] .process-stack-card {
     opacity: var(--stack-opacity, 1);
     transform: translateY(var(--stack-y, 0));
     transition:
@@ -249,7 +259,7 @@
 }
 
 @media (min-width: 1024px) and (prefers-reduced-motion: reduce) {
-  .process-stack-card {
+  [data-pinned="true"] .process-stack-card {
     transition: none;
   }
 }

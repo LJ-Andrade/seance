@@ -8,11 +8,12 @@ type BuildMetadataArgs = {
   path?: string;
   title: string;
   description: string;
-  /** Search keywords when explicitly provided for the route. */
-  keywords?: string[];
-  /** Open Graph image path relative to the site (optional). */
+  /** Open Graph image path relative to the site. Defaults to the shared image. */
   ogImage?: string;
 };
+
+/** Shared 1200x630 preview image (cropped from the Home hero photo). */
+const DEFAULT_OG_IMAGE = "/images/og-image.jpg";
 
 /**
  * Builds a complete, SEO-compliant Metadata object for a localized route:
@@ -25,8 +26,7 @@ export function buildMetadata({
   path = "",
   title,
   description,
-  keywords,
-  ogImage,
+  ogImage = DEFAULT_OG_IMAGE,
 }: BuildMetadataArgs): Metadata {
   const canonical = absoluteUrl(locale, path);
   const openGraphLocale = locale === "es" ? "es_AR" : "en_US";
@@ -45,7 +45,6 @@ export function buildMetadata({
     metadataBase: new URL(siteUrl),
     title,
     description,
-    keywords,
     alternates: {
       canonical,
       languages,
@@ -58,7 +57,14 @@ export function buildMetadata({
       url: canonical,
       title,
       description,
-      images: ogImage ? [{ url: ogImage }] : undefined,
+      images: [
+        {
+          url: ogImage,
+          width: 1200,
+          height: 630,
+          alt: siteConfig.name,
+        },
+      ],
     },
   };
 }

@@ -1,7 +1,13 @@
-export type NavItem = {
-  /** Locale-aware href (internal path) or on-page anchor. */
+export type NavLinkItem = {
+  /** Locale-aware href (internal path). */
   href: string;
   label: string;
-  /** Optional dropdown children (e.g. the Servicios menu). */
-  children?: NavItem[];
 };
+
+/**
+ * Top-level navigation entry: either a plain link or a dropdown parent (e.g.
+ * Servicios), which is a disclosure label without its own destination.
+ */
+export type NavItem =
+  | (NavLinkItem & { children?: undefined })
+  | { href?: undefined; label: string; children: NavLinkItem[] };

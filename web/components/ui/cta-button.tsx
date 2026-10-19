@@ -77,6 +77,8 @@ export function CtaButton({
       // 14px semibold with 1px tracking, 8px radius, 8px gap.
       className={cn(
         "h-auto gap-2 rounded-[8px] px-6 py-3 text-sm font-semibold leading-6 tracking-[1px]",
+        // Long labels wrap on narrow screens instead of overflowing the gutter.
+        "max-w-full whitespace-normal text-center",
         // Keep the un-filled area solid teal (default variant lightens on hover)
         // so it contrasts cleanly with the rising wave. The thin ink outline
         // keeps the white-filled button defined against light backgrounds.

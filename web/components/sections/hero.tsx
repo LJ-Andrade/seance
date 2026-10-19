@@ -26,7 +26,7 @@ export function Hero() {
       <div className="hero-background-frame pointer-events-none absolute inset-y-0 right-0 hidden w-full max-w-[1540px] min-[900px]:block">
         <Image
           src="/images/hero-productos.png"
-          alt=""
+          alt={t("imagenAlt")}
           fill
           priority
           sizes="(min-width: 900px) 100vw, 0px"
@@ -42,7 +42,7 @@ export function Hero() {
       <div className="hero-background-frame pointer-events-none absolute inset-0 min-[900px]:hidden">
         <Image
           src="/images/hero-productos-mobile.png"
-          alt=""
+          alt={t("imagenAlt")}
           fill
           priority
           sizes="100vw"

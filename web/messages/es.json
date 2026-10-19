@@ -2,29 +2,23 @@
   "metadatos": {
     "inicio": {
       "titulo": "Laboratorio Séance | Fabricación, Importación y Registro Cosmético ANMAT — Argentina",
-      "descripcion": "Laboratorio cosmético argentino habilitado por ANMAT desde 1990. Fabricamos, importamos y registramos cosméticos con confidencialidad total. Registro ANMAT inmediato. Más de 35 años, 200+ marcas."
+      "descripcion": "Laboratorio cosmético argentino habilitado por ANMAT desde 1990. Fabricamos, importamos y registramos cosméticos con confidencialidad total. Registro ANMAT en aprox. 72 horas hábiles. Más de 35 años, 200+ marcas."
     },
     "contacto": {
       "titulo": "Contacto | Laboratorio Séance — Fabricación, Importación y Registro Cosmético",
-      "descripcion": "Contactá a Laboratorio Séance. Respondemos en 48 horas, sin compromiso y con total confidencialidad. Directorio 3548, Caseros, Buenos Aires."
+      "descripcion": "Contactá a Laboratorio Séance. Respondemos en 72 horas hábiles, sin compromiso y con total confidencialidad. Directorio 3548, Caseros, Buenos Aires."
     },
     "fabricacion": {
       "titulo": "Fabricación Cosmética Tercerista (Private Label) ANMAT | Laboratorio Séance",
-      "descripcion": "Fabricamos tu línea cosmética en Argentina: fórmula a medida, producción con BPM, control de calidad y registro ANMAT. Private label confidencial para marcas e importadores. Más de 35 años."
+      "descripcion": "Fabricamos tu línea cosmética en Argentina: fórmula a medida, producción bajo BPF, control de calidad y registro ANMAT. Private label confidencial para marcas e importadores. Más de 35 años."
     },
     "hosting": {
-      "titulo": "Hosting Regulatorio para Importadores de Cosméticos ANMAT | Laboratorio Séance",
-      "descripcion": "Hosting regulatorio para importar cosméticos en Argentina: depósito habilitado, dirección técnica, registro ANMAT y seguimiento constante. La titularidad es siempre tuya. Más de 35 años.",
-      "palabrasClave": [
-        "hosting regulatorio cosméticos",
-        "dirección técnica ANMAT",
-        "depósito habilitado importadores",
-        "respaldo regulatorio importación cosmética Argentina"
-      ]
+      "titulo": "Hosting regulatorio para cosméticos | Laboratorio Séance",
+      "descripcion": "Comercializá tu marca cosmética en Argentina con Dirección Técnica, depósito habilitado por ANMAT y acompañamiento regulatorio de Laboratorio Séance."
     },
     "importacion": {
-      "titulo": "Importación de Cosméticos a Argentina · Registro ANMAT | Laboratorio Séance",
-      "descripcion": "Importamos tu producto cosmético a Argentina de punta a punta: aduana, registro ANMAT, logística y control de calidad. Listo para vender, en regla y con confidencialidad total."
+      "titulo": "Importación de cosméticos y domisanitarios | Séance",
+      "descripcion": "Séance importa cosméticos y domisanitarios a Argentina: pagos al exterior, logística, gestión ante ANMAT y control de calidad. Vos te ocupás de vender."
     },
     "nosotros": {
       "titulo": "Nosotros | Laboratorio Séance — Fabricación e Importación Cosmética ANMAT",
@@ -37,13 +31,60 @@
   },
   "comun": {
     "marca": "Laboratorio Séance",
+    "horario": "Lunes a viernes de 8 a 17 h",
     "cta": {
       "asesor": "Hablar con un asesor"
     }
   },
+  "condiciones": {
+    "eyebrow": "Condiciones de trabajo",
+    "titulo": "Lote mínimo y plazos",
+    "loteMinimo": {
+      "titulo": "Lote mínimo",
+      "valor": "500 litros",
+      "detalle": "o 5.000 unidades en formatos menores a 100 ml. A mayor volumen, mejor precio unitario."
+    },
+    "plazos": {
+      "titulo": "Plazos",
+      "columnas": {
+        "etapa": "Etapa",
+        "plazo": "Plazo"
+      },
+      "filas": [
+        {
+          "etapa": "Desarrollo de fórmula",
+          "plazo": "1 a 3 meses, según complejidad"
+        },
+        {
+          "etapa": "Registro ANMAT",
+          "plazo": "Aproximadamente 72 horas hábiles, con el expediente completo"
+        },
+        {
+          "etapa": "Producción",
+          "plazo": "Aproximadamente 4 semanas, con materia prima y material de empaque en planta"
+        }
+      ]
+    }
+  },
+  "noEncontrado": {
+    "metaTitulo": "Página no encontrada | Laboratorio Séance",
+    "eyebrow": "Error 404",
+    "titulo": "No encontramos esta página",
+    "parrafo": "Puede que la dirección haya cambiado o que el enlace esté incompleto. Estas son las secciones principales del sitio:",
+    "cta": "Volver al inicio"
+  },
+  "migas": {
+    "inicio": "Inicio",
+    "nosotros": "Nosotros",
+    "productos": "Productos",
+    "contacto": "Contacto",
+    "fabricacion": "Fabricación",
+    "hosting": "Hosting Regulatorio",
+    "importacion": "Importación"
+  },
   "navegacion": {
     "inicio": "Home",
-    "equipo": "Nuestro Equipo",
+    "equipo": "Nosotros",
     "servicios": "Servicios",
     "productos": "Productos",
     "contacto": "Contactanos",
@@ -52,13 +93,13 @@
     "cambiarIdioma": "Cambiar idioma",
     "serviciosItems": {
       "fabricacion": "Fabricación",
-      "hosting": "Hosting",
+      "hosting": "Hosting Regulatorio",
       "importacion": "Importación"
     }
   },
   "contacto": {
     "titulo": "Contactate con nosotros",
-    "parrafo": "Escribinos y te ayudamos a convertir tu idea en un producto real, en regla y listo para el mercado. Respondemos en 48 horas, sin compromiso y con total confidencialidad.",
+    "parrafo": "Escribinos y te ayudamos a convertir tu idea en un producto real, en regla y listo para el mercado. Respondemos en 72 horas hábiles, sin compromiso y con total confidencialidad.",
     "form": {
       "nombre": { "label": "Nombre y Apellido", "placeholder": "Tu nombre y apellido" },
       "email": { "label": "E-mail de contacto", "placeholder": "tu@email.com" },
@@ -71,15 +112,17 @@
     "tarjetas": {
       "email": "Email",
       "telefono": "Teléfono",
-      "direccion": "Dirección"
+      "direccion": "Dirección",
+      "horario": "Horario de atención"
     },
     "mapaAlt": "Ubicación de Laboratorio Séance en el mapa",
     "estado": {
-      "exito": "¡Gracias! Recibimos tu mensaje y te respondemos dentro de las 48 horas.",
+      "exito": "¡Gracias! Recibimos tu mensaje y te respondemos dentro de las 72 horas hábiles.",
       "error": "No pudimos enviar tu mensaje. Probá de nuevo o escribinos por email.",
       "requerido": "Este campo es obligatorio.",
       "emailInvalido": "Ingresá un email válido.",
-      "mensajeCorto": "Contanos un poco más (mínimo 10 caracteres)."
+      "mensajeCorto": "Contanos un poco más (mínimo 10 caracteres).",
+      "mensajeLargo": "El mensaje puede tener hasta 1.500 caracteres."
     }
   },
   "servicios": {
@@ -122,8 +165,8 @@
             "items": ["Serum", "Crema Hidratante / Nutritiva", "Crema Exfoliante / Peeling", "Contorno de ojos", "Cremas con Ácidos"]
           },
           {
-            "titulo": "Perfumes",
-            "items": ["Eau de Parfum", "Eau de Toilette", "Body splash", "Perfumes de diseñador"]
+            "titulo": "Fragancias",
+            "items": ["Eau de Parfum", "Body splash"]
           },
           {
             "titulo": "Productos Capilares",
@@ -131,7 +174,15 @@
           },
           {
             "titulo": "Cremas Corporales",
-            "items": ["Crema para Celulitis / Estrías / Várices", "Crema Hidratante / Nutritiva", "Crema para Pies / Piernas", "Crema Exfoliante"]
+            "items": ["Crema para Celulitis / Estrías", "Crema Hidratante / Nutritiva", "Crema para Pies / Piernas", "Crema Exfoliante"]
+          },
+          {
+            "titulo": "Domisanitarios",
+            "items": [
+              "Aromatizantes de ambiente",
+              "Aromatizantes textiles",
+              "Aromatizantes para autos"
+            ]
           }
         ],
         "sinProducto": {
@@ -142,187 +193,308 @@
       },
       "proceso": {
         "eyebrow": "Nuestro proceso",
-        "titulo": "Fabricamos tu línea en 4 pasos",
-        "parrafo": "Presentamos el proceso de fabricación en 4 pasos claros y orientados al cliente. Cada paso explica de forma concreta qué hacemos y qué tenés que esperar.",
+        "titulo": "Fabricamos tu línea en 5 pasos",
+        "parrafo": "Presentamos el proceso de fabricación en 5 pasos claros y en el orden real del trabajo. Cada paso explica de forma concreta qué hacemos y qué tenés que esperar.",
         "pasos": [
           {
             "numero": "1",
-            "titulo": "Definí tu proyecto y registramos tus productos",
-            "parrafo": "Identificamos tus necesidades y armamos tu registro ANMAT. Nuestros especialistas acompañan la presentación de tus productos ante ANMAT y coordinan todo el trámite, agilizando tiempos y minimizando errores."
+            "titulo": "Briefing y factibilidad",
+            "parrafo": "Nos contás qué querés hacer. Definimos clasificación Grado I o Grado II, viabilidad regulatoria y alcance del proyecto."
           },
           {
             "numero": "2",
-            "titulo": "Fórmulas, envases y etiquetado",
-            "parrafo": "Trabajamos junto a tu marca para elegir la fórmula ideal para tu línea:",
-            "bullets": ["Seleccionar envases y packaging adecuados", "Diseñar y validar etiquetas regulatorias."],
+            "titulo": "Desarrollo",
+            "parrafo": "Fórmula a medida o adaptación de la tuya, selección de envase, compatibilidad envase-fórmula y estabilidad.",
             "destacado": {
               "titulo": "¿No tenés una fórmula? La desarrollamos a medida",
               "parrafo": "Cada fórmula que creamos es confidencial y exclusiva de cada cliente: la diseñamos según tus objetivos y no la compartimos con nadie más."
             },
-            "tags": ["Paraben Free", "Cruelty Free", "Sulfate Free", "Consultar otros"]
+            "tagsTitulo": "Opciones de formulación a pedido del cliente:",
+            "tags": [
+              "Paraben Free",
+              "Cruelty Free",
+              "Sulfate Free",
+              "Consultar otras"
+            ]
           },
           {
             "numero": "3",
-            "titulo": "Producción, fraccionamiento y control de calidad",
-            "parrafo": "Producimos tu línea con altos estándares: elaboración y fraccionamiento.",
-            "bullets": ["Control de calidad por lote", "Verificación de etiquetado", "Registro de trazabilidad."]
+            "titulo": "Dossier y registro ANMAT",
+            "parrafo": "Armado del legajo, rótulo regulatorio, contrato de tercerización y presentación ante la autoridad."
           },
           {
             "numero": "4",
-            "titulo": "Control de calidad final y retiro",
-            "parrafo": "Realizamos el control de calidad final del producto terminado. Una vez aprobado, te indicamos el retiro de tu línea, lista para que la comercialices."
+            "titulo": "Producción y control",
+            "parrafo": "Elaboración, fraccionamiento, control por lote y trazabilidad completa.",
+            "destacado": {
+              "titulo": "Control de calidad bajo BPF",
+              "parrafo": "Controles fisicoquímicos y organolépticos, estudios de estabilidad, control de materias primas y material de empaque, y control de producto terminado antes de la liberación por Dirección Técnica."
+            }
+          },
+          {
+            "numero": "5",
+            "titulo": "Liberación",
+            "parrafo": "Control de producto terminado y liberación por Dirección Técnica."
           }
         ]
       },
       "anmat": {
-        "titulo": "Registro ANMAT sin esperas",
-        "parrafo": "Con el expediente completo, el registro ante ANMAT es inmediato. Preparar bien la documentación es nuestro trabajo — y lo hacemos hace más de 35 años."
+        "titulo": "Registro ANMAT en aproximadamente 72 horas hábiles, con el expediente bien armado",
+        "parrafos": [
+          "Con el expediente completo (documentación firmada, rótulos revisados y estudios finalizados), el alta del registro se obtiene en aproximadamente 72 horas hábiles, tanto para productos cosméticos de Grado I como en Grado II.",
+          "Esas 72 horas son la parte fácil. La diferencia entre un registro limpio y semanas de observaciones está en cómo se prepara el expediente antes de presentarlo, y eso es exactamente lo que hacemos desde 1990."
+        ]
       },
       "cierre": {
         "titulo": "Contanos sobre tu proyecto",
-        "parrafo": "Contanos qué línea querés fabricar y te respondemos en 48 horas. Te decimos exactamente qué se necesita y armamos un plan con tiempos y costos claros.",
+        "parrafo": "Contanos qué línea querés fabricar y te respondemos en 72 horas hábiles. Te decimos exactamente qué se necesita y armamos un plan con tiempos y costos claros.",
         "cta": "Hablar con un asesor"
       }
     },
     "hosting": {
       "hero": {
-        "eyebrow": "Respaldo regulatorio para importadores",
-        "titulo": "Importá en regla, con el respaldo de un laboratorio habilitado",
-        "parrafo": "El hosting regulatorio de Laboratorio Séance le da a los importadores el respaldo para operar legalmente en Argentina: depósito habilitado, dirección técnica, registro ante ANMAT y seguimiento regulatorio constante. La titularidad y la comercialización de los productos son siempre del cliente.",
-        "cta": "Hablar con un asesor",
+        "eyebrow": "Hosting regulatorio para cosméticos",
+        "titulo": "Tu marca cosmética en Argentina, con Dirección Técnica y depósito habilitado por ANMAT",
+        "parrafo": "Vos ponés la marca. Nosotros aportamos la Dirección Técnica, el depósito habilitado por ANMAT y el acompañamiento regulatorio para que puedas comercializar tus productos en Argentina.",
+        "cta": "Consultar por hosting regulatorio",
         "imagenAlt": "Documentación regulatoria y muestras en el laboratorio habilitado de Séance"
       },
+      "confianza": ["Establecimiento habilitado por ANMAT", "Desde 1990", "Dirección Técnica propia", "Confidencialidad"],
       "intro": {
         "eyebrow": "Qué es el hosting regulatorio",
-        "titulo": "Tu operación importadora, con respaldo de laboratorio",
-        "parrafo": "Si sos importador y necesitás operar en Argentina cumpliendo la normativa, el hosting regulatorio te da la estructura habilitada para hacerlo. Vos importás y comercializás tus productos manteniendo su titularidad; nosotros ponemos el respaldo regulatorio para que todo esté en regla, desde el registro hasta el seguimiento permanente ante ANMAT.",
+        "titulo": "La estructura sanitaria que necesita tu marca",
+        "parrafos": [
+          "El hosting regulatorio integra tu proyecto a la estructura habilitada de Séance: depósito, Dirección Técnica y gestión regulatoria. Te acompañamos desde la revisión de la documentación y el registro de los productos hasta el seguimiento de los productos en el mercado argentino.",
+          "Antes de comenzar, evaluamos tus productos y definimos la modalidad de trabajo, las responsabilidades de cada parte y los requisitos que deben cumplirse. Vos te concentrás en desarrollar tu marca y comercializarla."
+        ],
         "imagenAlt": "Equipo regulatorio de Laboratorio Séance revisando documentación"
       },
       "incluye": {
-        "eyebrow": "Soluciones",
-        "titulo": "Qué incluye el hosting regulatorio",
+        "eyebrow": "Qué incluye",
+        "titulo": "El respaldo de Séance, en cada etapa",
         "items": [
           {
             "titulo": "Depósito habilitado",
-            "descripcion": "Almacenamiento en un establecimiento habilitado por ANMAT, en condiciones que cumplen la normativa."
+            "descripcion": "Depósito habilitado por ANMAT, una vez controlada la mercadería podés vender tus productos en el mercado argentino."
           },
           {
-            "titulo": "Dirección técnica",
-            "descripcion": "Un director técnico responsable respalda tu operación ante la autoridad sanitaria."
+            "titulo": "Dirección Técnica",
+            "descripcion": "Nuestra Dirección Técnica supervisa los aspectos regulatorios de la operación y te acompaña en el cumplimiento de la normativa aplicable."
           },
           {
-            "titulo": "Registro ante ANMAT",
-            "descripcion": "Gestionamos el registro de tus productos para que puedas comercializarlos legalmente."
+            "titulo": "Gestión ante ANMAT",
+            "descripcion": "Revisamos la documentación, los rótulos y los requisitos técnicos. Gestionamos los registros y las presentaciones que correspondan a tus productos ante ANMAT."
           },
           {
-            "titulo": "Seguimiento regulatorio constante",
-            "descripcion": "Acompañamos tus productos en el tiempo: cambios de normativa, renovaciones y cualquier requerimiento de ANMAT."
+            "titulo": "Seguimiento regulatorio",
+            "descripcion": "Acompañamos las actualizaciones de documentación y mantenemos los requerimientos sanitarios vigentes."
           }
         ]
       },
       "titularidad": {
-        "eyebrow": "Garantía de titularidad",
-        "titulo": "La titularidad siempre es tuya",
-        "parrafo": "Queremos que quede claro y por escrito: en el hosting regulatorio, la titularidad y la comercialización de los productos son siempre del cliente. Nosotros aportamos el respaldo; vos seguís siendo dueño de tu marca, de tus productos y de tu negocio."
+        "eyebrow": "Tu marca y tu información",
+        "titulo": "Tu marca sigue siendo tuya",
+        "parrafo": "La titularidad de tu marca permanece en tus manos. La titularidad de los registros y las responsabilidades sanitarias se establecen por escrito desde el inicio, según la modalidad de operación. Resguardamos tu documentación y trabajamos con acuerdos de confidencialidad."
       },
-      "metodo": {
-        "eyebrow": "Nuestro método",
-        "titulo": "Seguridad, transparencia y claridad en cada paso",
-        "parrafo": "No te dejamos solo con el trámite. Nuestro foco está en darte tranquilidad: te explicamos cada paso con claridad, trabajamos con total transparencia y te capacitamos donde haga falta para que entiendas y controles tu propia operación.",
-        "puntos": [
-          { "titulo": "Seguridad", "descripcion": "Operás con un laboratorio habilitado y una dirección técnica que responde." },
-          { "titulo": "Transparencia", "descripcion": "Sabés en todo momento qué se hace y por qué." },
-          { "titulo": "Claridad", "descripcion": "Sin tecnicismos innecesarios: te explicamos lo que necesitás saber." },
-          { "titulo": "Capacitación", "descripcion": "Te formamos donde sea necesario para que domines tu operación." }
-        ]
+      "responsabilidades": {
+        "eyebrow": "Cómo trabajamos",
+        "titulo": "Qué aporta Séance y qué aportás vos",
+        "columnas": [
+          {
+            "titulo": "Séance aporta",
+            "items": [
+              "Depósito habilitado por ANMAT y Dirección Técnica propia.",
+              "Revisión de documentación y rótulos, y gestión de las presentaciones aplicables.",
+              "Seguimiento regulatorio, criterios de conservación y trazabilidad."
+            ]
+          },
+          {
+            "titulo": "Vos aportás",
+            "items": [
+              "La marca y la información de los productos y del fabricante.",
+              "Fórmulas, rótulos y documentación técnica disponible para evaluar el proyecto.",
+              "La gestión comercial y la información necesaria para mantener la documentación actualizada."
+            ]
+          }
+        ],
+        "nota": "El alcance del servicio, los honorarios y las responsabilidades de cada parte quedan definidos en la propuesta de trabajo."
       },
       "paraVos": {
-        "titulo": "¿Es para vos?",
+        "eyebrow": "Para quiénes",
+        "titulo": "¿Es para tu proyecto?",
         "items": [
-          "Importadores que quieren comercializar cosméticos en Argentina cumpliendo la normativa.",
-          "Marcas extranjeras que necesitan respaldo regulatorio local sin montar su propia estructura habilitada.",
-          "Empresas que prefieren enfocarse en vender mientras un laboratorio habilitado respalda el cumplimiento."
+          {
+            "titulo": "Marcas internacionales",
+            "descripcion": "Que buscan ingresar al mercado argentino con una estructura sanitaria y un equipo regulatorio local."
+          },
+          {
+            "titulo": "Importadores y distribuidores",
+            "descripcion": "Que necesitan depósito habilitado, Dirección Técnica y acompañamiento para sus productos cosméticos."
+          },
+          {
+            "titulo": "Empresas que desarrollan su marca",
+            "descripcion": "Que quieren concentrarse en la comercialización y contar con un laboratorio que acompañe los aspectos sanitarios de su operación."
+          }
         ]
       },
       "faq": {
         "eyebrow": "Preguntas frecuentes",
-        "titulo": "Lo que más nos preguntan",
+        "titulo": "Lo que necesitás saber antes de empezar",
         "items": [
           {
-            "pregunta": "¿De quién es la titularidad de los productos?",
-            "respuesta": "Siempre del cliente. En el hosting regulatorio vos mantenés la titularidad y la comercialización de tus productos; nosotros aportamos el respaldo regulatorio."
+            "pregunta": "¿Necesito habilitar una planta propia?",
+            "respuesta": "No. El servicio que ofrecemos permite trabajar con el depósito y la Dirección Técnica de Séance, dentro de la modalidad acordada. Antes de comenzar, evaluamos qué habilitaciones, registros y responsabilidades corresponden a cada parte según los productos y la operación."
           },
           {
-            "pregunta": "¿Qué aporta Séance exactamente?",
-            "respuesta": "El depósito habilitado, la dirección técnica, el registro ante ANMAT y el seguimiento regulatorio constante de tus productos."
+            "pregunta": "¿Qué documentación tengo que presentar?",
+            "respuesta": "Para evaluar tu proyecto, necesitamos conocer los productos, el país de origen, el fabricante, las fórmulas o listas de ingredientes y los rótulos disponibles. A partir de esa información, te indicamos la documentación técnica y los estudios que correspondan a cada producto."
           },
           {
-            "pregunta": "¿En qué se diferencia del servicio de importación?",
-            "respuesta": "En el hosting, vos importás y comercializás con tu titularidad y nosotros respaldamos el cumplimiento. En la importación integral, gestionamos nosotros todo el recorrido del producto hasta Argentina."
+            "pregunta": "¿De quién son la marca y los registros?",
+            "respuesta": "Tu marca sigue siendo tuya. La titularidad de los registros y las responsabilidades sanitarias se definen por escrito al inicio, de acuerdo con la modalidad de operación y los requisitos aplicables."
+          },
+          {
+            "pregunta": "¿En qué se diferencia de la importación integral?",
+            "respuesta": "El hosting regulatorio aporta depósito habilitado, Dirección Técnica y acompañamiento regulatorio. En la importación integral, Séance se ocupa de la importación directa desde el país de origen: realiza los pagos al exterior, coordina la logística, registra los productos ante ANMAT y realiza los controles de calidad. Vos te ocupás de vender."
           },
           {
             "pregunta": "¿Me acompañan después del registro?",
-            "respuesta": "Sí. El seguimiento regulatorio es constante: cambios de normativa, renovaciones y requerimientos de ANMAT a lo largo del tiempo."
+            "respuesta": "Sí. Durante la relación de trabajo acompañamos las actualizaciones de documentación, los cambios que deban informarse y los requerimientos sanitarios, conforme al alcance acordado. También definimos las pautas de seguridad y trazabilidad de los productos en el mercado."
+          },
+          {
+            "pregunta": "¿Cómo se cotiza y factura el servicio?",
+            "respuesta": "La propuesta se prepara según los productos, la documentación disponible y el alcance de la operación. Antes de comenzar, detallamos por escrito los honorarios, la forma de facturación y los gastos adicionales que correspondan, para que puedas evaluar el costo del servicio."
+          },
+          {
+            "pregunta": "¿Qué pasa si termina la relación de trabajo?",
+            "respuesta": "Las condiciones de finalización se acuerdan por escrito desde el inicio. Allí se define cómo se gestionarán la documentación y las actuaciones regulatorias que correspondan. Cualquier cambio de establecimiento o de titularidad se evalúa según los requisitos aplicables."
+          },
+          {
+            "pregunta": "¿Cómo se protege mi información?",
+            "respuesta": "Trabajamos con acuerdos de confidencialidad para resguardar la información técnica y comercial. La documentación se utiliza para prestar el servicio y realizar las gestiones regulatorias que correspondan, dentro del alcance acordado."
           }
         ]
       },
       "cierre": {
-        "titulo": "Contanos sobre tu proyecto de importación",
-        "parrafo": "Contanos qué querés importar y te explicamos cómo el hosting regulatorio te respalda. Te respondemos en 48 horas, con total confidencialidad.",
-        "cta": "Hablar con un asesor"
+        "eyebrow": "Hablemos de tu marca",
+        "titulo": "Contanos qué productos querés comercializar en Argentina",
+        "parrafo": "Compartinos el tipo de producto, el país de origen y la documentación que tenés disponible. Evaluamos tu proyecto y te indicamos cómo podemos acompañarte con nuestro servicio de hosting regulatorio.",
+        "plazo": "Respondemos las consultas completas dentro de las 72 horas hábiles.",
+        "cta": "Consultar por hosting regulatorio"
       }
     },
     "importacion": {
       "hero": {
-        "eyebrow": "Tu visión, nuestra expertise",
-        "titulo": "Traé tu producto cosmético a Argentina, sin trabas y en regla",
-        "parrafo": "Laboratorio Séance gestiona la importación integral de cosméticos, perfumería y domisanitarios a Argentina. Desde 1990 nos ocupamos del proceso completo — aduana, registro ANMAT, logística y control de calidad — para que tu producto llegue listo para vender, con cumplimiento del 100% y confidencialidad total.",
-        "cta": "Hablar con un asesor",
+        "eyebrow": "Importación integral de cosméticos y domisanitarios",
+        "titulo": "Nosotros importamos.\nVos te ocupás de vender.",
+        "parrafo": "Nos ocupamos de la importación directa de tus productos, desde el país de origen hasta Argentina. Realizamos los pagos al exterior, coordinamos la logística, registramos los productos ante ANMAT y realizamos los controles de calidad.",
+        "cta": "Consultar por importación integral",
         "imagenAlt": "Contenedores de carga en puerto para la importación de productos cosméticos"
       },
+      "confianza": ["Establecimiento habilitado por ANMAT", "Desde 1990", "Dirección Técnica propia", "Confidencialidad"],
       "recorrido": {
-        "eyebrow": "Operación end-to-end",
-        "titulo": "Nos ocupamos de todo el recorrido",
-        "parrafo": "Gestionamos la importación de punta a punta. Cada etapa está pensada para que tu producto llegue a Argentina en regla, sin sorpresas ni demoras.",
+        "eyebrow": "Cómo trabajamos",
+        "titulo": "Nos ocupamos de toda la importación",
+        "parrafo": "Desde la evaluación inicial hasta la recepción y el control por lote, coordinamos cada etapa con el respaldo de nuestra Dirección Técnica y nuestro Departamento de Asuntos Regulatorios.",
         "pasos": [
           {
             "numero": "1",
-            "titulo": "Registro y Presentación ante ANMAT",
-            "bullets": ["Asesoramiento técnico regulatorio", "Armado y presentación de dossier", "Ensayos locales si fueran necesarios", "Seguimiento hasta aprobación"]
+            "titulo": "Evaluación, documentación y registro",
+            "bullets": [
+              "Evaluamos los productos y los requisitos para su comercialización en Argentina.",
+              "Revisamos la documentación del fabricante, las fórmulas y los rótulos.",
+              "Preparamos el expediente y gestionamos los registros y las presentaciones ante ANMAT que correspondan.",
+              "Coordinamos los estudios o ensayos necesarios según cada producto."
+            ]
           },
           {
             "numero": "2",
-            "titulo": "Coordinación de Importación",
-            "bullets": ["Gestión con forwarder y despachantes", "Clasificación arancelaria", "Presentación de documentación en puerto", "Liberación ante ANMAT"]
+            "titulo": "Importación directa y pagos al exterior",
+            "bullets": [
+              "Coordinamos la operación con el proveedor en el país de origen.",
+              "Realizamos los pagos al exterior según las condiciones acordadas.",
+              "Reunimos y revisamos la documentación comercial necesaria para la importación.",
+              "Definimos con vos el alcance, los costos y las condiciones de la operación antes de comenzar."
+            ]
           },
           {
             "numero": "3",
-            "titulo": "Logística y Recepción en Argentina",
-            "bullets": ["Coordinación desde origen hasta puerto argentino", "Resolución de imprevistos", "Traslado seguro a depósito habilitado"]
+            "titulo": "Logística y recepción en Argentina",
+            "bullets": [
+              "Coordinamos el transporte internacional y el despacho aduanero.",
+              "Realizamos el seguimiento de la carga y de la documentación de la operación.",
+              "Coordinamos el traslado al depósito habilitado y la recepción de los productos.",
+              "Te informamos el avance de la operación y los ajustes que puedan requerirse."
+            ]
           },
           {
             "numero": "4",
-            "titulo": "Verificación y Control por Lote",
-            "bullets": ["Control de cantidades", "Validación de etiquetado", "Sobre-rotulado si corresponde", "Conservación de muestras", "Control de calidad previo a comercialización"]
+            "titulo": "Control por lote y liberación",
+            "bullets": [
+              "Verificamos las cantidades, la identificación de los lotes y los productos recibidos.",
+              "Revisamos el etiquetado y realizamos el sobrerrotulado cuando corresponde.",
+              "Realizamos los controles de calidad y conservamos las muestras que correspondan.",
+              "La Dirección Técnica evalúa los resultados y libera los productos antes de su comercialización."
+            ]
           }
         ]
       },
       "cumplimiento": {
-        "eyebrow": "Reducimos riesgos, tiempos y costos alineándonos con tu estrategia de salida al mercado",
-        "titulo": "Siempre en cumplimiento con ANMAT",
-        "parrafo": "Nos aseguramos de que tus productos cumplan con la normativa local desde el primer trámite hasta su comercialización. Garantizamos confidencialidad absoluta y respeto por la titularidad de la marca.",
-        "bullets": ["Evitá demoras en aduana.", "Evitá observaciones regulatorias.", "Evitá costos inesperados.", "Evitá errores de etiquetado.", "Evitá riesgos legales."],
+        "eyebrow": "Respaldo sanitario y regulatorio",
+        "titulo": "Importación con el respaldo de un laboratorio habilitado",
+        "parrafo": "Contamos con habilitación de ANMAT para importar productos cosméticos y domisanitarios, Dirección Técnica propia y Departamento de Asuntos Regulatorios. Trabajamos para el cumplimiento riguroso de la normativa ANMAT vigente en cada operación.",
+        "bullets": [
+          "Revisión de los requisitos antes de iniciar la operación.",
+          "Gestión regulatoria integrada al servicio de importación.",
+          "Control del etiquetado y de la calidad antes de comercializar."
+        ],
+        "destacado": {
+          "titulo": "Exportación",
+          "parrafo": "También estamos habilitados por ANMAT para exportar productos cosméticos."
+        },
         "imagenAlt": "Contenedores de importación en el puerto, en cumplimiento con ANMAT"
       },
       "titularidad": {
-        "eyebrow": "Garantía de titularidad",
+        "eyebrow": "Tu marca y tu información",
         "titulo": "Tu marca sigue siendo tuya",
-        "parrafo": "Cuando importás con Séance, la titularidad de tu marca y de tu registro es siempre tuya. Cuidamos tu producto y tu información con la misma confidencialidad con la que protegemos a todos nuestros clientes."
+        "parrafo": "La titularidad de tu marca permanece en tus manos. Resguardamos tu información técnica y comercial mediante acuerdos de confidencialidad. Las condiciones de la operación y las responsabilidades de cada parte quedan definidas por escrito desde el inicio."
+      },
+      "faq": {
+        "eyebrow": "Preguntas frecuentes",
+        "titulo": "Antes de empezar tu importación",
+        "items": [
+          {
+            "pregunta": "¿Qué productos pueden importar?",
+            "respuesta": "Importamos productos cosméticos, perfumería y domisanitarios. Nuestro alcance incluye cosméticos Grado II de todas las categorías. Antes de comenzar, evaluamos cada producto y su documentación para definir los requisitos de la operación."
+          },
+          {
+            "pregunta": "¿Qué información necesitan para evaluar mi proyecto?",
+            "respuesta": "Contanos qué productos querés importar, quién los fabrica, el país de origen, las cantidades estimadas y el plazo que tenés en mente. Si contás con fórmulas, rótulos y documentación técnica, incluí esa información. Te indicamos qué falta para avanzar."
+          },
+          {
+            "pregunta": "¿Séance realiza los pagos al proveedor del exterior?",
+            "respuesta": "Sí. Como parte de la importación integral, realizamos los pagos al proveedor del exterior. La moneda, los plazos de pago y los fondos necesarios se acuerdan por escrito antes de iniciar la operación."
+          },
+          {
+            "pregunta": "¿Cuánto tarda una importación?",
+            "respuesta": "El plazo depende de la documentación disponible, los requisitos del producto, los tiempos del proveedor, el transporte y el despacho aduanero. Después de evaluar tu proyecto, te informamos las etapas y los plazos estimados para planificar la operación."
+          },
+          {
+            "pregunta": "¿En qué se diferencia del hosting regulatorio?",
+            "respuesta": "El hosting aporta depósito habilitado, Dirección Técnica y acompañamiento regulatorio. La importación integral suma la importación directa, los pagos al exterior y la coordinación logística. Si querés que nos ocupemos del recorrido completo, esta es la modalidad para tu proyecto."
+          },
+          {
+            "pregunta": "¿Cómo se cotiza el servicio?",
+            "respuesta": "La propuesta se prepara según los productos, el origen, las cantidades y la documentación disponible. Detallamos el alcance y los costos de la operación, indicando los honorarios y qué gastos de transporte, aduana, tributos, trámites o ensayos están incluidos o se presupuestan por separado."
+          }
+        ]
       },
       "cierre": {
-        "titulo": "Contanos sobre tu proyecto de importación",
-        "parrafo": "Contanos qué producto querés importar y te respondemos en 48 horas. Te decimos exactamente qué se necesita para que llegue a Argentina sin trabas.",
-        "cta": "Hablar con un asesor"
+        "eyebrow": "Hablemos de tu proyecto",
+        "titulo": "Contanos qué productos querés importar",
+        "parrafo": "Compartinos el tipo de producto, el fabricante, el país de origen y las cantidades estimadas. Evaluamos la documentación disponible y te proponemos cómo llevar adelante la importación.",
+        "plazo": "Respondemos las consultas completas dentro de las 72 horas hábiles.",
+        "cta": "Consultar por importación integral"
       }
     }
   },
@@ -330,11 +502,18 @@
     "hero": {
       "eyebrow": "Tu socio estratégico en la industria cosmética argentina",
       "titulo": "Más de 35 años respondiendo por las marcas que confían en nosotros",
-      "parrafo": "Laboratorio Séance es un laboratorio cosmético argentino especializado en fabricación tercerista, hosting regulatorio para importadores y gestión integral de importación de cosméticos, perfumería y domisanitarios. Operamos con habilitación ANMAT vigente, cumplimiento del 100% de la normativa y confidencialidad total sobre cada fórmula y marca.",
+      "parrafo": "Laboratorio Séance es un laboratorio cosmético argentino especializado en fabricación tercerista, hosting regulatorio para importadores y gestión integral de importación de cosméticos, perfumería y domisanitarios. Operamos con habilitación ANMAT vigente, cumplimiento riguroso de la normativa ANMAT vigente y confidencialidad total sobre cada fórmula y marca.",
       "videoAlt": "Enrique Pelliza, fundador de Laboratorio Séance, en una entrevista",
-      "certAlt": "Certificación ISO 9001 e ISO 14001",
-      "certLinea1": "Management System — ISO 9001:2008 · ISO 14001:2004",
-      "certLinea2": "www.tuv.com · ID 9108632300"
+      "alcance": {
+        "titulo": "Alcance de habilitación",
+        "items": [
+          "Establecimiento habilitado por ANMAT para fabricación y acondicionamiento de productos cosméticos: líquidos, semisólidos y alcohólicos. Importación y exportación para productos cosméticos.",
+          "Habilitación vigente para fabricación e importación de productos domisanitarios.",
+          "Registro y producción de productos Grado I y Grado II en formas líquidas, semisólidas y alcohólicas. Importación de cosméticos Grado II de todas las categorías.",
+          "Producción bajo Buenas Prácticas de Fabricación (BPF), conforme a la normativa ANMAT vigente.",
+          "Dirección Técnica propia y Departamento de Asuntos Regulatorios."
+        ]
+      }
     },
     "soluciones": {
       "eyebrow": "¿Qué hacemos?",
@@ -343,7 +522,7 @@
       "items": [
         {
           "titulo": "Fabricación Tercerista",
-          "descripcion": "Desarrollamos y producimos tu línea completa con Buenas Prácticas de Manufactura (BPM): fórmula a medida, producción, fraccionamiento, control de calidad por lote, packaging y registro ANMAT.",
+          "descripcion": "Desarrollamos y producimos tu línea completa bajo Buenas Prácticas de Fabricación (BPF): fórmula a medida, producción, fraccionamiento, control de calidad por lote, packaging y registro ANMAT.",
           "enlace": "Ver fabricación"
         },
         {
@@ -361,9 +540,14 @@
     "capacidades": {
       "eyebrow": "Capacidades técnicas",
       "titulo": "Capacidades que respaldan cada proyecto",
+      "cifras": [
+        { "valor": "3.500 L", "etiqueta": "Tanques de hasta 3.500 litros" },
+        { "valor": "200.000", "etiqueta": "Unidades de capacidad mensual" },
+        { "valor": "2 ml – 200 L", "etiqueta": "Rango de fraccionamiento" }
+      ],
       "items": [
         "Planta habilitada por ANMAT para fabricación y acondicionamiento de productos cosméticos.",
-        "Buenas Prácticas de Manufactura (BPM) en todos los procesos productivos.",
+        "Buenas Prácticas de Fabricación (BPF) en todos los procesos productivos.",
         "Control de calidad por lote con trazabilidad completa y conservación de muestras.",
         "Departamento de Asuntos Regulatorios propio, dedicado a la relación con ANMAT.",
         "Confidencialidad absoluta y respeto por la titularidad de marca de cada cliente."
@@ -394,7 +578,7 @@
       "items": [
         { "titulo": "Confianza", "descripcion": "Somos el socio que responde por el cumplimiento de tu marca." },
         { "titulo": "Confidencialidad", "descripcion": "Protegemos la fórmula, la marca y la titularidad de cada cliente." },
-        { "titulo": "Cumplimiento", "descripcion": "El 100% de la normativa ANMAT, sin atajos." },
+        { "titulo": "Cumplimiento", "descripcion": "Cumplimiento riguroso de la normativa ANMAT vigente, sin atajos." },
         { "titulo": "Calidad", "descripcion": "Los mismos estándares para nuestros clientes que para nuestra propia marca." },
         { "titulo": "Transparencia", "descripcion": "Tiempos, costos y pasos claros, sin letra chica." }
       ]
@@ -402,13 +586,13 @@
     "everest": {
       "eyebrow": "Marca propia",
       "titulo": "Fabricamos con los mismos estándares para nuestros clientes",
-      "parrafo": "Everest es nuestra marca propia, fabricada con las mismas habilitaciones y estándares que ofrecemos a clientes: higiene, sanitización y cuidado personal. Si confiamos en Séance para poner nuestro nombre, podés confiar para el tuyo.",
+      "parrafo": "Everest es nuestra marca propia, fabricada con las mismas habilitaciones y estándares que ofrecemos a clientes: higiene, sanitización y cuidado personal. Si confiamos en Séance para poner nuestro nombre, podés confiar para el tuyo. Las marcas propias de Séance y las de nuestros clientes se manejan por separado.",
       "productos": ["Alcohol en gel", "Alcohol 70%", "Jabón líquido bactericida", "Repelente de insectos", "Shampoo", "Acondicionador"],
       "logoAlt": "Logo de Everest, la marca propia de Laboratorio Séance"
     },
     "cierre": {
       "titulo": "¿Listo para empezar tu proyecto?",
-      "parrafo": "Ya sea que quieras fabricar, importar u operar como importador en Argentina, contanos tu proyecto y te respondemos en 48 horas.",
+      "parrafo": "Ya sea que quieras fabricar, importar u operar como importador en Argentina, contanos tu proyecto y te respondemos en 72 horas hábiles.",
       "cta": "Hablar con un asesor"
     }
   },
@@ -422,12 +606,12 @@
     "items": [
       {
         "titulo": "Alcohol en gel",
-        "descripcion": "Alcohol en gel bactericida (EVEREST ORIGINAL), producto registrado y aprobado por ANMAT, al 65% de alcohol etílico. Calidad y protección para industrias alimenticias, hospitales, sanatorios y clínicas.",
-        "presentaciones": ["65ml", "280ml", "500ml", "Bidón 5L"]
+        "descripcion": "Alcohol en gel bactericida (EVEREST ORIGINAL), producto registrado ante ANMAT. Respaldado por estudio de eficacia bactericida. Formulado para uso intensivo en industria alimenticia, hospitales, sanatorios y clínicas.",
+        "presentaciones": ["Bidón 5L"]
       },
       {
         "titulo": "Alcohol 70%",
-        "descripcion": "Formulado a base de alcohol etílico para eliminar virus y bacterias, enriquecido con emolientes. Fabricado con alcohol 96° de uso medicinal, aprobado por el INV (sin metanol).",
+        "descripcion": "Formulado a base de alcohol etílico al 70%, enriquecido con emolientes. Elaborado con alcohol 96 grados, aprobado por el INV, sin metanol. Acción bactericida respaldada por estudio. Producto registrado ante ANMAT.",
         "presentaciones": ["Bidón 5L"]
       },
       {
@@ -436,8 +620,16 @@
         "presentaciones": ["280ml", "Bidón 5L"]
       },
       {
+        "titulo": "Jabón líquido",
+        "descripcion": "Este producto que recién sale al mercado, brinda limpieza y cuidado de la piel, ya que tiene una acción bactericida y suavizante al mismo tiempo. Fragancia Manzana.",
+        "presentaciones": [
+          "280ml",
+          "Bidón 5L"
+        ]
+      },
+      {
         "titulo": "Repelente en spray",
-        "descripcion": "Fórmula con 10% de DEET y citronella. Dermatológicamente testeado, hipoalergénico. Protección prolongada con aloe vera, apto para todo tipo de piel.",
+        "descripcion": "Fórmula con 10% de DEET y citronella, con aloe vera. Hipoalergénico y dermatológicamente testeado, ambos respaldados por estudio. Protección prolongada de 8 hs, respaldada por estudio de eficacia. Apto para todo tipo de piel.",
         "presentaciones": ["Spray"]
       },
       {
@@ -448,7 +640,7 @@
       {
         "titulo": "Acondicionador",
         "descripcion": "Complemento ideal para el lavado: desenreda y aporta suavidad al cabello. Variedad manzana. Formulado para alta performance en cuidado capilar.",
-        "presentaciones": ["280ml", "Bidón 5L"]
+        "presentaciones": ["Bidón 5L"]
       }
     ],
     "cierre": {
@@ -460,27 +652,32 @@
   "footer": {
     "tagline": "Innovación, calidad y experiencia en la industria cosmética argentina desde 1990.",
     "columnas": {
-      "links": "Links",
       "servicios": "Servicios",
-      "contacto": "Contacto",
+      "escribinos": "Escribinos",
+      "contactanos": "Contactanos",
       "direccion": "Dirección"
     },
-    "links": ["Inicio", "Nosotros", "Contacto"],
     "servicios": [
       "Fabricación Tercerista",
-      "Hosting",
+      "Hosting Regulatorio",
       "Importación"
     ],
     "derechos": "Todos los derechos reservados.",
-    "whatsapp": "Chatear por WhatsApp"
+    "whatsapp": "Chatear por WhatsApp",
+    "whatsappMensaje": "Hola, me interesa conocer más sobre los servicios de Laboratorio Séance",
+    "redes": {
+      "youtube": "Séance en YouTube",
+      "facebook": "Séance en Facebook",
+      "linkedin": "Séance en LinkedIn"
+    }
   },
   "inicio": {
     "hero": {
       "eyebrow": "Laboratorio cosmético habilitado por ANMAT · Argentina · desde 1990",
       "titulo": "Tu marca cosmética en el mercado argentino, sin riesgos",
-      "parrafo": "Laboratorio Séance es un laboratorio cosmético argentino habilitado por ANMAT, fundado en 1990. Ayudamos a marcas e importadores de todo el mundo a fabricar, importar y registrar productos cosméticos, perfumería y domisanitarios en Argentina — con cumplimiento regulatorio del 100% y confidencialidad total sobre cada fórmula y marca.",
+      "parrafo": "Laboratorio Séance es un laboratorio cosmético argentino habilitado por ANMAT, fundado en 1990. Ayudamos a marcas e importadores de todo el mundo a fabricar, importar y registrar productos cosméticos, perfumería y domisanitarios en Argentina — con cumplimiento riguroso de la normativa ANMAT vigente y confidencialidad total sobre cada fórmula y marca. Registramos y fabricamos productos Grado I y Grado II en formas líquidas, semisólidas y alcohólicas, e importamos cosméticos Grado II de todas las categorías.",
       "cta": "Hablar con un asesor",
-      "imagenAlt": "Línea de productos cosméticos premium fabricados por Laboratorio Séance"
+      "imagenAlt": "Línea cosmética de marca propia en envases negros con detalles dorados: frasco con dosificador, spray y potes de crema corporal y facial"
     },
     "soluciones": {
       "eyebrow": "¿Qué necesitás resolver?",
@@ -489,7 +686,7 @@
         "fabricacion": {
           "titulo": "Fabricación Tercerista",
           "subtitulo": "«Tengo una idea de marca pero no sé fabricarla»",
-          "descripcion": "Desarrollamos tu línea completa bajo un mismo techo: fórmula a medida, producción con BPM, control de calidad por lote, packaging y registro ANMAT. Vos ponés la marca; nosotros, el laboratorio.",
+          "descripcion": "Desarrollamos tu línea completa bajo un mismo techo: fórmula a medida, producción bajo BPF, control de calidad por lote, packaging y registro ANMAT. Vos ponés la marca; nosotros, el laboratorio.",
           "enlace": "Ver fabricación"
         },
         "hosting": {
@@ -508,7 +705,7 @@
     },
     "confianza": {
       "anchor": [
-        "Registro ANMAT inmediato con el expediente completo",
+        "Registro ANMAT en aprox. 72 horas hábiles con el expediente completo",
         "Más de 35 años respondiendo por marcas en Argentina"
       ],
       "bar": [
@@ -533,7 +730,7 @@
       "items": [
         { "valor": "200+", "etiqueta": "Marcas registradas ante ANMAT" },
         { "valor": "5000+", "etiqueta": "SKUs cosméticos procesados con éxito" },
-        { "valor": "100%", "etiqueta": "Cumplimiento legal y regulatorio" },
+        { "valor": "72 h", "etiqueta": "Hábiles, aprox., para el alta ANMAT con el expediente completo" },
         { "valor": "+35", "etiqueta": "Años fabricando en Argentina (desde 1990)" }
       ]
     },
@@ -543,7 +740,7 @@
       "items": {
         "fabricacion": {
           "titulo": "Fabricación Tercerista (Private Label)",
-          "descripcion": "Fórmula a medida · Producción con BPM · Control de calidad por lote · Registro ANMAT · Packaging y etiquetado regulatorio."
+          "descripcion": "Fórmula a medida · Producción bajo BPF · Control de calidad por lote · Registro ANMAT · Packaging y etiquetado regulatorio."
         },
         "hosting": {
           "titulo": "Hosting Regulatorio para Importadores",
@@ -556,18 +753,21 @@
       }
     },
     "registro": {
-      "titulo": "Registro ANMAT sin esperas",
-      "parrafo": "Una vez que el expediente está completo, el registro ante ANMAT es inmediato. La diferencia entre semanas de demora y un registro limpio está en preparar bien la documentación — y eso es exactamente lo que hacemos en más de 35 años de trayectoria."
+      "titulo": "Registro ANMAT en aproximadamente 72 horas hábiles, con el expediente bien armado",
+      "parrafos": [
+        "Con el expediente completo (documentación firmada, rótulos revisados y estudios finalizados), el alta del registro se obtiene en aproximadamente 72 horas hábiles, tanto para productos cosméticos de Grado I como en Grado II.",
+        "Esas 72 horas son la parte fácil. La diferencia entre un registro limpio y semanas de observaciones está en cómo se prepara el expediente antes de presentarlo, y eso es exactamente lo que hacemos desde 1990."
+      ]
     },
     "everest": {
       "titulo": "Everest — nuestra marca propia",
-      "parrafo": "Everest es nuestra marca propia — fabricada con los mismos estándares y habilitaciones que ofrecemos a clientes: higiene, sanitización y cuidado personal. Si confiamos en Séance para poner nuestro nombre, podés confiar para el tuyo.",
+      "parrafo": "Everest es nuestra marca propia — fabricada con los mismos estándares y habilitaciones que ofrecemos a clientes: higiene, sanitización y cuidado personal. Si confiamos en Séance para poner nuestro nombre, podés confiar para el tuyo. Las marcas propias de Séance y las de nuestros clientes se manejan por separado.",
       "logoAlt": "Logo de Everest, la marca propia de Laboratorio Séance"
     },
     "proceso": {
       "eyebrow": "Proceso de trabajo",
       "titulo": "Vos traés la idea. Nosotros nos encargamos del resto",
-      "parrafo": "No necesitás saber cómo funciona ANMAT, ni qué documentación pide la aduana. En 34 años lo hicimos más de 5000 veces.",
+      "parrafo": "No necesitás saber cómo funciona ANMAT, ni qué documentación pide la aduana. Desde 1990 lo hicimos más de 5000 veces.",
       "pasos": [
         {
           "numero": "01",
@@ -611,20 +811,60 @@
           "respuesta": "Fabricamos, importamos y registramos productos cosméticos, de perfumería y domisanitarios en Argentina para marcas e importadores, con habilitación ANMAT vigente y confidencialidad total."
         },
         {
-          "pregunta": "¿Mi fórmula y mi marca quedan protegidas?",
-          "respuesta": "Sí. Cada fórmula es confidencial y exclusiva de cada cliente: no la compartimos ni la reutilizamos. La titularidad de tu marca y de tu registro es siempre tuya."
+          "pregunta": "¿Cuál es el lote mínimo?",
+          "respuesta": "500 litros, o 5.000 unidades en formatos menores a 100 ml. A mayor volumen, mejor precio unitario."
+        },
+        {
+          "pregunta": "¿Cuánto tarda desarrollar una fórmula nueva?",
+          "respuesta": "Entre 1 y 3 meses, según la complejidad."
+        },
+        {
+          "pregunta": "¿Cuánto tarda registrar un producto cosmético en Argentina?",
+          "respuesta": "Con el expediente completo (documentación firmada, rótulos revisados y estudios finalizados), el alta del registro ante ANMAT se obtiene en aproximadamente 72 horas hábiles, tanto para Grado I como para Grado II. El trabajo real está en preparar bien el expediente, y de eso nos encargamos nosotros."
+        },
+        {
+          "pregunta": "¿Cuánto tarda la producción?",
+          "respuesta": "Aproximadamente 4 semanas desde que la materia prima y el material de empaque están en planta."
+        },
+        {
+          "pregunta": "¿Trabajan con productos Grado II?",
+          "respuesta": "Sí. Fabricamos varias categorías de Grado II, en formas líquidas, semisólidas y alcohólicas, e importamos cosméticos Grado II de todas las categorías."
+        },
+        {
+          "pregunta": "¿Puedo traer mi propia fórmula?",
+          "respuesta": "Sí. La adaptamos a la normativa local y al equipamiento de planta. La fórmula sigue siendo tuya y no se comparte ni se reutiliza."
+        },
+        {
+          "pregunta": "¿Quién queda como titular del registro?",
+          "respuesta": "Siempre el cliente. Séance aporta el respaldo regulatorio; la titularidad y la comercialización no cambian de manos."
+        },
+        {
+          "pregunta": "¿Firman acuerdo de confidencialidad?",
+          "respuesta": "Sí, lo hacemos."
+        },
+        {
+          "pregunta": "¿Fabrican domisanitarios?",
+          "respuesta": "Sí. Contamos con habilitación vigente y fabricamos aromatizantes de ambiente, textiles y autos."
+        },
+        {
+          "pregunta": "¿Importan productos domisanitarios?",
+          "respuesta": "Sí, estamos habilitados para hacerlo."
         },
         {
           "pregunta": "¿Necesito saber cómo funciona ANMAT para trabajar con ustedes?",
           "respuesta": "No. Te hacemos una consulta inicial gratuita, entendemos tu proyecto y te decimos exactamente qué camino seguir."
         },
         {
-          "pregunta": "¿Cuánto tarda registrar un producto cosmético en Argentina?",
-          "respuesta": "El registro ante ANMAT es inmediato una vez que la documentación y los estudios están completos. El trabajo real está en preparar bien el expediente — y de eso nos encargamos nosotros."
-        },
-        {
           "pregunta": "¿Fabrican para marcas internacionales sin estructura en Argentina?",
           "respuesta": "Sí. Mediante nuestro servicio de hosting para importadores, operás legalmente en Argentina sin necesidad de tener una entidad local."
+        },
+        {
+          "pregunta": "¿En qué idiomas atienden?",
+          "respuesta": "En español e inglés."
+        },
+        {
+          "pregunta": "¿Cuánto tardan en responder una solicitud?",
+          "respuesta": "Respondemos las solicitudes completas a más tardar en 72 horas hábiles."
         },
         {
           "pregunta": "¿Dónde están ubicados?",
@@ -634,14 +874,14 @@
     },
     "contacto": {
       "titulo": "¿Listo para empezar?",
-      "parrafo": "Contanos tu proyecto y te respondemos en 48 horas. Sin compromiso y con total confidencialidad.",
+      "parrafo": "Contanos tu proyecto y te respondemos en 72 horas hábiles. Sin compromiso y con total confidencialidad.",
       "cta": "Hablar con un asesor"
     },
     "newsletter": {
       "eyebrow": "Newsletter",
       "titulo": "Cosmetovigilancia y Tendencias",
       "parrafo": "Por Andrea Pelliza — CEO & Regulatory Affairs, Laboratorio Séance. Novedades en cosmetovigilancia y regulación ANMAT, cambios en la normativa y tendencias de la industria cosmética argentina.",
-      "cta": "Suscribirme al newsletter"
+      "cta": "Suscribirte en LinkedIn"
     }
   }
 }

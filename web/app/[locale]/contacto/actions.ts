@@ -17,6 +17,7 @@ export type ContactState = {
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const MIN_MESSAGE_LENGTH = 10;
+const MAX_MESSAGE_LENGTH = 1500;
 
 export async function submitContactForm(
   _prev: ContactState,
@@ -42,6 +43,7 @@ export async function submitContactForm(
   else if (!EMAIL_RE.test(email)) errors.email = t("emailInvalido");
   if (!message) errors.message = t("requerido");
   else if (message.length < MIN_MESSAGE_LENGTH) errors.message = t("mensajeCorto");
+  else if (message.length > MAX_MESSAGE_LENGTH) errors.message = t("mensajeLargo");
 
   if (Object.keys(errors).length > 0) {
     return { status: "error", errors };

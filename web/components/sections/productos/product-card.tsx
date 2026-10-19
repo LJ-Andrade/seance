@@ -10,12 +10,13 @@ type ProductCardProps = {
   image: string;
   presentacionesLabel: string;
   fichaLabel: string;
-  fichaHref?: string;
+  /** Data-sheet PDF. The button is hidden until a real file exists. */
+  ficha?: { href: string; hrefLang: string };
 };
 
 /**
  * Everest product card: photo, name, description, available formats as chips
- * and a "download data sheet" button.
+ * and, when a PDF exists, a "download data sheet" button.
  */
 export function ProductCard({
   id,
@@ -25,7 +26,7 @@ export function ProductCard({
   image,
   presentacionesLabel,
   fichaLabel,
-  fichaHref = "#",
+  ficha,
 }: ProductCardProps) {
   return (
     <ChromeTilt
@@ -66,13 +67,19 @@ export function ProductCard({
           </div>
         </div>
 
-        <a
-          href={fichaHref}
-          className="mt-auto flex items-center justify-center gap-2 rounded-[4px] border border-brand-teal px-4 py-3 text-sm font-semibold uppercase tracking-[1px] text-brand-teal transition-colors hover:bg-brand-teal hover:text-white"
-        >
-          <Download className="size-4" aria-hidden />
-          {fichaLabel}
-        </a>
+        {ficha ? (
+          <a
+            href={ficha.href}
+            hrefLang={ficha.hrefLang}
+            type="application/pdf"
+            target="_blank"
+            rel="noopener"
+            className="mt-auto flex items-center justify-center gap-2 rounded-[4px] border border-brand-teal px-4 py-3 text-sm font-semibold uppercase tracking-[1px] text-brand-teal transition-colors hover:bg-brand-teal hover:text-white"
+          >
+            <Download className="size-4" aria-hidden />
+            {fichaLabel}
+          </a>
+        ) : null}
       </div>
     </ChromeTilt>
   );

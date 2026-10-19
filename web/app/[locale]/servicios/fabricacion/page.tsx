@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { buildMetadata } from "@/lib/seo";
-import { serviceNode } from "@/lib/structured-data";
+import { faqPageNode, serviceNode, type FaqItem } from "@/lib/structured-data";
 import { JsonLd } from "@/components/seo/json-ld";
+import { pageBreadcrumb } from "@/lib/breadcrumbs";
 import { TrustBar } from "@/components/sections/trust-bar";
 import { ServiceHero } from "@/components/sections/servicios/service-hero";
 import { InfoCardGrid } from "@/components/sections/servicios/info-card-grid";
@@ -11,7 +12,8 @@ import {
   ProcessSteps,
   type ProcessStep,
 } from "@/components/sections/servicios/process-steps";
-import { AnmatBand } from "@/components/sections/servicios/anmat-band";
+import { Registro } from "@/components/sections/registro";
+import { Faq } from "@/components/sections/faq";
 import { CtaBand } from "@/components/sections/cta-band";
 
 type PageProps = {
@@ -23,6 +25,7 @@ const PRODUCT_IMAGES = [
   "/images/servicios/prod-perfumes.png",
   "/images/servicios/prod-capilares.png",
   "/images/servicios/prod-corporales.png",
+  "/images/servicios/domisanitarios.jpeg",
 ];
 
 export async function generateMetadata({
@@ -42,13 +45,18 @@ export async function generateMetadata({
 export default async function FabricacionPage({ params }: PageProps) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const breadcrumb = await pageBreadcrumb(locale, "fabricacion", "servicios/fabricacion");
 
   const t = await getTranslations({ locale, namespace: "servicios.fabricacion" });
+  // Same FAQ as Home (single source in `inicio.faq`), as requested by the client.
+  const tFaq = await getTranslations({ locale, namespace: "inicio.faq" });
+  const faqItems = tFaq.raw("items") as FaqItem[];
 
   return (
     <>
       <JsonLd
         nodes={[
+          breadcrumb,
           serviceNode({
             locale,
             path: "servicios/fabricacion",
@@ -59,6 +67,7 @@ export default async function FabricacionPage({ params }: PageProps) {
                 ? "Contract cosmetics manufacturing (private label)"
                 : "Fabricación cosmética tercerista (private label)",
           }),
+          faqPageNode(locale, "servicios/fabricacion", faqItems),
         ]}
       />
       <main className="flex flex-1 flex-col">
@@ -97,7 +106,12 @@ export default async function FabricacionPage({ params }: PageProps) {
           steps={t.raw("proceso.pasos") as ProcessStep[]}
         />
 
-        <AnmatBand title={t("anmat.titulo")} paragraph={t("anmat.parrafo")} />
+        <Registro
+          title={t("anmat.titulo")}
+          paragraphs={t.raw("anmat.parrafos") as string[]}
+        />
+
+        <Faq />
 
         <CtaBand
           title={t("cierre.titulo")}
