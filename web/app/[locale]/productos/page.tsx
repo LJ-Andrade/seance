@@ -41,13 +41,13 @@ function dataSheet(locale: string, slug: string): DataSheet | undefined {
 }
 
 const PRODUCT_IMAGES = [
-  "/images/productos/alcohol-gel.png",
-  "/images/productos/alcohol-70.png",
-  "/images/productos/jabon.png",
-  "/images/productos/jabon-liquido.png",
-  "/images/productos/repelente.png",
-  "/images/productos/shampoo.png",
-  "/images/productos/acondicionador.png",
+  "/images/productos/alcohol-gel.webp",
+  "/images/productos/alcohol-70.webp",
+  "/images/productos/jabon.webp",
+  "/images/productos/jabon-liquido.webp",
+  "/images/productos/repelente.webp",
+  "/images/productos/shampoo.webp",
+  "/images/productos/acondicionador.webp",
 ];
 
 const PRODUCT_SLUGS = [
