@@ -364,6 +364,15 @@ the `certbot` CLI.
 
 ## Release Process
 
+The `fulldeploy` script at the repo root automates the steps below (pull with
+`--rebase`, conditional `npm ci`, pre-build memory check, build, scoped reload,
+smoke check against `NEXT_PUBLIC_SITE_URL`). As `<SITE_USER>`, from anywhere:
+
+```bash
+./fulldeploy
+```
+
+The manual steps remain the reference and the fallback when the script aborts.
 As `<SITE_USER>`, from `<REPO_PATH>`:
 
 1. `git pull` on `main`.

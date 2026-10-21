@@ -1,0 +1,71 @@
+#!/usr/bin/env bash
+# fulldeploy — pull the latest main, rebuild the site, and reload PM2.
+#
+# Encodes the release process from docs/DEPLOY_INFO.md:
+#   1. git pull --rebase origin main
+#   2. npm ci --prefix web        (only when web/package-lock.json changed)
+#   3. npm run build --prefix web (must finish BEFORE the reload)
+#   4. pm2 reload seance-web      (always scoped to this app; never "all")
+#   5. Smoke check against NEXT_PUBLIC_SITE_URL
+#
+# Run as the site user from anywhere: ./fulldeploy
+
+set -euo pipefail
+cd "$(dirname "${BASH_SOURCE[0]}")"
+
+APP_NAME="seance-web"
+# next build is memory-hungry and this VPS is shared; abort below this
+# threshold rather than risk the kernel OOM-killing a neighbour site.
+MIN_AVAILABLE_MB=1800
+
+echo "==> 1/5 Bajando cambios de origin main..."
+OLD_HEAD=$(git rev-parse HEAD)
+# --rebase matches the reconciliation strategy chosen for this checkout:
+# it keeps history linear if a local commit ever diverges from origin.
+git pull --rebase origin main
+NEW_HEAD=$(git rev-parse HEAD)
+
+if [ "$OLD_HEAD" = "$NEW_HEAD" ]; then
+  echo "    No hay commits nuevos; se redeploya el estado actual igual."
+fi
+
+echo "==> 2/5 Dependencias..."
+if git diff --name-only "$OLD_HEAD" "$NEW_HEAD" | grep -q '^web/package-lock\.json$'; then
+  echo "    package-lock.json cambió, corriendo npm ci..."
+  npm ci --prefix web
+else
+  echo "    package-lock.json sin cambios, se omite npm ci."
+fi
+
+echo "==> 3/5 Verificando memoria disponible..."
+AVAILABLE_MB=$(awk '/MemAvailable/ {print int($2/1024)}' /proc/meminfo)
+echo "    Disponible: ${AVAILABLE_MB} MB"
+if [ "$AVAILABLE_MB" -lt "$MIN_AVAILABLE_MB" ]; then
+  echo "ERROR: solo hay ${AVAILABLE_MB} MB disponibles (< ${MIN_AVAILABLE_MB} MB)." >&2
+  echo "       El build podría morir por OOM y afectar otros sitios del VPS." >&2
+  echo "       Liberá memoria o buildeá en un horario de bajo tráfico." >&2
+  exit 1
+fi
+
+echo "==> 4/5 Buildeando..."
+npm run build --prefix web
+
+echo "==> 5/5 Recargando PM2 ($APP_NAME)..."
+pm2 reload "$APP_NAME"
+
+# Smoke check: the public URL comes from the build-time env file.
+SITE_URL=$(sed -n 's/^NEXT_PUBLIC_SITE_URL=//p' web/.env.production 2>/dev/null | tr -d "\"'" | tail -n1 || true)
+if [ -n "$SITE_URL" ]; then
+  echo "==> Smoke check: $SITE_URL/es"
+  CODE=$(curl -sS -o /dev/null -w '%{http_code}' "$SITE_URL/es")
+  if [ "$CODE" = "200" ]; then
+    echo "    OK (HTTP 200)"
+  else
+    echo "    ATENCIÓN: respondió HTTP $CODE — revisá 'pm2 logs $APP_NAME'." >&2
+    exit 1
+  fi
+else
+  echo "==> Smoke check omitido (NEXT_PUBLIC_SITE_URL no definido)."
+fi
+
+echo "==> Deploy completo: $(git log -1 --format='%h %s')"
